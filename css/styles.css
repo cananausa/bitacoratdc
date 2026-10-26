@@ -465,3 +465,10 @@ footer{background:var(--vino);color:var(--mostaza);text-align:center;padding:3.5
     font-size: .9rem;
   }
 }
+
+/* Reducir el logo principal únicamente en móviles */
+@media (max-width: 480px) {
+  .hero-logo {
+    width: min(75%, 300px);
+  }
+}
