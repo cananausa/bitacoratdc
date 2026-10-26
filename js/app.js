@@ -29,6 +29,7 @@
   const A = D.agencia;
   /* INICIO: COMPOSICIÓN DEL HOME (el texto sale de data.js; aquí solo se edita la forma) */
   const W = (v) => `<svg class="wv" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="${v ? "M0 50C200 110 420 0 700 40S1180 100 1440 20V100H0Z" : "M0 30C260 -10 460 100 760 60S1220 0 1440 60V100H0Z"}" fill="currentColor"/></svg>`;
+  const P = (v) => [].concat(v).map((t) => `<p>${t}</p>`).join("");
   const slogan = A.slogan.replace(/caña/i, (m) => `<em>${m}</em>`);
   if (page === "home") main.innerHTML = `
     <section class="hero sec" style="--bg:var(--vino)">
@@ -51,8 +52,8 @@
 
     <section class="sec mv" style="--bg:#fffaf0">${W(0)}
       <div class="w"><div class="blobs">
-        <article class="blob b1 rv"><h3>Misión</h3><p>${A.mision}</p></article>
-        <article class="blob b2 rv"><h3>Visión</h3><p>${A.vision}</p></article></div>
+        <article class="blob b1 rv"><h3>Misión</h3>${P(A.mision)}</article>
+        <article class="blob b2 rv"><h3>Visión</h3>${P(A.vision)}</article></div>
         <h3 class="sub rv">Principios</h3>
         <ul class="pebbles">${A.principios.map((p) => `<li class="pebble rv"><h4>${p.t}</h4><p>${p.d}</p></li>`).join("")}</ul></div></section>
 
