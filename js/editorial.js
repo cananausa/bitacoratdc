@@ -138,8 +138,12 @@
     tabs(".ed-tt", "tp-p");
 
     /* El menú de categorías se ancla justo debajo del encabezado principal */
-    const hd = d.getElementById("site-header"), sh = () => d.documentElement.style.setProperty("--hh", hd.offsetHeight + "px");
+    let oculto = false, last = scrollY;
+    const hd = d.getElementById("site-header"), sh = () => d.documentElement.style.setProperty("--hh", (oculto ? 0 : hd.offsetHeight) + "px");
+    const ver = (v) => { if (v === oculto) return; oculto = v; hd.classList.toggle("hd-hide", v); sh(); };
     sh(); addEventListener("resize", sh); if (window.ResizeObserver) new ResizeObserver(sh).observe(hd);
+    addEventListener("scroll", () => { const y = scrollY, dy = y - last; if (y < 80) ver(false); else if (dy > 6 && !d.querySelector("#nav.open")) ver(true); else if (dy < -6) ver(false); last = y; }, { passive: true });
+    hd.addEventListener("focusin", () => ver(false));
     /* Progreso de lectura, sección activa y revelado (solo con movimiento permitido) */
     const bar = main.querySelector(".ed-prog i"), links = [...main.querySelectorAll(".ed-nav a")];
     let t = 0; const upd = () => { const h = d.documentElement; bar.style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight))})`; t = 0; };
