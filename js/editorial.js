@@ -27,7 +27,6 @@
     const prev = acts[idx - 1], next = acts[idx + 1];
 
     main.innerHTML = `
-<div class="ed-prog" aria-hidden="true"><i></i></div>
 <header class="ed-hero">
   <svg class="ed-arcs" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#F2B705" stroke-width="2">${[290, 240, 190, 140, 90].map(r => `<path d="M${300 - r} 600V${300}a${r} ${r} 0 0 1 ${2 * r} 0V600"/>`).join("")}</g></svg>
   <div class="ed-hero-in">
@@ -41,7 +40,7 @@
     ${slot("imagen-portada", "4/5", "Portada: vista de la instalación", "arch")}
   </div>
 </header>
-<nav class="ed-nav" aria-label="Secciones de la actividad"><ol>${secs.map((s, i) => `<li><a href="#${s[0]}"><span>0${i + 1}</span>${s[1]}</a></li>`).join("")}</ol></nav>
+<div class="ed-nav" role="navigation" aria-label="Secciones de la actividad"><div class="ed-prog" aria-hidden="true"><i></i></div><ol>${secs.map((s, i) => `<li><a href="#${s[0]}"><span>0${i + 1}</span>${s[1]}</a></li>`).join("")}</ol></div>
 
 <section id="concepto" class="ed-sec" aria-labelledby="concepto-t">
   ${head("01", "concepto", "El concepto", "Producto-experiencia")}
@@ -138,6 +137,9 @@
     main.querySelectorAll(".plan .st").forEach((g, i) => g.onclick = () => selSt(i));
     tabs(".ed-tt", "tp-p");
 
+    /* El menú de categorías se ancla justo debajo del encabezado principal */
+    const hd = d.getElementById("site-header"), sh = () => d.documentElement.style.setProperty("--hh", hd.offsetHeight + "px");
+    sh(); addEventListener("resize", sh); if (window.ResizeObserver) new ResizeObserver(sh).observe(hd);
     /* Progreso de lectura, sección activa y revelado (solo con movimiento permitido) */
     const bar = main.querySelector(".ed-prog i"), links = [...main.querySelectorAll(".ed-nav a")];
     let t = 0; const upd = () => { const h = d.documentElement; bar.style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight))})`; t = 0; };
