@@ -499,7 +499,7 @@ body.ed main{max-width:none;padding:0}
 .ed-prog{position:absolute;left:0;right:0;bottom:-3px;height:5px;pointer-events:none}.ed-prog i{display:block;height:100%;background:var(--coral);transform:scaleX(0);transform-origin:left}
 .ed-hero{position:relative;background:var(--vino);color:#fffaf0;overflow:hidden;padding:clamp(2rem,6vw,5rem) max(1.2rem,calc((100% - 1180px)/2)) clamp(2.5rem,6vw,5rem)}
 .ed-arcs{position:absolute;right:-8%;bottom:-8%;width:min(80vw,760px);opacity:.28;pointer-events:none}
-.ed-hero-in{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(1.5rem,4vw,4rem);align-items:end}
+.ed-hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,4rem);align-items:end}
 .ed-eye{font:.95rem Marvin,Georgia,serif;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin:0 0 1rem}
 .ed-mega{display:block;font:400 clamp(5.5rem,24vw,18rem)/.78 Marvin,Georgia,serif;color:var(--mostaza);letter-spacing:-.02em;margin-left:-.04em}
 .ed-lema{font:clamp(1.5rem,3.4vw,2.6rem)/1.1 Marvin,Georgia,serif;margin:1.4rem 0 .8rem;max-width:20ch}
@@ -577,7 +577,7 @@ body.ed main{max-width:none;padding:0}
 .edjs .ed-rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .8s var(--ease)}.edjs .ed-rv.in{opacity:1;transform:none}
 @media(max-width:860px){
  .ed-hero-in,.ed-split,.ed-stage,.ed-types{grid-template-columns:1fr}
- .ed-hero .slot{max-width:340px}.ed-mega{font-size:clamp(5rem,34vw,10rem)}
+.ed-mega{font-size:clamp(5rem,34vw,10rem)}
  .ed-split.rev>.slot{order:0}.ed-big{margin:0}
  .ed-tt{position:static;flex-direction:row;overflow-x:auto;padding-bottom:.4rem}.ed-tt button{flex:none}.ed-tt button[aria-selected=true]{transform:none}
  .ed-spec{grid-template-columns:1fr}.ed-planbox{max-width:320px;margin:auto}.ed-num{-webkit-text-stroke-width:1.5px}
@@ -590,3 +590,8 @@ body.ed,body.ed footer{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"He
 body.ed footer{margin-top:-2.5rem}
 .ed-end{padding-bottom:calc(clamp(3rem,8vw,7rem) + 3rem)}
 @media(max-width:860px){body.ed header{position:sticky}}
+
+/* Encabezado principal: se oculta al bajar y reaparece al subir (solo en la actividad) */
+body.ed header{transition:transform .35s var(--ease),padding .35s var(--ease),box-shadow .35s var(--ease)}
+body.ed header.hd-hide{transform:translateY(-100%);box-shadow:none}
+.ed-nav{transition:top .35s var(--ease)}
