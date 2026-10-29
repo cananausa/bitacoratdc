@@ -61,14 +61,6 @@ vision: [
      Agrega un objeto por actividad (ver LEEME.md). Se crea sola su página:
      tercer-corte/actividad.html?id=<id>. bloques: texto | imagen | galeria | cita */
   actividades: [
-    { id: "demo", demo: true, semana: "Semana X", fecha: "", titulo: "Ejemplo de plantilla de actividad",
-      resumen: "DEMOSTRACIÓN del formato. No es una actividad académica real.",
-      bloques: [
-        { tipo: "texto", titulo: "Objetivo", texto: "Texto de ejemplo. Reemplaza por el objetivo real de la actividad." },
-        { tipo: "imagen", src: "assets/img/logo_circular.png", alt: "Imagen de ejemplo", pie: "Pie de imagen de ejemplo." },
-        { tipo: "cita", texto: "Reflexión o decisión de diseño destacada." },
-        { tipo: "galeria", imagenes: [{ src: "assets/img/imagotipo_rojo.svg", alt: "Ejemplo 1", nota: "Anotación: por qué se eligió." }] }
-      ] },
     { id: "concepto-cultura-arquitectura", editorial: true, semana: "", fecha: "29 oct 2026",
       titulo: "BETA: instalación para promocionar Diseño Digital, cultura digital y arquitectura efímera",
       resumen: "Una instalación universitaria interactiva que muestra qué se crea al estudiar Diseño Digital, con síntesis de cultura digital, la carrera y seis tipologías de arquitectura efímera.",
