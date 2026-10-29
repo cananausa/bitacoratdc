@@ -10,7 +10,7 @@
     let fig = 0;
     const cred = a.creditos || {}, esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
     const slot = (n, r, lab, c = "") => {
-      const k = ++fig, x = cred[n] || {}, ok = !!x.nombre, src = x.url ? `<a href="${x.url}" target="_blank" rel="noopener">${esc(x.fuente || x.url)}</a>` : esc(x.fuente || "autor.com");
+      const k = ++fig, x = cred[n] || {}, ok = !!x.nombre, link = x.url ? (/^[a-z][a-z0-9+.-]*:/i.test(x.url.trim()) ? x.url.trim() : "https://" + x.url.trim().replace(/^\/+/, "")) : "", src = x.url ? `<a href="${link}" target="_blank" rel="noopener">${esc(x.fuente || link)}</a>` : esc(x.fuente || "autor.com");
       return `<figure class="slot ${c}" style="--r:${r}"><div class="fr"><div class="ph"><i>Fig. ${String(k).padStart(2, "0")}</i><b>Imagen por incorporar</b><code>${n}</code><small>${lab} · ${r.replace("/", ":")}</small></div><img src="${R}assets/img/actividad/${n}.jpg" alt="${esc(x.nombre || lab)}" loading="lazy" onerror="CANANA_ERR(this)"></div><figcaption class="cap${ok ? "" : " pend"}"><b>Nota.</b> Figura ${k}. <i>${esc(x.nombre || "Nombre de la foto")}</i>. Tomado de: ${src} (${esc(x.anio || "2026")}).</figcaption></figure>`;
     };
     const head = (num, id, t, k) => `<div class="ed-h ed-rv"><span class="ed-num" aria-hidden="true">${num}</span><div><p class="ed-k">${k}</p><h2 id="${id}-t">${t}</h2></div></div>`;
