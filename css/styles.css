@@ -595,3 +595,8 @@ body.ed footer{margin-top:-2.5rem}
 body.ed header{transition:transform .35s var(--ease),padding .35s var(--ease),box-shadow .35s var(--ease)}
 body.ed header.hd-hide{transform:translateY(-100%);box-shadow:none}
 .ed-nav{transition:top .35s var(--ease)}
+
+/* Pies de foto (Nota. Figura x. Nombre. Tomado de: fuente (año)) */
+.slot .cap{font:.82rem/1.4 system-ui,"Segoe UI",Arial,sans-serif;margin-top:.5rem;color:var(--petrol);text-align:left}.slot .cap b{font-weight:700}.slot .cap a{color:inherit;overflow-wrap:anywhere}
+.slot .cap.pend{opacity:.6}
+.slot.on-dark .cap,.ed-hero .slot .cap{color:#fffaf0}.ed-end .slot .cap{color:var(--vino)}
