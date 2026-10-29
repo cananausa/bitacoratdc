@@ -81,7 +81,11 @@
   if (page === "actividad") {
     const id = new URLSearchParams(location.search).get("id"), i = acts.findIndex(a => a.id === id), a = acts[i];
     if (!a) main.innerHTML = `<h1>Actividad no encontrada</h1><a class="btn" href="index.html">Volver al Tercer corte</a>`;
-    else {
+    else if (a.editorial) {
+      document.title = a.titulo + " · " + A.nombre;
+      const s = document.createElement("script"); s.src = R + "js/editorial.js";
+      s.onload = () => window.CANANA_EDITORIAL(a, R, main, acts, i); document.body.appendChild(s);
+    } else {
       document.title = a.titulo + " · " + A.nombre;
       const blk = (b) => ({
         texto: `<section>${b.titulo ? `<h2>${b.titulo}</h2>` : ""}<p>${b.texto}</p></section>`,

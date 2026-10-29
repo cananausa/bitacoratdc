@@ -69,184 +69,147 @@ vision: [
         { tipo: "cita", texto: "Reflexión o decisión de diseño destacada." },
         { tipo: "galeria", imagenes: [{ src: "assets/img/imagotipo_rojo.svg", alt: "Ejemplo 1", nota: "Anotación: por qué se eligió." }] }
       ] },
-    { id: "concepto-cultura-arquitectura", semana: "", fecha: "29 oct 2026",
-      titulo: "Pregón: concepto, cultura digital, diseño digital y arquitectura efímera",
-      resumen: "Registro conceptual de un nuevo producto-experiencia ferial y síntesis de cultura digital, diseño digital como carrera y seis tipologías de arquitectura efímera.",
-      bloques: [
-        { tipo: "texto", titulo: "1. Concepto y nuevo producto-experiencia: Pregón",
-          texto: `<strong>Pregón</strong> es un pabellón ferial efímero y modular que convierte las voces del comercio callejero del Caribe colombiano (el vendedor de mango, el pregón del raspao, la copla) en una experiencia interactiva de patrimonio sonoro. Aborda una oportunidad clara: los estands feriales suelen montarse, admirarse y desecharse, mientras la oralidad cotidiana que da identidad a ciudades como Santa Marta casi no tiene espacios contemporáneos donde ser escuchada, archivada y reinterpretada. Se dirige a visitantes de ferias culturales y de diseño, a gestores de patrimonio y a estudiantes, y se diferencia por articular tres capas: un esqueleto de perfiles de aluminio modular y reutilizable, una cubierta de membrana tensada que es a la vez techo, pantalla de proyección y caja de resonancia, y seis nodos sonoros táctiles donde cada pregón grabado en comunidad se escucha, se mezcla y se suma a una composición colectiva que la membrana traduce en luz y color. Desde el pensamiento estratégico de diseño, que equilibra la racionalidad analítica con la sensibilidad empática (Brown, 2008), el proyecto parte de entrevistas y grabaciones en campo y las convierte en un sistema coherente; y propone una nueva relación entre objeto, sujeto y contexto: el visitante deja de ser espectador para ser coautor, la estructura deja de ser un contenedor neutro para ser instrumento, y el territorio deja de ser decorado para ser contenido vivo. En unos diez minutos el visitante entra, elige un pregón, lo mezcla con otros y se lleva un código QR a la bitácora digital con su composición: una forma de meterle caña a las ideas con raíz local.` },
-        { tipo: "esquema", pie: "Esquema 1. Componentes y relaciones de Pregón. Las flechas indican el flujo de voces, interacción y luz; la línea punteada, el apoyo estructural.",
-          markup: `<svg viewBox="0 0 420 540" role="img" aria-labelledby="pgt pgd" xmlns="http://www.w3.org/2000/svg"><title id="pgt">Esquema de componentes de Pregón</title><desc id="pgd">El territorio aporta voces a seis nodos sonoros; el visitante toca y mezcla en los nodos, que envían señal a la membrana; la membrana devuelve luz y eco al visitante; el visitante se lleva su composición a la bitácora digital; la estructura Octanorm sostiene todo.</desc>
-<defs><marker id="pgA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5C0A0A"/></marker></defs>
-<g font-family="Thicker,system-ui,sans-serif" text-anchor="middle" fill="#5C0A0A">
-<rect x="60" y="8" width="300" height="64" rx="22" fill="#E58B70" stroke="#5C0A0A" stroke-width="2"/><text x="210" y="37" font-family="Marvin,Georgia,serif" font-size="19">TERRITORIO</text><text x="210" y="58" font-size="14">Pregones grabados en campo</text>
-<line x1="210" y1="74" x2="210" y2="110" stroke="#5C0A0A" stroke-width="2.5" marker-end="url(#pgA)"/><text x="224" y="98" font-size="14" text-anchor="start">voces</text>
-<rect x="60" y="114" width="300" height="70" rx="22" fill="#F2B705" stroke="#5C0A0A" stroke-width="2"/><text x="210" y="145" font-family="Marvin,Georgia,serif" font-size="19">6 NODOS SONOROS</text><text x="210" y="167" font-size="14">Postes táctiles con NFC</text>
-<rect x="10" y="238" width="150" height="70" rx="22" fill="#263F50" stroke="#5C0A0A" stroke-width="2"/><text x="85" y="269" font-family="Marvin,Georgia,serif" font-size="19" fill="#fff">VISITANTE</text><text x="85" y="291" font-size="14" fill="#fff">coautor</text>
-<line x1="80" y1="236" x2="105" y2="188" stroke="#5C0A0A" stroke-width="2.5" marker-end="url(#pgA)"/><text x="8" y="214" font-size="14" text-anchor="start">toca y mezcla</text>
-<rect x="260" y="238" width="150" height="70" rx="22" fill="#5C0A0A"/><text x="335" y="269" font-family="Marvin,Georgia,serif" font-size="19" fill="#fff">MEMBRANA</text><text x="335" y="291" font-size="14" fill="#fff">pantalla y eco</text>
-<line x1="300" y1="188" x2="325" y2="234" stroke="#5C0A0A" stroke-width="2.5" marker-end="url(#pgA)"/><text x="330" y="214" font-size="14" text-anchor="start">señal</text>
-<line x1="258" y1="273" x2="164" y2="273" stroke="#5C0A0A" stroke-width="2.5" marker-end="url(#pgA)"/><text x="211" y="263" font-size="14">luz y eco</text>
-<line x1="85" y1="310" x2="85" y2="348" stroke="#5C0A0A" stroke-width="2.5" marker-end="url(#pgA)"/><text x="97" y="335" font-size="14" text-anchor="start">QR</text>
-<rect x="10" y="352" width="150" height="64" rx="22" fill="#fff" stroke="#5C0A0A" stroke-width="2"/><text x="85" y="381" font-family="Marvin,Georgia,serif" font-size="19">BITÁCORA</text><text x="85" y="402" font-size="14">composición propia</text>
-<line x1="335" y1="446" x2="335" y2="312" stroke="#5C0A0A" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#pgA)"/>
-<rect x="10" y="450" width="400" height="76" rx="20" fill="#FFF3D6" stroke="#5C0A0A" stroke-width="2" stroke-dasharray="7 6"/><text x="210" y="483" font-family="Marvin,Georgia,serif" font-size="19">ESTRUCTURA MODULAR OCTANORM</text><text x="210" y="507" font-size="14">aluminio reutilizable · soporta nodos y membrana</text>
-</g></svg>` },
-        { tipo: "cita", texto: "El visitante deja de mirar el patrimonio: lo toca, lo mezcla y se lo lleva." },
-        { tipo: "tarjetas", titulo: "Ficha rápida del concepto",
-          items: [
-            { t: "Oportunidad", d: "Dar un espacio contemporáneo a la oralidad callejera del Caribe, hoy poco archivada." },
-            { t: "Público", d: "Visitantes de ferias culturales y de diseño, gestores de patrimonio y estudiantes." },
-            { t: "Diferenciadores", d: "Estructura modular reutilizable, membrana que proyecta y resuena, nodos sonoros colaborativos." },
-            { t: "Experiencia", d: "Escuchar, mezclar y llevarse una composición propia en unos diez minutos." }
-          ] },
-
-        { tipo: "texto", titulo: "2. Cultura digital",
-          texto: `La cultura digital es el conjunto de prácticas, lenguajes, valores y formas de organización que surgen cuando las tecnologías digitales y las redes median cómo nos comunicamos, aprendemos, trabajamos y creamos. No se reduce al uso de dispositivos: Gere (2002) la ubica en una historia más larga que la del computador personal; Castells (1996) la vincula con la sociedad red, donde la información circula en estructuras en red; y Manovich (2001) identifica principios propios de los nuevos medios que explican por qué un contenido digital puede copiarse, modificarse y recombinarse con facilidad.` },
-        { tipo: "linea", titulo: "Historia: hitos para comprender su evolución",
-          hitos: [
-            { a: "1945", t: "El memex", d: "Vannevar Bush imagina en «As We May Think» una máquina para enlazar documentos, antecedente intelectual del hipertexto." },
-            { a: "1969", t: "ARPANET", d: "Primer enlace entre computadores de universidades de EE. UU., germen de Internet." },
-            { a: "1984", t: "Interfaz gráfica y ciberespacio", d: "Llega el Macintosh al público masivo y Neuromancer, de William Gibson, populariza el término «ciberespacio»." },
-            { a: "1991–1993", t: "World Wide Web", d: "Tim Berners-Lee crea la Web en el CERN y el navegador Mosaic (1993) hace de la navegación una práctica cotidiana." },
-            { a: "2004–2007", t: "Web 2.0 y móvil", d: "Redes sociales y contenido generado por usuarios (Facebook, YouTube) y el iPhone (2007) llevan la red al bolsillo." },
-            { a: "2020", t: "Digitalización acelerada", d: "La pandemia de COVID-19 traslada educación, trabajo y cultura a la pantalla." },
-            { a: "2022", t: "IA generativa", d: "El lanzamiento de ChatGPT (noviembre) populariza la generación de texto e imágenes con inteligencia artificial." }
-          ] },
-        { tipo: "tarjetas", titulo: "Categorías principales",
-          items: [
-            { t: "Comunicación y redes", d: "Mensajería, redes sociales y comunidades en línea." },
-            { t: "Creación y remix", d: "Memes, mashups, fan art y cultura participativa." },
-            { t: "Economía y trabajo", d: "Plataformas, comercio electrónico y trabajo remoto." },
-            { t: "Conocimiento y educación", d: "Acceso abierto, cursos en línea y archivos digitales." },
-            { t: "Entretenimiento", d: "Videojuegos, streaming y experiencias interactivas." },
-            { t: "Identidad y ciudadanía", d: "Presencia en línea, privacidad y derechos digitales." }
-          ] },
-        { tipo: "tarjetas", titulo: "Cinco principios de los nuevos medios (Manovich, 2001)",
-          items: [
-            { t: "Representación numérica", d: "Todo objeto digital se describe con números." },
-            { t: "Modularidad", d: "Los elementos conservan su identidad dentro de un conjunto." },
-            { t: "Automatización", d: "Procesos creativos y de edición pueden delegarse al software." },
-            { t: "Variabilidad", d: "Un mismo objeto existe en múltiples versiones." },
-            { t: "Transcodificación", d: "Lo cultural y lo computacional se influyen mutuamente." }
-          ] },
-        { tipo: "tarjetas", titulo: "Tendencias relevantes",
-          items: [
-            { t: "IA generativa", d: "Creatividad asistida que exige criterio de autoría y ética." },
-            { t: "Realidad extendida", d: "Espacios híbridos entre lo físico y lo digital." },
-            { t: "Cultura de creadores", d: "Remix y creación colectiva como motor cultural." },
-            { t: "Datos y privacidad", d: "Debate sobre vigilancia, consentimiento y propiedad de datos." },
-            { t: "Brecha digital", d: "El acceso desigual condiciona quién participa y quién es representado." },
-            { t: "Patrimonio digital", d: "Archivar y reinterpretar cultura local con medios digitales, como propone Pregón." }
-          ] },
-
-        { tipo: "texto", titulo: "3. El diseño digital como carrera profesional",
-          texto: `El diseño digital aplica la tecnología al arte y al diseño para crear piezas gráficas, interactivas y multimedia con ingenio y creatividad (El Heraldo, 2021a). En la Universidad Sergio Arboleda se presenta como un campo que se distingue de la programación y del diseño gráfico, con los que suele confundirse, y que no se limita al dominio de programas sino a preguntarse por el potencial creador de las herramientas (El Heraldo, 2021b).` },
-        { tipo: "tarjetas", titulo: "Contenidos formativos",
-          intro: "Según el plan de estudios publicado por la universidad (Universidad Sergio Arboleda, 2021):",
-          items: [
-            { t: "Núcleo proyectual", d: "Introducción al diseño y Talleres de Diseño Conceptual I a IV, con talleres de diseño e investigación." },
-            { t: "Lenguajes digitales", d: "Lógica para el mundo digital, gráfica digital, fotografía digital y narrativa digital." },
-            { t: "Interfaz y gestión", d: "Diseño e interfaz y gestión de proyectos de diseño." },
-            { t: "Énfasis en objetos", d: "Modelado digital, fábrica digital FabLab, ergonomía y diseño sostenible." },
-            { t: "Énfasis en videojuegos", d: "Textura y escultura digital y diseño de videojuegos I a III." },
-            { t: "Cultura y estética digital", d: "Semiótica, materialidad digital, diseño interactivo, mashup y cultura digital." }
-          ] },
-        { tipo: "tarjetas", titulo: "Competencias y perfil profesional",
-          items: [
-            { t: "Proyectual", d: "Domina el proceso de diseño de productos digitales: objetos, contenidos y videojuegos." },
-            { t: "Técnica", d: "Modelado 3D, web, plataformas informáticas, fabricación digital, multimedia y comunicación transmediática." },
-            { t: "Narrativa", d: "Usa lenguajes y narrativas digitales para crear nuevos formatos y contenidos." },
-            { t: "Gestión y liderazgo", d: "Formula, planea y dirige proyectos interdisciplinares con componente digital." },
-            { t: "Social", d: "Media procesos de diseño digital para el desarrollo social." },
-            { t: "Estratégica", d: "Actúa como consultor creativo en nuevos formatos de la cultura digital." }
-          ] },
-        { tipo: "tarjetas", titulo: "Campos de acción y proyección",
-          items: [
-            { t: "Experiencia e interfaces", d: "Diseño de interacción, UX y UI para productos y servicios." },
-            { t: "Videojuegos", d: "Diseño, arte y narrativa de experiencias interactivas." },
-            { t: "Producto y fabricación digital", d: "Modelado, prototipado y manufactura asistida." },
-            { t: "Contenido transmedia", d: "Producción audiovisual y narrativas en múltiples plataformas." },
-            { t: "Gestión y consultoría", d: "Dirección de proyectos y asesoría creativa a organizaciones." },
-            { t: "Cultura y territorio", d: "Proyectos de patrimonio, comunidades y experiencias culturales." }
-          ] },
-        { tipo: "tarjetas", titulo: "Transformaciones y oportunidades",
-          items: [
-            { t: "De la herramienta al pensamiento", d: "El valor está en el criterio de diseño, más que en el manejo de un software (El Heraldo, 2021b)." },
-            { t: "De la pantalla al objeto", d: "La fabricación digital y los entornos híbridos acercan el diseño digital al mundo físico." },
-            { t: "IA como colaboradora", d: "Automatiza tareas y abre oportunidades en dirección creativa, curaduría y diseño de experiencias." },
-            { t: "Diseño con comunidades", d: "Crece la demanda de propuestas centradas en el usuario y en su contexto cultural." }
-          ] },
-
-        { tipo: "texto", titulo: "4. Arquitectura efímera para eventos feriales",
-          texto: `La arquitectura efímera produce espacios pensados para existir durante un tiempo limitado: el de una feria, un festival o una exposición. Su lógica se invierte respecto a la construcción permanente: se diseña desde el montaje y el desmontaje, y se mide en rapidez, ligereza, reutilización, claridad de marca y seguridad bajo el uso intensivo. Un ejemplo de esa mentalidad es el Warnowturm, una torre de 49 m construida en solo diez días para la Feria Internacional de Jardinería de 2003 (Micheletti y Podio-Guidugli, 2022).` },
-        { tipo: "tarjetas", titulo: "Fundamentos",
-          items: [
-            { t: "Temporalidad", d: "El diseño asume desde el inicio un ciclo corto de vida." },
-            { t: "Montaje y desmontaje", d: "Pocas piezas, uniones simples y tiempos de armado predecibles." },
-            { t: "Ligereza y transporte", d: "Materiales livianos y volúmenes compactos reducen costos logísticos." },
-            { t: "Modularidad y reutilización", d: "Los componentes se reconfiguran para distintos eventos." },
-            { t: "Seguridad y normativa", d: "Verificar cargas de viento, aforo y evacuación según la normativa local." }
-          ] },
-        { tipo: "tipologias", titulo: "Seis tipologías de estructuras efímeras",
-          intro: "Despliega cada tipología para ver su funcionamiento, características, ventajas, limitaciones y aplicaciones.",
-          items: [
-            { t: "Estructuras neumáticas", res: "Espacios definidos por aire a presión dentro de una envolvente flexible (Herzog, 1976).",
-              f: "En las soportadas por aire, un ventilador mantiene el interior a una presión ligeramente mayor que la exterior y la membrana se sostiene sola; en las de elementos inflados, tubos o arcos presurizados forman el esqueleto.",
-              c: "Envolvente de membrana, sistema de ventilación continuo, accesos con esclusa y anclajes al suelo.",
-              v: "Montaje muy rápido, mínimo volumen de transporte, grandes luces sin apoyos interiores, translucidez.",
-              l: "Dependen del suministro de aire y de energía, son sensibles a perforaciones y al viento, y su aislamiento térmico y acústico es limitado.",
-              a: "Carpas y domos de exposición, escenarios y pabellones inflables, publicidad y eventos de gran formato." },
-            { t: "Estructuras escualizables, abatibles o plegables", res: "Sistemas articulados que cambian de tamaño: se recogen para transportarse y se abren para usarse (Escrig, 1985).",
-              f: "Barras unidas en tijera (pantógrafos) o paneles con bisagras se despliegan por geometría articulada hasta alcanzar su forma final, donde se bloquean.",
-              c: "Piezas articuladas, geometría modular, bloqueos de seguridad y, a veces, membranas integradas.",
-              v: "Armado en minutos, formato compacto, reutilización frecuente y buena movilidad.",
-              l: "Las articulaciones exigen mantenimiento, la rigidez final es menor y las formas posibles están limitadas por el mecanismo.",
-              a: "Estands emergentes, carpas plegables, mamparas abatibles y cubiertas retráctiles de membrana articulada en tijera." },
-            { t: "Cubiertas de membranas", res: "Superficies textiles pretensadas que resisten cargas por tracción (Forster y Mollaert, 2004).",
-              f: "La tela se tensa entre mástiles, arcos y cables; su doble curvatura (anticlástica o sinclástica) le da rigidez, y la forma se obtiene mediante un cálculo de búsqueda de forma.",
-              c: "Tejidos recubiertos o láminas poliméricas, pretensado, curvaturas opuestas, bordes de cable y mástiles de soporte.",
-              v: "Gran cobertura con poco material, ligereza, luz natural y una superficie ideal para imagen de marca y proyección.",
-              l: "Requieren diseño y patronaje especializados, son sensibles a viento y acumulación de agua, y aíslan poco del sonido y del calor.",
-              a: "Cubiertas de escenarios, carpas feriales, pabellones y parasoles de plazas." },
-            { t: "Tensegridad (Tensegrity)", res: "Principio estructural de «islas de compresión en un mar de tensión» (Micheletti y Podio-Guidugli, 2022).",
-              f: "Barras que no se tocan entre sí se mantienen estables gracias a una red continua de cables pretensados; el equilibrio nace de la tensión interna (Designing Buildings, s. f.).",
-              c: "Compresión discontinua, tensión continua, pretensado y aspecto ligero que parece flotar. El término lo acuñó Buckminster Fuller.",
-              v: "Gran impacto visual, poco peso, posibilidad de desplegarse o cambiar de forma.",
-              l: "Rigidez baja, geometría y comportamiento mecánico complejos, y menor eficiencia que las estructuras convencionales para cargas grandes.",
-              a: "Torres e instalaciones escultóricas, cubiertas como las cúpulas de Fuller y pasarelas desplegables experimentales." },
-            { t: "Sistema modular Octanorm", res: "Sistema de perfiles de aluminio extruido de sección octogonal, lanzado en 1969 para construir estands feriales (OCTANORM, s. f.).",
-              f: "Perfiles y nodos estandarizados se ensamblan con piezas de conexión para formar paredes, soportes y cielos rasos; los paneles y la gráfica se añaden sobre el esqueleto.",
-              c: "Aluminio reciclable, medidas modulares, conexiones rápidas y accesorios como iluminación y mobiliario integrados.",
-              v: "Montaje ágil, alta reutilización, personalización con gráfica y una amplia red de proveedores.",
-              l: "Su apariencia puede verse estándar sin diseño adicional, requiere piezas compatibles de un mismo sistema y tiene límites en grandes luces o voladizos.",
-              a: "Estands de ferias, muros expositivos, displays, tiendas temporales y diseño de interiores." },
-            { t: "Escenarios rodantes", res: "Plataformas sobre remolque o vehículo que se transportan armadas y se abren en el lugar del evento.",
-              f: "El camión o remolque llega al sitio, se nivela, y sus laterales, cubierta y piso se despliegan mediante sistemas hidráulicos o mecánicos.",
-              c: "Chasis móvil, cubierta y laterales plegables, piso técnico y puntos de anclaje para sonido e iluminación.",
-              v: "Puesta en marcha en pocas horas, autonomía logística y facilidad para itinerar entre plazas y municipios.",
-              l: "Tamaño limitado por las normas de tránsito, requieren terreno nivelado, acceso vehicular y permisos de circulación.",
-              a: "Giras musicales, festivales populares, ferias municipales y eventos culturales en espacio público." }
-          ] },
-        { tipo: "texto", titulo: "Aplicación al concepto Pregón",
-          texto: `Pregón combina tres de estas tipologías: perfiles Octanorm para el esqueleto reutilizable, una cubierta de membrana tensada que sirve de pantalla y resonador, y uniones desmontables inspiradas en los sistemas plegables para optimizar el transporte desde el taller hasta la feria.` },
-        { tipo: "refs", titulo: "Referencias (APA 7)",
-          items: [
-            `Brown, T. (2008). Design thinking. <em>Harvard Business Review, 86</em>(6), 84–92. <a href="https://hbr.org/2008/06/design-thinking" target="_blank" rel="noopener">https://hbr.org/2008/06/design-thinking</a>`,
-            `Castells, M. (1996). <em>The rise of the network society</em>. Blackwell.`,
-            `Designing Buildings. (s. f.). <em>Tensegrity structural systems</em>. <a href="https://www.designingbuildings.co.uk/wiki/Tensegrity_structural_systems" target="_blank" rel="noopener">https://www.designingbuildings.co.uk/wiki/Tensegrity_structural_systems</a>`,
-            `El Heraldo. (2021a, 2 de noviembre). <em>Diseño digital, el nuevo programa de la Sergio Arboleda en Barranquilla</em>. <a href="https://www.elheraldo.co/informes-comerciales/2021/11/02/diseno-digital-el-nuevo-programa-de-la-sergio-arboleda-en-barranquilla-862283/" target="_blank" rel="noopener">https://www.elheraldo.co/informes-comerciales/2021/11/02/diseno-digital-el-nuevo-programa-de-la-sergio-arboleda-en-barranquilla-862283/</a>`,
-            `El Heraldo. (2021b, 17 de diciembre). <em>Diseño digital: una carrera que busca humanizar las tecnologías</em>. <a href="https://www.elheraldo.co/informes-comerciales/2021/12/17/diseno-digital-una-carrera-que-busca-humanizar-las-tecnologias-873889/" target="_blank" rel="noopener">https://www.elheraldo.co/informes-comerciales/2021/12/17/diseno-digital-una-carrera-que-busca-humanizar-las-tecnologias-873889/</a>`,
-            `Escrig, F. (1985). Expandable space structures. <em>International Journal of Space Structures, 1</em>(2), 79–91.`,
-            `Forster, B., y Mollaert, M. (Eds.). (2004). <em>European design guide for tensile surface structures</em>. TensiNet. <a href="https://repository.lincoln.ac.uk/articles/chapter/Introduction_European_design_guide_for_tensile_surface_structures_/24333712" target="_blank" rel="noopener">Registro del libro (University of Lincoln)</a>`,
-            `Gere, C. (2002). <em>Digital culture</em>. Reaktion Books.`,
-            `Herzog, T. (1976). <em>Pneumatic structures: A handbook of inflatable architecture</em>. Oxford University Press.`,
-            `Manovich, L. (2001). <em>The language of new media</em>. MIT Press.`,
-            `Micheletti, A., y Podio-Guidugli, P. (2022). Seventy years of tensegrities (and counting). <em>Archive of Applied Mechanics, 92</em>(9), 2525–2548. <a href="https://doi.org/10.1007/s00419-022-02192-4" target="_blank" rel="noopener">https://doi.org/10.1007/s00419-022-02192-4</a>`,
-            `OCTANORM. (s. f.). <em>About octanorm</em>. <a href="https://www.octanorm.com/about-octanorm/" target="_blank" rel="noopener">https://www.octanorm.com/about-octanorm/</a>`,
-            `Universidad Sergio Arboleda. (2021). <em>Diseño digital</em> [Plegable del programa]. <a href="https://www.usergioarboleda.edu.co/barranquilla/wp-content/uploads/2021/09/DISENO-DIGITAL.pdf" target="_blank" rel="noopener">https://www.usergioarboleda.edu.co/barranquilla/wp-content/uploads/2021/09/DISENO-DIGITAL.pdf</a>`
-          ] }
-      ] }
+    { id: "concepto-cultura-arquitectura", editorial: true, semana: "", fecha: "29 oct 2026",
+      titulo: "BETA: instalación para promocionar Diseño Digital, cultura digital y arquitectura efímera",
+      resumen: "Una instalación universitaria interactiva que muestra qué se crea al estudiar Diseño Digital, con síntesis de cultura digital, la carrera y seis tipologías de arquitectura efímera.",
+      pdf: "assets/documentos/referencias-apa7.pdf",
+      concepto: {
+        nombre: "BETA",
+        lema: "Estudiar Diseño Digital es entrar a una versión beta de uno mismo.",
+        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 8 metros para el vestíbulo de la Universidad Sergio Arboleda, sede Santa Marta, que convierte la pregunta «¿qué puedo crear?» en un recorrido que se atraviesa con el cuerpo: un túnel de arcos modulares de aluminio, cubierto por una membrana translúcida tensada, funciona a la vez como umbral, pantalla y señal luminosa visible desde los pasillos. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades son difíciles de explicar con folletos o charlas, mientras que aspirantes y estudiantes de otros programas necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a estudiantes de primeros semestres, aspirantes de colegios que visitan la sede y comunidad universitaria, propone cuatro estaciones: «Mira», donde láminas superpuestas revelan la carrera según el ángulo; «Arma», donde piezas físicas con NFC se combinan sobre una mesa y generan en la membrana un cartel dinámico de color, forma y sonido; «Descubre», que proyecta los campos profesionales vinculados a lo que el visitante armó; y «Llévate», que imprime una ficha-cartel con su composición y un QR hacia el programa. Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del juego, el color caribe y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora, y propone que estudiar Diseño Digital es meterle caña a un proceso en construcción donde cada persona deja su huella.`,
+        ficha: [
+          ["Nombre", "BETA"],
+          ["Idea rectora", "La carrera se comprende al hacer: cada visitante construye una primera pieza."],
+          ["Público", "Aspirantes, estudiantes de primeros semestres y comunidad universitaria."],
+          ["Oportunidad", "Explicar de forma tangible qué es Diseño Digital y qué se puede crear con él."],
+          ["Propósito", "Despertar interés por la carrera y conducir al visitante hacia más información."],
+          ["Diferenciadores", "Recorrido físico, creación participativa, resultado que el visitante se lleva."],
+          ["Contexto", "Vestíbulo o zona techada del campus, en ferias de admisión y semanas de facultad."]
+        ] },
+      estaciones: [
+        { n: "Mira", img: "imagen-estacion-mira", ve: "Arcos con láminas translúcidas superpuestas de tipografía y color. Al caminar, la lectura cambia: «¿Qué puedes crear?».", hace: "Caminar, rodear y mirar desde distintos ángulos.", d: "La carrera es un conjunto de disciplinas que se superponen: imagen, interacción, objeto y narrativa." },
+        { n: "Arma", img: "imagen-estacion-arma", ve: "Una mesa con piezas de forma, color, sonido y movimiento. Cada pieza lleva una etiqueta NFC.", hace: "Combinar tres piezas; la membrana proyecta al instante un cartel generativo con esa mezcla.", d: "Diseñar es tomar decisiones dentro de un sistema, con lógica y con expresión." },
+        { n: "Descubre", img: "imagen-estacion-descubre", ve: "La proyección muestra rutas profesionales relacionadas con la composición creada.", hace: "Tocar o escanear para ver asignaturas, énfasis y campos de acción asociados.", d: "Lo que acaba de hacer conecta con experiencias, videojuegos, objetos y contenidos transmedia." },
+        { n: "Llévate", img: "imagen-estacion-llevate", ve: "Una estación de impresión entrega una ficha-cartel con la composición del visitante.", hace: "Recoger la ficha y escanear su QR hacia el programa y los canales de admisión.", d: "Ya hizo su primera pieza de diseño digital: el siguiente paso es continuar." }
+      ],
+      fases: [
+        { t: "Atención", d: "Luz y tipografía visibles desde los pasillos." },
+        { t: "Curiosidad", d: "Un umbral translúcido invita a entrar." },
+        { t: "Participación", d: "El visitante arma y ve su resultado." },
+        { t: "Comprensión", d: "Conecta lo creado con la carrera." },
+        { t: "Acción", d: "Se lleva la ficha y el QR." }
+      ],
+      componentes: [
+        { t: "Portal modular", d: "Arcos de perfiles de aluminio tipo Octanorm, reutilizables." },
+        { t: "Membrana translúcida", d: "Tela tensada que funciona como piel, pantalla y difusor de luz." },
+        { t: "Mesa de piezas NFC", d: "Piezas físicas que el visitante combina para crear su cartel." },
+        { t: "Proyección y sonido", d: "Proyector de corta distancia y altavoces que responden a la mezcla." },
+        { t: "Estación de impresión", d: "Entrega la ficha-cartel con QR hacia el programa." },
+        { t: "Señalética tipográfica", d: "Mensajes grandes que comunican el recorrido sin explicaciones largas." }
+      ],
+      integracion: [
+        { t: "Dónde", d: "Vestíbulo o zona techada con alto tránsito, sin bloquear rutas de evacuación." },
+        { t: "Cuándo", d: "Ferias de admisión, semana de facultad y visitas de colegios." },
+        { t: "Quién la opera", d: "Estudiantes de la carrera como guías, con apoyo técnico del programa." }
+      ],
+      cultura: {
+        def: `La cultura digital es el conjunto de prácticas, lenguajes, valores y formas de organización que surgen cuando las tecnologías digitales y las redes median cómo nos comunicamos, aprendemos, trabajamos y creamos. No se reduce al uso de dispositivos: se enlaza con una historia más larga que la del computador personal, con la sociedad red descrita por Castells y con principios propios de los nuevos medios que explican por qué un contenido digital puede copiarse, modificarse y recombinarse con facilidad.`,
+        hitos: [
+          { a: "1945", t: "El memex", d: "Vannevar Bush imagina una máquina para enlazar documentos, antecedente intelectual del hipertexto." },
+          { a: "1969", t: "ARPANET", d: "Primer enlace entre computadores de universidades de EE. UU., germen de Internet." },
+          { a: "1984", t: "Interfaz y ciberespacio", d: "Llega el Macintosh al público masivo y Neuromancer populariza el término «ciberespacio»." },
+          { a: "1991", t: "World Wide Web", d: "Tim Berners-Lee crea la Web en el CERN; el navegador Mosaic (1993) la vuelve cotidiana." },
+          { a: "2004", t: "Web 2.0 y móvil", d: "Redes sociales y contenido generado por usuarios; el iPhone (2007) lleva la red al bolsillo." },
+          { a: "2020", t: "Digitalización acelerada", d: "La pandemia traslada educación, trabajo y cultura a la pantalla." },
+          { a: "2022", t: "IA generativa", d: "ChatGPT populariza la generación de texto e imágenes con inteligencia artificial." }
+        ],
+        categorias: [
+          { t: "Comunicación y redes", d: "Mensajería, redes sociales y comunidades en línea." },
+          { t: "Creación y remix", d: "Memes, mashups y cultura participativa." },
+          { t: "Economía y trabajo", d: "Plataformas, comercio electrónico y trabajo remoto." },
+          { t: "Conocimiento y educación", d: "Acceso abierto, cursos en línea y archivos digitales." },
+          { t: "Entretenimiento", d: "Videojuegos, streaming y experiencias interactivas." },
+          { t: "Identidad y ciudadanía", d: "Presencia en línea, privacidad y derechos digitales." }
+        ],
+        principios: [
+          { t: "Representación numérica", d: "Todo objeto digital se describe con números." },
+          { t: "Modularidad", d: "Los elementos conservan su identidad dentro de un conjunto." },
+          { t: "Automatización", d: "Procesos creativos pueden delegarse al software." },
+          { t: "Variabilidad", d: "Un mismo objeto existe en múltiples versiones." },
+          { t: "Transcodificación", d: "Lo cultural y lo computacional se influyen entre sí." }
+        ],
+        tendencias: ["IA generativa", "Realidad extendida", "Cultura de creadores", "Datos y privacidad", "Brecha digital", "Patrimonio digital"]
+      },
+      carrera: {
+        def: `El diseño digital aplica la tecnología al arte y al diseño para crear piezas gráficas, interactivas y multimedia con ingenio y creatividad. En la Universidad Sergio Arboleda se presenta como un campo que se distingue de la programación y del diseño gráfico, con los que suele confundirse, y que no se limita al dominio de programas: se pregunta por el potencial creador de las herramientas.`,
+        ruta: [
+          { t: "Núcleo proyectual", d: "Introducción al diseño y Talleres de Diseño Conceptual I a IV, con talleres de diseño e investigación." },
+          { t: "Lenguajes digitales", d: "Lógica para el mundo digital, gráfica digital, fotografía digital y narrativa digital." },
+          { t: "Interfaz y gestión", d: "Diseño e interfaz y gestión de proyectos de diseño." },
+          { t: "Énfasis", d: "Objetos (modelado digital, FabLab, diseño sostenible) y videojuegos (escultura digital, diseño de videojuegos)." },
+          { t: "Cultura y estética digital", d: "Semiótica, materialidad digital, diseño interactivo, mashup y cultura digital." }
+        ],
+        competencias: [
+          { t: "Proyectual", d: "Domina el proceso de diseño de productos digitales: objetos, contenidos y videojuegos." },
+          { t: "Técnica", d: "Modelado 3D, web, plataformas, fabricación digital, multimedia y comunicación transmediática." },
+          { t: "Narrativa", d: "Usa lenguajes y narrativas digitales para crear nuevos formatos y contenidos." },
+          { t: "Gestión", d: "Formula, planea y dirige proyectos interdisciplinares con componente digital." },
+          { t: "Social", d: "Media procesos de diseño digital para el desarrollo social." },
+          { t: "Estratégica", d: "Actúa como consultor creativo en nuevos formatos de la cultura digital." }
+        ],
+        campos: ["Experiencia e interfaces (UX/UI)", "Videojuegos", "Producto y fabricación digital", "Contenido transmedia", "Gestión y consultoría creativa", "Cultura y territorio"],
+        transformaciones: [
+          { de: "La herramienta", a: "El pensamiento", d: "El valor está en el criterio de diseño, más que en el manejo de un software." },
+          { de: "La pantalla", a: "El objeto", d: "La fabricación digital y los entornos híbridos acercan lo digital al mundo físico." },
+          { de: "Hacer solo", a: "Co-crear con IA", d: "La IA automatiza tareas y abre oportunidades en dirección creativa y curaduría." },
+          { de: "El usuario genérico", a: "La comunidad", d: "Crece la demanda de propuestas centradas en personas y contextos culturales." }
+        ]
+      },
+      arq: {
+        def: `La arquitectura efímera produce espacios pensados para existir durante un tiempo limitado: el de una feria, un festival o una exposición. Su lógica se invierte respecto a la construcción permanente: se diseña desde el montaje y el desmontaje, y se mide en rapidez, ligereza, reutilización, claridad de marca y seguridad bajo uso intensivo. Un ejemplo es el Warnowturm, una torre de 49 m construida en diez días para la Feria Internacional de Jardinería de 2003.`,
+        fundamentos: ["Temporalidad", "Montaje y desmontaje", "Ligereza y transporte", "Modularidad y reutilización", "Seguridad y normativa"],
+        criterios: ["Montaje", "Movilidad", "Rigidez", "Luz libre"],
+        tipologias: [
+          { t: "Estructuras neumáticas", id: "estructuras-neumaticas", r: [5, 5, 2, 5], res: "Espacios definidos por aire a presión dentro de una envolvente flexible.",
+            f: "En las soportadas por aire, un ventilador mantiene el interior a una presión ligeramente mayor que la exterior y la membrana se sostiene sola; en las de elementos inflados, tubos o arcos presurizados forman el esqueleto.",
+            c: "Envolvente de membrana, ventilación continua, accesos con esclusa y anclajes al suelo.",
+            v: "Montaje muy rápido, mínimo volumen de transporte, grandes luces sin apoyos interiores, translucidez.",
+            l: "Dependen del suministro de aire y energía, son sensibles a perforaciones y al viento, y aíslan poco térmica y acústicamente.",
+            a: "Carpas y domos de exposición, escenarios y pabellones inflables, publicidad y eventos de gran formato." },
+          { t: "Estructuras escualizables, abatibles o plegables", id: "escualizables-abatibles-plegables", r: [5, 4, 3, 2], res: "Sistemas articulados que se recogen para transportarse y se abren para usarse.",
+            f: "Barras unidas en tijera (pantógrafos) o paneles con bisagras se despliegan por geometría articulada hasta su forma final, donde se bloquean.",
+            c: "Piezas articuladas, geometría modular, bloqueos de seguridad y, a veces, membranas integradas.",
+            v: "Armado en minutos, formato compacto, reutilización frecuente y buena movilidad.",
+            l: "Las articulaciones exigen mantenimiento, la rigidez final es menor y las formas están limitadas por el mecanismo.",
+            a: "Estands emergentes, carpas plegables, mamparas abatibles y cubiertas retráctiles de membrana articulada en tijera." },
+          { t: "Cubiertas de membranas", id: "cubiertas-membranas", r: [3, 4, 3, 5], res: "Superficies textiles pretensadas que resisten cargas por tracción.",
+            f: "La tela se tensa entre mástiles, arcos y cables; su doble curvatura (anticlástica o sinclástica) le da rigidez, y su forma se obtiene mediante un cálculo de búsqueda de forma.",
+            c: "Tejidos recubiertos o láminas poliméricas, pretensado, curvaturas opuestas, bordes de cable y mástiles.",
+            v: "Gran cobertura con poco material, ligereza, luz natural y una superficie ideal para marca y proyección.",
+            l: "Requieren diseño y patronaje especializados, son sensibles al viento y al agua acumulada, y aíslan poco del sonido y del calor.",
+            a: "Cubiertas de escenarios, carpas feriales, pabellones y parasoles de plazas." },
+          { t: "Tensegridad (Tensegrity)", id: "tensegridad", r: [2, 3, 2, 3], res: "Principio estructural de «islas de compresión en un mar de tensión».",
+            f: "Barras que no se tocan entre sí se mantienen estables gracias a una red continua de cables pretensados; el equilibrio nace de la tensión interna.",
+            c: "Compresión discontinua, tensión continua, pretensado y aspecto ligero que parece flotar. El término lo acuñó Buckminster Fuller.",
+            v: "Gran impacto visual, poco peso y posibilidad de desplegarse o cambiar de forma.",
+            l: "Rigidez baja, geometría y comportamiento mecánico complejos, y menor eficiencia que las estructuras convencionales con cargas grandes.",
+            a: "Torres e instalaciones escultóricas, cubiertas como las cúpulas de Fuller y pasarelas desplegables experimentales." },
+          { t: "Sistema modular Octanorm", id: "sistema-octanorm", r: [4, 4, 4, 2], res: "Perfiles de aluminio extruido de sección octogonal, lanzados en 1969 para estands feriales.",
+            f: "Perfiles y nodos estandarizados se ensamblan con piezas de conexión para formar paredes, soportes y cielos rasos; paneles y gráfica se añaden sobre el esqueleto.",
+            c: "Aluminio reciclable, medidas modulares, conexiones rápidas y accesorios como iluminación y mobiliario integrados.",
+            v: "Montaje ágil, alta reutilización, personalización con gráfica y una amplia red de proveedores.",
+            l: "Puede verse estándar sin diseño adicional, exige piezas compatibles del mismo sistema y tiene límites en grandes luces o voladizos.",
+            a: "Estands de ferias, muros expositivos, displays, tiendas temporales y diseño de interiores." },
+          { t: "Escenarios rodantes", id: "escenarios-rodantes", r: [5, 5, 5, 2], res: "Plataformas sobre remolque o vehículo que llegan armadas y se abren en el lugar del evento.",
+            f: "El camión o remolque llega al sitio, se nivela, y sus laterales, cubierta y piso se despliegan con sistemas hidráulicos o mecánicos.",
+            c: "Chasis móvil, cubierta y laterales plegables, piso técnico y puntos de anclaje para sonido e iluminación.",
+            v: "Puesta en marcha en pocas horas, autonomía logística y facilidad para itinerar entre plazas y municipios.",
+            l: "Tamaño limitado por normas de tránsito; requieren terreno nivelado, acceso vehicular y permisos de circulación.",
+            a: "Giras musicales, festivales populares, ferias municipales y eventos culturales en espacio público." }
+        ]
+      },
+      aplicacion: `BETA combina tres de estas tipologías: perfiles tipo Octanorm para los arcos reutilizables, una membrana tensada como piel y pantalla, y uniones desmontables inspiradas en los sistemas plegables para transportar la instalación entre el taller y el campus.`
+    }
   ]
   /* FIN: ACTIVIDADES DEL TERCER CORTE */
 };
