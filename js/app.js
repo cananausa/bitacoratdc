@@ -29,7 +29,6 @@
   const A = D.agencia;
   /* INICIO: COMPOSICIÓN DEL HOME (el texto sale de data.js; aquí solo se edita la forma) */
   const W = (v) => `<svg class="wv" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="${v ? "M0 50C200 110 420 0 700 40S1180 100 1440 20V100H0Z" : "M0 30C260 -10 460 100 760 60S1220 0 1440 60V100H0Z"}" fill="currentColor"/></svg>`;
-  const P = (v) => [].concat(v).map((t) => `<p>${t}</p>`).join("");
   const slogan = A.slogan.replace(/caña/i, (m) => `<em>${m}</em>`);
   if (page === "home") main.innerHTML = `
     <section class="hero sec" style="--bg:var(--vino)">
@@ -52,8 +51,8 @@
 
     <section class="sec mv" style="--bg:#fffaf0">${W(0)}
       <div class="w"><div class="blobs">
-        <article class="blob b1 rv"><h3>Misión</h3>${P(A.mision)}</article>
-        <article class="blob b2 rv"><h3>Visión</h3>${P(A.vision)}</article></div>
+        <article class="blob b1 rv"><h3>Misión</h3><p>${A.mision}</p></article>
+        <article class="blob b2 rv"><h3>Visión</h3><p>${A.vision}</p></article></div>
         <h3 class="sub rv">Principios</h3>
         <ul class="pebbles">${A.principios.map((p) => `<li class="pebble rv"><h4>${p.t}</h4><p>${p.d}</p></li>`).join("")}</ul></div></section>
 
@@ -89,6 +88,13 @@
         imagen: `<figure><img src="${R}${b.src}" alt="${b.alt || ""}" loading="lazy"><figcaption>${b.pie || ""}</figcaption></figure>`,
         cita: `<blockquote>${b.texto}</blockquote>`,
         galeria: `<div class="gallery">${(b.imagenes || []).map(g => `<figure><img src="${R}${g.src}" alt="${g.alt || ""}" loading="lazy"><figcaption>${g.nota || ""}</figcaption></figure>`).join("")}</div>`
+
+      ,
+      tarjetas: `<section>${b.titulo ? `<h2>${b.titulo}</h2>` : ""}${b.intro ? `<p>${b.intro}</p>` : ""}<ul class="tj">${(b.items || []).map(i => `<li><h3>${i.t}</h3><p>${i.d}</p></li>`).join("")}</ul></section>`,
+      linea: `<section>${b.titulo ? `<h2>${b.titulo}</h2>` : ""}<ol class="tl">${(b.hitos || []).map(h => `<li><b>${h.a}</b><h3>${h.t}</h3><p>${h.d}</p></li>`).join("")}</ol></section>`,
+      tipologias: `<section>${b.titulo ? `<h2>${b.titulo}</h2>` : ""}${b.intro ? `<p>${b.intro}</p>` : ""}<div class="tip">${(b.items || []).map((i, n) => `<details${n === 0 ? " open" : ""}><summary><span class="n">${n + 1}</span>${i.t}</summary><p class="res">${i.res}</p><dl><dt>Funcionamiento</dt><dd>${i.f}</dd><dt>Características</dt><dd>${i.c}</dd><dt>Ventajas</dt><dd>${i.v}</dd><dt>Limitaciones</dt><dd>${i.l}</dd><dt>Aplicaciones</dt><dd>${i.a}</dd></dl></details>`).join("")}</div></section>`,
+      esquema: `<figure class="dg">${b.markup || ""}<figcaption>${b.pie || ""}</figcaption></figure>`,
+      refs: `<section><h2>${b.titulo || "Referencias"}</h2><ol class="refs">${(b.items || []).map(r => `<li>${r}</li>`).join("")}</ol></section>`
       }[b.tipo] || "");
       const prev = acts[i - 1], next = acts[i + 1];
       main.innerHTML = `<nav class="crumbs" aria-label="Ruta"><a href="../index.html">Home</a> / <a href="index.html">Tercer corte</a> / ${a.titulo}</nav>
