@@ -61,30 +61,22 @@ vision: [
      Agrega un objeto por actividad (ver LEEME.md). Se crea sola su página:
      tercer-corte/actividad.html?id=<id>. bloques: texto | imagen | galeria | cita */
   actividades: [
-    { id: "demo", demo: true, semana: "Semana X", fecha: "", titulo: "Ejemplo de plantilla de actividad",
-      resumen: "DEMOSTRACIÓN del formato. No es una actividad académica real.",
-      bloques: [
-        { tipo: "texto", titulo: "Objetivo", texto: "Texto de ejemplo. Reemplaza por el objetivo real de la actividad." },
-        { tipo: "imagen", src: "assets/img/logo_circular.png", alt: "Imagen de ejemplo", pie: "Pie de imagen de ejemplo." },
-        { tipo: "cita", texto: "Reflexión o decisión de diseño destacada." },
-        { tipo: "galeria", imagenes: [{ src: "assets/img/imagotipo_rojo.svg", alt: "Ejemplo 1", nota: "Anotación: por qué se eligió." }] }
-      ] },
-    { id: "concepto-cultura-arquitectura", editorial: true, semana: "", fecha: "29 oct 2026",
+    { id: "concepto-cultura-arquitectura", editorial: true, semana: "12", fecha: "29 oct 2026",
       titulo: "BETA: instalación para promocionar Diseño Digital, cultura digital y arquitectura efímera",
       resumen: "Una instalación universitaria interactiva que muestra qué se crea al estudiar Diseño Digital, con síntesis de cultura digital, la carrera y seis tipologías de arquitectura efímera.",
       pdf: "assets/documentos/referencias-apa7.pdf",
       concepto: {
         nombre: "BETA",
         lema: "Estudiar Diseño Digital es entrar a una versión beta de uno mismo.",
-        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 8 metros para el vestíbulo de la Universidad Sergio Arboleda, sede Santa Marta, que convierte la pregunta «¿qué puedo crear?» en un recorrido que se atraviesa con el cuerpo: un túnel de arcos modulares de aluminio, cubierto por una membrana translúcida tensada, funciona a la vez como umbral, pantalla y señal luminosa visible desde los pasillos. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades son difíciles de explicar con folletos o charlas, mientras que aspirantes y estudiantes de otros programas necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a estudiantes de primeros semestres, aspirantes de colegios que visitan la sede y comunidad universitaria, propone cuatro estaciones: «Mira», donde láminas superpuestas revelan la carrera según el ángulo; «Arma», donde piezas físicas con NFC se combinan sobre una mesa y generan en la membrana un cartel dinámico de color, forma y sonido; «Descubre», que proyecta los campos profesionales vinculados a lo que el visitante armó; y «Llévate», que imprime una ficha-cartel con su composición y un QR hacia el programa. Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del juego, el color caribe y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora, y propone que estudiar Diseño Digital es meterle caña a un proceso en construcción donde cada persona deja su huella.`,
+        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 2 metros pensada para su inicial instalación en la Universidad Sergio Arboleda, sede Santa Marta RNL, que convierte la pregunta «¿qué puedo crear?» en un recorrido que se atraviesa con el cuerpo: un "túnel" de arcos triangulares funciona a la vez como umbral, pantalla y señal luminosa visible desde lejos. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades son difíciles de explicar con folletos o charlas, mientras que aspirantes de grado 11° necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a estudiantes aspirantes de colegios que visitan la sede, entre los 16 y 19 años, propone cuatro estaciones: ----- Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del juego, el color caribe y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora, y propone que estudiar Diseño Digital es meterle caña a un proceso en construcción donde cada persona deja su huella.`,
         ficha: [
           ["Nombre", "BETA"],
-          ["Idea rectora", "La carrera se comprende al hacer: cada visitante construye una primera pieza."],
-          ["Público", "Aspirantes, estudiantes de primeros semestres y comunidad universitaria."],
+          ["Idea central", "El mobiliario puede partir de una simple tabla e invitar a su uso en etapas."],
+          ["Público", "Aspirantes, estudiantes de grado 11° de cualquier colegio en la región Caribe."],
           ["Oportunidad", "Explicar de forma tangible qué es Diseño Digital y qué se puede crear con él."],
           ["Propósito", "Despertar interés por la carrera y conducir al visitante hacia más información."],
           ["Diferenciadores", "Recorrido físico, creación participativa, resultado que el visitante se lleva."],
-          ["Contexto", "Vestíbulo o zona techada del campus, en ferias de admisión y semanas de facultad."]
+          ["Contexto", "Zonas verdes del campus, corredores abiertos o cualquier sitio donde quepa."]
         ] },
       estaciones: [
         { n: "Mira", img: "imagen-estacion-mira", ve: "Arcos con láminas translúcidas superpuestas de tipografía y color. Al caminar, la lectura cambia: «¿Qué puedes crear?».", hace: "Caminar, rodear y mirar desde distintos ángulos.", d: "La carrera es un conjunto de disciplinas que se superponen: imagen, interacción, objeto y narrativa." },
@@ -108,12 +100,12 @@ vision: [
         { t: "Señalética tipográfica", d: "Mensajes grandes que comunican el recorrido sin explicaciones largas." }
       ],
       integracion: [
-        { t: "Dónde", d: "Vestíbulo o zona techada con alto tránsito, sin bloquear rutas de evacuación." },
-        { t: "Cuándo", d: "Ferias de admisión, semana de facultad y visitas de colegios." },
+        { t: "Dónde", d: "Zonas verdes entre el Bloque H y el Bloque D; así como zonas comunes alrededor de la fuente central del campus RNL." },
+        { t: "Cuándo", d: "Fechas de admisión, Semana SOY Digital, Semana Cultural." },
         { t: "Quién la opera", d: "Estudiantes de la carrera como guías, con apoyo técnico del programa." }
       ],
       cultura: {
-        def: `La cultura digital es el conjunto de prácticas, lenguajes, valores y formas de organización que surgen cuando las tecnologías digitales y las redes median cómo nos comunicamos, aprendemos, trabajamos y creamos. No se reduce al uso de dispositivos: se enlaza con una historia más larga que la del computador personal, con la sociedad red descrita por Castells y con principios propios de los nuevos medios que explican por qué un contenido digital puede copiarse, modificarse y recombinarse con facilidad.`,
+        def: `La cultura digital es el conjunto de prácticas, lenguajes, valores y formas de organización que surgen cuando las tecnologías digitales y las redes median cómo nos comunicamos, aprendemos, trabajamos y creamos. No se reduce al uso de dispositivos: se enlaza con una historia más larga que la del compu personal, con la sociedad red descrita por Castells y con principios propios de los nuevos medios que explican por qué un contenido digital puede copiarse, modificarse y recombinarse con facilidad.`,
         hitos: [
           { a: "1945", t: "El memex", d: "Vannevar Bush imagina una máquina para enlazar documentos, antecedente intelectual del hipertexto." },
           { a: "1969", t: "ARPANET", d: "Primer enlace entre computadores de universidades de EE. UU., germen de Internet." },
@@ -146,7 +138,7 @@ vision: [
           { t: "Núcleo proyectual", d: "Introducción al diseño y Talleres de Diseño Conceptual I a IV, con talleres de diseño e investigación." },
           { t: "Lenguajes digitales", d: "Lógica para el mundo digital, gráfica digital, fotografía digital y narrativa digital." },
           { t: "Interfaz y gestión", d: "Diseño e interfaz y gestión de proyectos de diseño." },
-          { t: "Énfasis", d: "Objetos (modelado digital, FabLab, diseño sostenible) y videojuegos (escultura digital, diseño de videojuegos)." },
+          { t: "Énfasis", d: "Objetos (modelado digital), Creación de Contenidos Digitales; y videojuegos (escultura digital, diseño de videojuegos)." },
           { t: "Cultura y estética digital", d: "Semiótica, materialidad digital, diseño interactivo, mashup y cultura digital." }
         ],
         competencias: [
@@ -166,7 +158,7 @@ vision: [
         ]
       },
       arq: {
-        def: `La arquitectura efímera produce espacios pensados para existir durante un tiempo limitado: el de una feria, un festival o una exposición. Su lógica se invierte respecto a la construcción permanente: se diseña desde el montaje y el desmontaje, y se mide en rapidez, ligereza, reutilización, claridad de marca y seguridad bajo uso intensivo. Un ejemplo es el Warnowturm, una torre de 49 m construida en diez días para la Feria Internacional de Jardinería de 2003.`,
+        def: `La arquitectura efímera produce espacios pensados para existir durante un tiempo limitado: el de una feria, un festival o una exposición. Su lógica se invierte respecto a la construcción permanente: se diseña desde el montaje y el desmontaje, y se mide en rapidez, ligereza, reutilización, claridad de marca y seguridad bajo uso intensivo. Un ejemplo emblemático es el Pabellón de la Serpentine Gallery de 2015 de SelgasCano en Londres: una estructura efímera de arcos de acero y membranas translúcidas multicolor que, durante cuatro meses, transformó la luz natural y artificial en una experiencia inmersiva y colorida en medio del parque antes de ser desmontada.`,
         fundamentos: ["Temporalidad", "Montaje y desmontaje", "Ligereza y transporte", "Modularidad y reutilización", "Seguridad y normativa"],
         criterios: ["Montaje", "Movilidad", "Rigidez", "Luz libre"],
         tipologias: [
@@ -208,7 +200,7 @@ vision: [
             a: "Giras musicales, festivales populares, ferias municipales y eventos culturales en espacio público." }
         ]
       },
-      aplicacion: `BETA combina tres de estas tipologías: perfiles tipo Octanorm para los arcos reutilizables, una membrana tensada como piel y pantalla, y uniones desmontables inspiradas en los sistemas plegables para transportar la instalación entre el taller y el campus.`
+      Aprendizajes: `BETA puede aprender muchas cosas que colocaremos después.`
     }
   ]
   /* FIN: ACTIVIDADES DEL TERCER CORTE */
