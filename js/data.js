@@ -5,10 +5,10 @@ window.CANANA = {
   agencia: {
     nombre: "Cañaña",
     slogan: "Meterle caña a las ideas.", // EDITABLE: tomado del concepto de marca; reemplazar si hay slogan oficial
-    frase: "Un grupo de mentes singulares que impulsa el diseño colombiano con perrenque.",
+    frase: "Cañaña Agencia de Diseño es un grupo de mentes singulares que impulsa el diseño colombiano con perrenque.",
     contexto: "Diseño Digital · Universidad Sergio Arboleda, sede Santa Marta · Taller de Diseño Conceptual IV (TDC-IV)",
     concepto: [
-      "Cañaña nace como un grupo de mentes singulares destinadas a meterle caña a las ideas y proyectos de diseño capaces de crear y romper los paradigmas del sector de diseño colombiano, generando un crecimiento total en la cultura innovadora de cualquier ambiente.",
+      "Cañaña nace como un grupo de mentes singulares destinadas a meterle caña a las ideas y proyectos de diseño capaces de crear y romper los paradigmas dentro de la carrera de Diseño Digital de la Sergio, generando un crecimiento total en la cultura innovadora de cualquier ambiente.",
       "Al partir de una palabra tan callejera, cargada de perrenque e identidad colombiana, buscamos trasladar esa fuerza al diseño de experiencias culturales memorables, capaces de conectar con las personas desde sus realidades, necesidades y formas de vivir. Nos mueve comprender los contextos que nos rodean, reconocer su diversidad cultural y transformar esos hallazgos en propuestas creativas centradas en el usuario, donde lo cotidiano se convierte en una oportunidad para diseñar experiencias significativas y auténticas."
     ],
     proposito: "Porque las personas y comunidades necesitan experiencias de diseño que comprendan sus necesidades, reconozcan sus contextos y respondan a sus formas de vivir, para transformar sus ideas y realidades en soluciones centradas en el usuario, capaces de generar conexiones significativas y experiencias culturales memorables.",
@@ -70,13 +70,13 @@ vision: [
          Mientras "nombre" esté vacío, el pie se muestra atenuado como recordatorio. */
       creditos: {
         "imagen-portada": { nombre: "Pabellón de la Serpentine", fuente: "Arquitectura Viva", anio: "2016", url: "arquitecturaviva.com" },
-        "imagen-concepto-instalacion": { nombre: "Esquema Básico", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
-        "imagen-esquema-instalacion": { nombre: "Esquema Básico", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
-        "imagen-estacion-mira": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
-        "imagen-estacion-arma": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
-        "imagen-estacion-descubre": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
-        "imagen-estacion-llevate": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
-        "imagen-componentes-instalacion": { nombre: "Boceto componentes", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
+        "imagen-concepto-instalacion": { nombre: "Esquema Básico", fuente: "Cañaña", anio: "2026", url: "" },
+        "imagen-esquema-instalacion": { nombre: "Esquema Básico", fuente: "Cañaña", anio: "2026", url: "" },
+        "imagen-estacion-mira": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "" },
+        "imagen-estacion-arma": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "" },
+        "imagen-estacion-descubre": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "" },
+        "imagen-estacion-llevate": { nombre: "Boceto secundario", fuente: "Cañaña", anio: "2026", url: "" },
+        "imagen-componentes-instalacion": { nombre: "Boceto", fuente: "Cañaña", anio: "2026", url: "" },
         "imagen-cultura-digital": { nombre: "Grupo de Jóvenes", fuente: "Universimed", anio: "2025", url: "universimed.com" },
         "imagen-diseno-digital": { nombre: "Escuela de Diseño", fuente: "Arcos", anio: "2017", url: "arcos.cl" },
         "imagen-campos-accion": { nombre: "Collage Gráfico", fuente: "Gear Patrol", anio: "2022", url: "gearpatrol.com" },
@@ -87,13 +87,13 @@ vision: [
         "imagen-tensegridad": { nombre: "Needle Tower", fuente: "Wikipedia", anio: "2026", url: "wikipedia.org" },
         "imagen-sistema-octanorm": { nombre: "Stand Modulable", fuente: "CG Trader", anio: "2021", url: "cgtrader.com" },
         "imagen-escenarios-rodantes": { nombre: "Camión Móvil Husqvarna", fuente: "Doblemeventos", anio: "2019", url: "doblemeventos.com" },
-        "imagen-aplicacion-beta": { nombre: "Boceto Beta", fuente: "Cañaña", anio: "2026", url: "Cañaña" },
+        "imagen-aplicacion-beta": { nombre: "Esquema Básico", fuente: "Cañaña", anio: "2026", url: "" },
         "imagen-cierre": { nombre: "Universidad Sergio Arboleda", fuente: "El Informador", anio: "2021", url: "elinformador.com.co" }
       },
       concepto: {
         nombre: "BETA",
         lema: "Estudiar Diseño Digital es entrar a una versión beta de uno mismo.",
-        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 8 metros para el vestíbulo de la Universidad Sergio Arboleda, sede Santa Marta, que convierte la pregunta «¿qué puedo crear?» en un recorrido que se atraviesa con el cuerpo: un túnel de arcos modulares de aluminio, cubierto por una membrana translúcida tensada, funciona a la vez como umbral, pantalla y señal luminosa visible desde los pasillos. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades son difíciles de explicar con folletos o charlas, mientras que aspirantes y estudiantes de otros programas necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a estudiantes de primeros semestres, aspirantes de colegios que visitan la sede y comunidad universitaria, propone cuatro estaciones: «Mira», donde láminas superpuestas revelan la carrera según el ángulo; «Arma», donde piezas físicas con NFC se combinan sobre una mesa y generan en la membrana un cartel dinámico de color, forma y sonido; «Descubre», que proyecta los campos profesionales vinculados a lo que el visitante armó; y «Llévate», que imprime una ficha-cartel con su composición y un QR hacia el programa. Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del juego, el color caribe y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora, y propone que estudiar Diseño Digital es meterle caña a un proceso en construcción donde cada persona deja su huella.`,
+        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 2 metros pensada para instalarse en cualquier espacio abierto la Universidad Sergio Arbolede sede RNL o Centro (Santa Marta), que convierte la pregunta «¿qué es el diseño digital?» en un recorrido que se atraviesa con el cuerpo y la mente: un túnel de arcos triangulares cubiertos por un tragaluz funciona a la vez como umbral, mobiliario y arquitectura efímera y viva. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades requieren un espacio único para explicarlas, mientras que estudiantes de grado 11° de colegios samarios necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a dichos estudiantes que visitan la sede y comunidad universitaria, se proponen cuatro momentos dentro del mobiliario: «Llegada», donde la persona llega mirando el stand de frente, no hay nada que obstaculice y la idea es apreciar el diseño innovador del mueble. «Mirada», Dentro del stand el usuario encuentra folletos con la identidad visual de la carrera, puede tomar un volante y llevarse la información clave en la mano.; «Descubre», El centro de atención absoluto del stand será un pendón grande, catchy visual, mostrando imágenes, el concepto de la carrera y conceptos útiles para la comprensión del usuario.; y «Conversa»,  El usuario sale del túnel, y se acerca a conversar con un voluntario de la carrera cara a cara y de pie. Es el momento perfecto para resolver dudas y entender la empatía de la carrera.. Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del juego, el color caribe y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es túnel experiencial y medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora.`,
         ficha: [
           ["Nombre", "BETA"],
           ["Idea rectora", "La carrera se comprende al hacer: cada visitante construye una primera pieza."],
