@@ -159,12 +159,12 @@ integracion: [
         tendencias: ["IA generativa", "Realidad extendida", "Cultura de creadores", "Datos y privacidad", "Brecha digital", "Patrimonio digital"]
       },
       carrera: {
-        def: `El diseño digital aplica la tecnología al arte y al diseño para crear piezas gráficas, interactivas y multimedia con ingenio y creatividad. En la Universidad Sergio Arboleda se presenta como un campo que se distingue de la programación y del diseño gráfico, con los que suele confundirse, y que no se limita al dominio de programas: se pregunta por el potencial creador de las herramientas.`,
+        def: `El diseño digital es la disciplina que crea experiencias, productos y contenidos para medios digitales, como interfaces, videojuegos, identidades visuales y narrativas transmedia, combinando creatividad, tecnología y comunicación visual. El diseño digital aplica la tecnología al arte y al diseño para crear piezas gráficas, interactivas y multimedia con ingenio y creatividad. En la Universidad Sergio Arboleda se presenta como un campo que se distingue de la programación y del diseño gráfico, con los que suele confundirse, y que no se limita al dominio de programas: se pregunta por el potencial creador de las herramientas.`,
         ruta: [
           { t: "Núcleo proyectual", d: "Introducción al diseño y Talleres de Diseño Conceptual I a IV, con talleres de diseño e investigación." },
           { t: "Lenguajes digitales", d: "Lógica para el mundo digital, gráfica digital, fotografía digital y narrativa digital." },
           { t: "Interfaz y gestión", d: "Diseño e interfaz y gestión de proyectos de diseño." },
-          { t: "Énfasis", d: "Objetos (modelado digital, FabLab, diseño sostenible) y videojuegos (escultura digital, diseño de videojuegos)." },
+          { t: "Énfasis", d: "Objetos (modelado digital), Creación de Contenidos Digitales, y Diseño de Videojuegos" },
           { t: "Cultura y estética digital", d: "Semiótica, materialidad digital, diseño interactivo, mashup y cultura digital." }
         ],
         competencias: [
@@ -184,7 +184,7 @@ integracion: [
         ]
       },
       arq: {
-        def: `La arquitectura efímera produce espacios pensados para existir durante un tiempo limitado: el de una feria, un festival o una exposición. Su lógica se invierte respecto a la construcción permanente: se diseña desde el montaje y el desmontaje, y se mide en rapidez, ligereza, reutilización, claridad de marca y seguridad bajo uso intensivo. Un ejemplo es el Warnowturm, una torre de 49 m construida en diez días para la Feria Internacional de Jardinería de 2003.`,
+        def: `La arquitectura efímera produce espacios pensados para existir durante un tiempo limitado: el de una feria, un festival o una exposición. Su lógica se invierte respecto a la construcción permanente: se diseña desde el montaje y el desmontaje, y se mide en rapidez, ligereza, reutilización, claridad de marca y seguridad bajo uso intensivo. Un ejemplo es el Serpentine Pavilion, un pabellón temporal que cada verano se construye en los jardines de las Serpentine Galleries, en Londres, y que desde el año 2000 se encarga a un arquitecto distinto, con Zaha Hadid como la primera.`,
         fundamentos: ["Temporalidad", "Montaje y desmontaje", "Ligereza y transporte", "Modularidad y reutilización", "Seguridad y normativa"],
         criterios: ["Montaje", "Movilidad", "Rigidez", "Luz libre"],
         tipologias: [
@@ -226,7 +226,6 @@ integracion: [
             a: "Giras musicales, festivales populares, ferias municipales y eventos culturales en espacio público." }
         ]
       },
-      aplicacion: `BETA combina tres de estas tipologías: perfiles tipo Octanorm para los arcos reutilizables, una membrana tensada como piel y pantalla, y uniones desmontables inspiradas en los sistemas plegables para transportar la instalación entre el taller y el campus.`
     }
   ]
   /* FIN: ACTIVIDADES DEL TERCER CORTE */
