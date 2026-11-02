@@ -93,42 +93,43 @@ vision: [
       concepto: {
         nombre: "BETA",
         lema: "Estudiar Diseño Digital es entrar a una versión beta de uno mismo.",
-        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 2 metros pensada para instalarse en cualquier espacio abierto la Universidad Sergio Arbolede sede RNL o Centro (Santa Marta), que convierte la pregunta «¿qué es el diseño digital?» en un recorrido que se atraviesa con el cuerpo y la mente: un túnel de arcos triangulares cubiertos por un tragaluz funciona a la vez como umbral, mobiliario y arquitectura efímera y viva. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades requieren un espacio único para explicarlas, mientras que estudiantes de grado 11° de colegios samarios necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a dichos estudiantes que visitan la sede y comunidad universitaria, se proponen cuatro momentos dentro del mobiliario: «Llegada», donde la persona llega mirando el stand de frente, no hay nada que obstaculice y la idea es apreciar el diseño innovador del mueble. «Mirada», Dentro del stand el usuario encuentra folletos con la identidad visual de la carrera, puede tomar un volante y llevarse la información clave en la mano.; «Descubre», El centro de atención absoluto del stand será un pendón grande, catchy visual, mostrando imágenes, el concepto de la carrera y conceptos útiles para la comprensión del usuario.; y «Conversa»,  El usuario sale del túnel, y se acerca a conversar con un voluntario de la carrera cara a cara y de pie. Es el momento perfecto para resolver dudas y entender la empatía de la carrera.. Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del juego, el color caribe y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es túnel experiencial y medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora.`,
+        parrafo: `<strong>BETA</strong> es una instalación semipermanente de 3 × 2 metros que inicia como una tabla plana y se levanta hasta que se pliega y transforma en un stand, pensada para instalarse en cualquier espacio abierto la Universidad Sergio Arbolede sede RNL o Centro (Santa Marta); y que convierte la pregunta «¿qué es el diseño digital?» en un recorrido que se atraviesa con el cuerpo y la mente: una tabla que se convierte en un túnel de arcos triangulares cubiertos por un tragaluz funciona a la vez como umbral, mobiliario y arquitectura efímera y viva. Responde a una oportunidad doble: la carrera de Diseño Digital suele confundirse con programación o con diseño gráfico y sus posibilidades requieren un espacio único para explicarlas, mientras que estudiantes de grado 11° de colegios samarios necesitan comprobar por sí mismos qué se aprende y qué se puede lograr. Dirigida a dichos estudiantes que visitan la sede, se proponen cuatro momentos dentro del mobiliario: «Llegada», donde la persona llega mirando el stand de frente, no hay nada que obstaculice y la idea es apreciar el diseño innovador del mueble. «Mirada», Dentro del stand el usuario encuentra folletos con la identidad visual de la carrera,toma uno y se lleva la información clave en la mano; «Descubre», El centro de atención absoluto del stand será un pendón grande, catchy visual, mostrando imágenes, el concepto de la carrera e ideas útiles para la comprensión del usuario; y «Conversa»,  El usuario sale del túnel, y se acerca a conversar con un voluntario de la carrera cara a cara y de pie. Es el momento perfecto para resolver dudas y entenderlo todo. Desde el pensamiento estratégico de diseño, equilibra la racionalidad de un sistema modular, repetible y medible con la sensibilidad del diseño y la sorpresa, y redefine la relación entre objeto, sujeto y contexto: la estructura es túnel experiencial y medio de comunicación, el visitante es coautor del mensaje y el campus es el escenario donde la carrera se demuestra en lugar de explicarse. Su nombre alude a la versión beta, el producto que se prueba, se ajusta y se mejora.`,
         ficha: [
           ["Nombre", "BETA"],
-          ["Idea rectora", "La carrera se comprende al hacer: cada visitante construye una primera pieza."],
-          ["Público", "Aspirantes, estudiantes de primeros semestres y comunidad universitaria."],
+          ["Idea rectora", "La carrera se comprende al adentrarse en su propia forma de comunicación."],
+          ["¿Quién?", "Jóvenes entre los 15 y 19 años, estudiantes de grado 11° de los colegios de Santa Marta."],
           ["Oportunidad", "Explicar de forma tangible qué es Diseño Digital y qué se puede crear con él."],
           ["Propósito", "Despertar interés por la carrera y conducir al visitante hacia más información."],
-          ["Diferenciadores", "Recorrido físico, creación participativa, resultado que el visitante se lleva."],
-          ["Contexto", "Vestíbulo o zona techada del campus, en ferias de admisión y semanas de facultad."]
+          ["Diferenciadores", "Recorrido físico, diseño disruptivo, resultado que el visitante se lleva."],
+          ["¿Dónde?", "Zonas abiertas de los campus, como la fuente, mangales, Bloque H y alrededores."]
         ] },
       estaciones: [
-        { n: "Mira", img: "imagen-estacion-mira", ve: "Arcos con láminas translúcidas superpuestas de tipografía y color. Al caminar, la lectura cambia: «¿Qué puedes crear?».", hace: "Caminar, rodear y mirar desde distintos ángulos.", d: "La carrera es un conjunto de disciplinas que se superponen: imagen, interacción, objeto y narrativa." },
-        { n: "Arma", img: "imagen-estacion-arma", ve: "Una mesa con piezas de forma, color, sonido y movimiento. Cada pieza lleva una etiqueta NFC.", hace: "Combinar tres piezas; la membrana proyecta al instante un cartel generativo con esa mezcla.", d: "Diseñar es tomar decisiones dentro de un sistema, con lógica y con expresión." },
-        { n: "Descubre", img: "imagen-estacion-descubre", ve: "La proyección muestra rutas profesionales relacionadas con la composición creada.", hace: "Tocar o escanear para ver asignaturas, énfasis y campos de acción asociados.", d: "Lo que acaba de hacer conecta con experiencias, videojuegos, objetos y contenidos transmedia." },
-        { n: "Llévate", img: "imagen-estacion-llevate", ve: "Una estación de impresión entrega una ficha-cartel con la composición del visitante.", hace: "Recoger la ficha y escanear su QR hacia el programa y los canales de admisión.", d: "Ya hizo su primera pieza de diseño digital: el siguiente paso es continuar." }
+        { n: "Llegada", img: "imagen-estacion-mira", ve: "Una construcción con un túnel triangular que parece una obra de Santiago Calatrava. Al acercarse, la lectura cambia: «¿Qué hay ahí?».", hace: "Caminar, rodear y mirar desde distintos ángulos.", d: "La carrera le metió tremendo esfuerzo a un stand creativo, aquí hay muchas herramientas que se superponen: arquitectura, diseño gráfico, comunicación visual, marketing." },
+        { n: "Mirada", img: "imagen-estacion-arma", ve: "Los folletos con la información clave de la carrera, sujetos a un dispensador curioso y efectivo.", hace: "Puede tomar uno desplegable que le brinda todo tipo de datos curiosos interesantes", d: "El Diseño es mucho más que crear logos o juegos: Diseñar es tomar decisiones dentro de un sistema, con lógica y con expresión." },
+        { n: "Descubre", img: "imagen-estacion-descubre", ve: "El pendón central roba totalmente su atención, generando intriga sobre las posibilidades de los 3 énfasis que ofrece la carrera.", hace: "Lee y aprecia el arte gráfico del pendón, escanea un QR para ver asignaturas, énfasis y campos de acción asociados.", d: "Lo que acaba de hacer conecta con experiencias, videojuegos, objetos y contenidos transmedia." },
+        { n: "Conversa", img: "imagen-estacion-llevate", ve: "Sale del túnel inmersivo para encontrarse con un amable estudiante que le cuenta su experiencia en palabras sencillas y amenas.", hace: "Conoce el testimonio de un paisano suyo y genera empatía y expectativa por su futuro.", d: "Ya conociste las posibilidades del diseño digital, el siguiente paso es graduarte para ser un sergista." }
       ],
       fases: [
-        { t: "Atención", d: "Luz y tipografía visibles desde los pasillos." },
-        { t: "Curiosidad", d: "Un umbral translúcido invita a entrar." },
-        { t: "Participación", d: "El visitante arma y ve su resultado." },
-        { t: "Comprensión", d: "Conecta lo creado con la carrera." },
-        { t: "Acción", d: "Se lleva la ficha y el QR." }
+        { t: "Atención", d: "La silueta del túnel se distingue desde lejos entre los demás stands." },
+        { t: "Intriga", d: "Lo que no se alcanza a ver desde afuera invita a acercarse." },
+        { t: "Descubrimiento", d: "Cada visitante recorre a su ritmo y arma su propia idea de la carrera." },
+        { t: "Identificación", d: "Escucha a un estudiante real y se imagina en su lugar." },
+        { t: "Proyección", d: "Sale con el folleto y una imagen de sí mismo como futuro sergista." }
       ],
-      componentes: [
-        { t: "Portal modular", d: "Arcos de perfiles de aluminio tipo Octanorm, reutilizables." },
-        { t: "Membrana translúcida", d: "Tela tensada que funciona como piel, pantalla y difusor de luz." },
-        { t: "Mesa de piezas NFC", d: "Piezas físicas que el visitante combina para crear su cartel." },
-        { t: "Proyección y sonido", d: "Proyector de corta distancia y altavoces que responden a la mezcla." },
-        { t: "Estación de impresión", d: "Entrega la ficha-cartel con QR hacia el programa." },
-        { t: "Señalética tipográfica", d: "Mensajes grandes que comunican el recorrido sin explicaciones largas." }
-      ],
-      integracion: [
-        { t: "Dónde", d: "Vestíbulo o zona techada con alto tránsito, sin bloquear rutas de evacuación." },
-        { t: "Cuándo", d: "Ferias de admisión, semana de facultad y visitas de colegios." },
-        { t: "Quién la opera", d: "Estudiantes de la carrera como guías, con apoyo técnico del programa." }
-      ],
+    componentes: [
+  { t: "El tablero que se levanta", d: "Todo parte de una superficie plana que se pliega hacia arriba y se convierte en estructura: el mobiliario y la arquitectura del stand nacen de la misma pieza." },
+  { t: "Arcos triangulares", d: "Una sucesión de arcos en forma de triángulo, sostenidos por palos plegados, que dan ritmo y profundidad al recorrido." },
+  { t: "El túnel", d: "Centro de la experiencia: un paso inmersivo que separa el campus del mundo del diseño." },
+  { t: "Tragaluz", d: "Una abertura con una especie de pérgola cóncava de tablas en lo alto del túnel que deja entrar luz." },
+  { t: "Pendón central", d: "Pieza gráfica que domina el interior y concentra las posibilidades de los 3 énfasis de la carrera." },
+  { t: "Dispensador de folletos", d: "Un gesto pequeño y curioso que entrega la información clave y deja algo físico en la mano del visitante." },
+  { t: "Tipografía como señal", d: "Mensajes grandes y breves que guían el recorrido sin necesidad de explicarlo." }
+],
+integracion: [
+  { t: "Dónde", d: "En los espacios abiertos de ambas sedes, en puntos de alto tránsito donde el mobiliario se vea desde lejos y la entrada y la salida del recorrido queden despejadas." },
+  { t: "Cuándo", d: "En fechas admisión, Semana SOY Digital, Semana Cultural y en visitas de colegios, es decir, cuando llegan quienes aún no conocen la carrera." },
+  { t: "Quién la opera", d: "Estudiantes de la carrera, que reciben a los visitantes y cierran el recorrido con su testimonio." }
+],
       cultura: {
         def: `La cultura digital es el conjunto de prácticas, lenguajes, valores y formas de organización que surgen cuando las tecnologías digitales y las redes median cómo nos comunicamos, aprendemos, trabajamos y creamos. No se reduce al uso de dispositivos: se enlaza con una historia más larga que la del computador personal, con la sociedad red descrita por Castells y con principios propios de los nuevos medios que explican por qué un contenido digital puede copiarse, modificarse y recombinarse con facilidad.`,
         hitos: [
