@@ -119,7 +119,6 @@
   <h3 class="ed-h3 ed-rv">Comparativa rápida</h3>
   <div class="ed-tablewrap ed-rv" tabindex="0" role="region" aria-label="Tabla comparativa, desplazable"><table class="ed-cmp"><thead><tr><th>Tipología</th>${AR.criterios.map(c => `<th>${c}</th>`).join("")}</tr></thead><tbody>${AR.tipologias.map(t => `<tr><th scope="row">${t.t}</th>${t.r.map(n => `<td>${dots(n)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
   <p class="ed-note ed-rv">Valoración cualitativa orientativa elaborada por el equipo; 5 es el nivel más alto de cada criterio.</p>
-  <div class="ed-apply ed-rv"><p class="ed-k">Aplicación</p><p class="ed-big">${a.aplicacion}</p>${slot("imagen-aplicacion-beta", "16/9", "Estructura de BETA", "on-dark")}</div>
 </section>
 
 <section id="referencias" class="ed-sec ed-end" aria-labelledby="referencias-t">
