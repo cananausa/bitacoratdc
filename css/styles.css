@@ -600,3 +600,7 @@ body.ed header.hd-hide{transform:translateY(-100%);box-shadow:none}
 .slot .cap{font:.82rem/1.4 system-ui,"Segoe UI",Arial,sans-serif;margin-top:.5rem;color:var(--petrol);text-align:left}.slot .cap b{font-weight:700}.slot .cap a{color:inherit;overflow-wrap:anywhere}
 .slot .cap.pend{opacity:.6}
 .slot.on-dark .cap,.ed-hero .slot .cap{color:#fffaf0}.ed-end .slot .cap{color:var(--vino)}
+
+/* Banner de la materia en el footer */
+.foot-banner{display:block;width:min(100%,1100px);height:auto;margin:1.8rem auto 0;border-radius:.5rem}
+@media(max-width:860px){.foot-banner{margin-top:1.4rem;border-radius:.3rem}}
