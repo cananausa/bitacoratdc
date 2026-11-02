@@ -589,11 +589,11 @@ body.ed,body.ed footer{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"He
 .ed-go span,.ed-btn span,.dots,.ed-shift span,.ed-fund span,.ed-nav a span,.ed-tabs button span,.ed-tt button span,.ed-rail span{font-family:system-ui,"Segoe UI",Arial,sans-serif}
 body.ed footer{margin-top:-2.5rem}
 .ed-end{padding-bottom:calc(clamp(3rem,8vw,7rem) + 3rem)}
-@media(max-width:860px){body.ed header{position:sticky}}
+@media(max-width:860px){body.ed #site-header{position:sticky}}
 
 /* Encabezado principal: se oculta al bajar y reaparece al subir (solo en la actividad) */
-body.ed header{transition:transform .35s var(--ease),padding .35s var(--ease),box-shadow .35s var(--ease)}
-body.ed header.hd-hide{transform:translateY(-100%);box-shadow:none}
+body.ed #site-header{transition:transform .35s var(--ease),padding .35s var(--ease),box-shadow .35s var(--ease)}
+body.ed #site-header.hd-hide{transform:translateY(-100%);box-shadow:none}
 .ed-nav{transition:top .35s var(--ease)}
 
 /* Pies de foto (Nota. Figura x. Nombre. Tomado de: fuente (año)) */
@@ -604,7 +604,3 @@ body.ed header.hd-hide{transform:translateY(-100%);box-shadow:none}
 /* Banner de la materia en el footer */
 .foot-banner{display:block;width:min(100%,1100px);height:auto;margin:1.8rem auto 0;border-radius:.5rem}
 @media(max-width:860px){.foot-banner{margin-top:1.4rem;border-radius:.3rem}}
-
-@media (max-width: 860px) {
-  .edjs .ed-rv { opacity: 1 !important; transform: none !important; }
-}
