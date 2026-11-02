@@ -24,7 +24,8 @@
     <img src="${R}${D.recursos.imagotipo}" alt="" width="48">
     <p><strong>${D.agencia.nombre}</strong> · ${D.agencia.contexto}</p>
     <p><a href="${R}${D.recursos.manual}" target="_blank" rel="noopener">Manual de marca (PDF)</a> ·
-    <a href="${R}index.html">Home</a> · <a href="${R}tercer-corte/index.html">Tercer corte</a></p>`;
+    <a href="${R}index.html">Home</a> · <a href="${R}tercer-corte/index.html">Tercer corte</a></p>
+    <img class="foot-banner" src="${R}assets/img/banner-materia.png" alt="Rótulo de la materia TDC-IV" loading="lazy">`;
 
   const A = D.agencia;
   /* INICIO: COMPOSICIÓN DEL HOME (el texto sale de data.js; aquí solo se edita la forma) */
