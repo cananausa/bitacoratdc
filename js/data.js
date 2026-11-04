@@ -101,7 +101,7 @@ vision: [
           ["Oportunidad", "Explicar de forma tangible qué es Diseño Digital y qué se puede crear con él."],
           ["Propósito", "Despertar interés por la carrera y conducir al visitante hacia más información."],
           ["Diferenciadores", "Recorrido físico, diseño disruptivo, resultado que el visitante se lleva."],
-          ["¿Dónde?", "Zonas abiertas de los campus, como la fuente, mangales, Bloque H y alrededores."]
+          ["¿Dónde?", "Sobre la cancha de fútbol a las afueras del Bloque D, con suficiente espacio para la circulación y expectación."]
         ] },
       estaciones: [
         { n: "Llegada", img: "imagen-estacion-mira", ve: "Una construcción con un túnel triangular que parece una obra de Santiago Calatrava. Al acercarse, la lectura cambia: «¿Qué hay ahí?».", hace: "Caminar, rodear y mirar desde distintos ángulos.", d: "La carrera le metió tremendo esfuerzo a un stand creativo, aquí hay muchas herramientas que se superponen: arquitectura, diseño gráfico, comunicación visual, marketing." },
