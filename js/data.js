@@ -230,7 +230,57 @@ integracion: [
     { id: "analisis-de-referentes", referentes: true, semana: "", fecha: "9 nov 2026",
       titulo: "Análisis de referentes",
       resumen: "Matriz de doce referentes, conclusiones y decisiones para BETA, e inventario de recursos TIC con su clasificación.",
-      pdf: "assets/documentos/matriz-referentes.pdf" }
+      pdf: "assets/documentos/matriz-referentes.pdf" },
+
+         ,
+    { id: "desarrollo-formal", formal: true, semana: "", fecha: "",
+      titulo: "DESARROLLO FORMAL: bitácora de evolución de BETA",
+      resumen: "Bitácora cronológica por semanas con bocetos, dibujos, decisiones y comparaciones que muestran cómo la propuesta BETA se transforma y se perfecciona.",
+      lema: "La forma de BETA se decide, se prueba y se corrige semana a semana.",
+      intro: "Aquí queda el rastro del proceso: bocetos, dibujos, estudios de forma, pruebas y las decisiones que fueron moviendo la propuesta de una versión a la siguiente.",
+      evolucionTexto: "Cada semana registra qué se quería resolver, qué se decidió, qué cambió frente a la versión anterior y qué problemas quedaron por resolver. La secuencia y la matriz muestran de un vistazo cómo se transforma la propuesta.",
+      cierre: "Toda beta se mejora. Esta bitácora conserva el rastro de cada versión de BETA.",
+      carpeta: "assets/img/formal/",
+      ejes: [
+        { id: "forma", t: "Forma y volumen" },
+        { id: "espacio", t: "Distribución espacial" },
+        { id: "materiales", t: "Materiales" },
+        { id: "tecnologia", t: "Tecnología e interacción" }
+      ],
+      semanas: [
+        { n: 1, id: "semana-01", periodo: "", titulo: "", objetivo: "",
+          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
+          galeria: [
+            { tipo: "Bocetos iniciales", pie: "" },
+            { tipo: "Dibujos exploratorios", pie: "" },
+            { tipo: "Estudios de forma y volumen", pie: "" }
+          ] },
+        { n: 2, id: "semana-02", periodo: "", titulo: "", objetivo: "",
+          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
+          galeria: [
+            { tipo: "Distribución espacial", pie: "" },
+            { tipo: "Exploración de materiales", pie: "" },
+            { tipo: "Pruebas de composición", pie: "" }
+          ],
+          comparacion: { antes: "semana-01/01", despues: "semana-02/01", etiquetaAntes: "Semana 1", etiquetaDespues: "Semana 2", nota: "" } },
+        { n: 3, id: "semana-03", periodo: "", titulo: "", objetivo: "",
+          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
+          galeria: [
+            { tipo: "Diagramas de funcionamiento", pie: "" },
+            { tipo: "Modelo tridimensional", pie: "" },
+            { tipo: "Renderizado", pie: "" }
+          ],
+          comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "" } },
+        { n: 4, id: "semana-04", periodo: "", titulo: "", objetivo: "",
+          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
+          galeria: [
+            { tipo: "Prototipo", pie: "" },
+            { tipo: "Pruebas de interacción", pie: "" },
+            { tipo: "Renderizado final", pie: "" }
+          ],
+          comparacion: { antes: "semana-03/01", despues: "semana-04/01", etiquetaAntes: "Semana 3", etiquetaDespues: "Semana 4", nota: "" } }
+      ]
+    }
   ]
   /* FIN: ACTIVIDADES DEL TERCER CORTE */
 };
