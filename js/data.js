@@ -225,8 +225,12 @@ integracion: [
             l: "Tamaño limitado por normas de tránsito; requieren terreno nivelado, acceso vehicular y permisos de circulación.",
             a: "Giras musicales, festivales populares, ferias municipales y eventos culturales en espacio público." }
         ]
-      },
-    }
+            },
+    },
+    { id: "analisis-de-referentes", referentes: true, semana: "", fecha: "9 nov 2026",
+      titulo: "Análisis de referentes",
+      resumen: "Matriz de doce referentes, conclusiones y decisiones para BETA, e inventario de recursos TIC con su clasificación.",
+      pdf: "assets/documentos/matriz-referentes.pdf" }
   ]
   /* FIN: ACTIVIDADES DEL TERCER CORTE */
 };
