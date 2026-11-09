@@ -232,7 +232,6 @@ integracion: [
       resumen: "Matriz de doce referentes, conclusiones y decisiones para BETA, e inventario de recursos TIC con su clasificación.",
       pdf: "assets/documentos/matriz-referentes.pdf" },
 
-         ,
     { id: "desarrollo-formal", formal: true, semana: "", fecha: "",
       titulo: "DESARROLLO FORMAL: bitácora de evolución de BETA",
       resumen: "Bitácora cronológica por semanas con bocetos, dibujos, decisiones y comparaciones que muestran cómo la propuesta BETA se transforma y se perfecciona.",
