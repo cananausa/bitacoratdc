@@ -72,12 +72,54 @@
       <p class="big rv">Un documento vivo: aquí registramos el proceso, no solo el resultado.</p>
       <a class="btn alt" href="tercer-corte/index.html">Tercer corte</a></div></section>`;
   /* FIN: COMPOSICIÓN DEL HOME */
-  if (page === "indice") main.innerHTML = `
+    if (page === "indice") {
+    /* Listado de actividades · rediseño. Usa solo campos que ya existen: titulo, resumen, semana, fecha, demo, id. */
+    const PAL = [["var(--mostaza)", "var(--vino)", "var(--coral)", "var(--vino)"], ["var(--coral)", "var(--vino)", "var(--mostaza)", "var(--petrol)"], ["var(--petrol)", "#fffaf0", "var(--mostaza)", "var(--coral)"], ["var(--vino)", "var(--mostaza)", "var(--coral)", "var(--mostaza)"]];
+    const ARCS = [150, 115, 80, 45].map((r) => `<path d="M${200 - r} 240V${240 - r}a${r} ${r} 0 0 1 ${2 * r} 0V240"/>`).join("");
+    const DOTS = Array.from({ length: 32 }, (_, k) => { const x = k % 8, y = (k / 8) | 0; return x === 5 && y === 1 ? "" : `<circle cx="${50 + x * 43}" cy="${40 + y * 52}" r="7"/>`; }).join("");
+    const ART = [
+      `<g class="g" fill="none" stroke="var(--ac)" stroke-width="10">${ARCS}</g><circle class="f" cx="200" cy="170" r="22" fill="var(--fg)"/>`,
+      `<circle class="g" cx="275" cy="108" r="82" fill="var(--ac)"/><circle class="g" cx="120" cy="150" r="52" fill="none" stroke="var(--fg)" stroke-width="9"/><circle class="f" cx="335" cy="204" r="18" fill="var(--fg)"/>`,
+      `<g class="g"><path d="M0 150C60 100 120 190 200 150S340 100 400 150V240H0Z" fill="var(--ac)"/><path d="M0 185C70 145 130 225 215 185S350 150 400 190V240H0Z" fill="var(--fg)" opacity=".25"/></g><circle class="f" cx="310" cy="62" r="30" fill="var(--ac)"/>`,
+      `<g class="g" stroke="var(--fg)" stroke-width="10" opacity=".35">${[-60, 10, 80, 150, 220, 290, 360].map((x) => `<path d="M${x} 240L${x + 130} 0"/>`).join("")}</g><circle class="f" cx="150" cy="120" r="62" fill="var(--ac)"/>`,
+      `<g class="g" fill="var(--fg)" opacity=".4">${DOTS}</g><circle class="f" cx="265" cy="92" r="26" fill="var(--ac)"/>`,
+      `<g class="g"><path d="M40 224L120 60L200 224Z" fill="var(--ac)"/><path d="M140 224L230 36L320 224Z" fill="none" stroke="var(--fg)" stroke-width="8" stroke-linejoin="round"/><path d="M250 224L310 118L370 224Z" fill="var(--fg)" opacity=".5"/></g><circle class="f" cx="352" cy="46" r="16" fill="var(--ac)"/>`
+    ];
+    const corto = (t) => t.split(/[:·–—]/)[0].trim();
+    const marq = acts.map((a) => `<span>${corto(a.titulo)}</span>`).join("");
+    const real = acts.some((a) => !a.demo);
+    main.innerHTML = `
     <nav class="crumbs" aria-label="Ruta"><a href="../index.html">Home</a> / Tercer corte</nav>
-    <h1>Tercer corte</h1><p class="lead">Registro progresivo de actividades, investigaciones y ejercicios del periodo.</p>
-    ${acts.some(a => !a.demo) ? "" : `<p class="card">Aún no hay actividades reales registradas. Se irán incorporando semana a semana.</p>`}
-    <ul class="grid4">${acts.map(a => `<li class="card"><p class="eyebrow">${a.semana || ""} ${a.fecha || ""} ${a.demo ? '· <b>DEMOSTRACIÓN</b>' : ""}</p>
-      <h2 class="h3"><a href="actividad.html?id=${a.id}">${a.titulo}</a></h2><p>${a.resumen || ""}</p></li>`).join("")}</ul>`;
+    <div class="tc-hero">
+      <div class="tc-sun" aria-hidden="true"></div>
+      <svg class="tc-arcs" viewBox="0 0 400 240" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3">${ARCS}</g></svg>
+      <p class="eyebrow">Bitácora · TDC-IV</p>
+      <h1><span>Tercer</span><span>corte</span></h1>
+      <p class="lead">Registro progresivo de actividades, investigaciones y ejercicios del periodo.</p>
+      <ul class="tc-stats"><li><b>${acts.length}</b> ${acts.length === 1 ? "actividad" : "actividades"}</li>${acts.length > 3 ? `<li><label class="tc-q"><span class="sr-only">Buscar actividad</span><input type="search" placeholder="Buscar actividad…" autocomplete="off"></label></li>` : ""}</ul>
+    </div>
+    <div class="tc-marq" aria-hidden="true"><div>${marq}${marq}${marq}${marq}</div></div>
+    ${real ? "" : `<p class="card">Aún no hay actividades reales registradas. Se irán incorporando semana a semana.</p>`}
+    <ul class="tc-list">${acts.map((a, i) => { const p = PAL[i % 4]; return `<li class="rv" style="transition-delay:${Math.min(i, 5) * 70}ms">
+      <article class="tc-card" style="--bg:${p[0]};--fg:${p[1]};--ac:${p[2]};--sh:${p[3]}">
+        <div class="tc-art"><svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${ART[i % ART.length]}</svg><span class="tc-n" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span></div>
+        <div class="tc-body">
+          <p class="tc-meta">${[a.semana, a.fecha].filter(Boolean).join(" · ") || "Actividad"}${a.demo ? ' <b class="tc-demo">Demostración</b>' : ""}</p>
+          <h2><a href="actividad.html?id=${a.id}">${a.titulo}</a></h2>
+          <p class="tc-res">${a.resumen || ""}</p>
+          <span class="tc-go" aria-hidden="true">Abrir actividad</span>
+        </div></article></li>`; }).join("")}</ul>
+    <p class="card tc-none" hidden>Ninguna actividad coincide con tu búsqueda.</p>`;
+    const qi = main.querySelector(".tc-q input");
+    if (qi) qi.addEventListener("input", () => {
+      const q = qi.value.trim().toLowerCase(); let n = 0;
+      main.querySelectorAll(".tc-list>li").forEach((li) => { const m = !q || li.textContent.toLowerCase().includes(q); li.hidden = !m; if (m) n++; });
+      main.querySelector(".tc-none").hidden = n > 0;
+    });
+    /* Brillo que sigue al cursor (solo con puntero fino) */
+    if (matchMedia("(pointer:fine)").matches) main.querySelectorAll(".tc-card").forEach((c) => c.addEventListener("pointermove", (e) => { const r = c.getBoundingClientRect(); c.style.setProperty("--mx", (e.clientX - r.left) + "px"); c.style.setProperty("--my", (e.clientY - r.top) + "px"); }, { passive: true }));
+  }
+
 
   if (page === "actividad") {
     const id = new URLSearchParams(location.search).get("id"), i = acts.findIndex(a => a.id === id), a = acts[i];
