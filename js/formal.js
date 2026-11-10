@@ -125,7 +125,7 @@
         <g stroke-width="2.5"><path d="M180 56v14m-5-6l5 6 5-6"/><path d="M180 164v14m-5-6l5 6 5-6" transform="translate(0 -4)"/></g>
       </g>
       <g class="df-fl"><text x="30" y="66">01 · TABLA PLANA</text><text x="30" y="192">02 · SE LEVANTA</text><text x="30" y="300">03 · TÚNEL DE ARCOS TRIANGULARES</text></g></svg>
-      <figcaption>Esquema de la idea rectora de BETA. Ilustración conceptual, no es un plano.</figcaption></figure>
+      
   </div>
 </header>
 <div class="ed-nav" role="navigation" aria-label="Semanas de la bitácora"><div class="ed-prog" aria-hidden="true"><i></i></div><ol>${secs.map((s) => `<li><a href="#${s[0]}"><span>${s[2]}</span>${s[1]}</a></li>`).join("")}</ol></div>
