@@ -13,17 +13,17 @@
      Cada línea apunta a una página real donde aparecen las fotos del proyecto. REVISA que la foto de tu matriz
      coincida con la de la página; si no, cambia nombre, autor, fuente, año y enlace por los de la página de tu foto. */
   const CREDITOS = {
-    "referente-01-research-pavilion": { nombre: "ICD/ITKE Research Pavilion 2016-17", autor: "Laurian Ghinitoiu; Burggraf / Reichert; ICD-ITKE University of Stuttgart", fuente: "archdaily.com", anio: "2017", url: "https://www.archdaily.com/869450/icd-itke-research-pavilion-2016-17-icd-itke-university-of-stuttgart" },
-    "referente-02-zoom-pavilion": { nombre: "Rafael Lozano-Hemmer and Krzysztof Wodiczko, Zoom Pavillion, 2015. Pseudomatismos, MUAC, Mexico, 2015", autor: "Antimodular Studio", fuente: "vice.com", anio: "2015", url: "https://www.vice.com/en/article/pseudomatisms-exhibition-finds-patterns-in-the-randomness" },
-    "referente-03-buga-fibre-pavilion": { nombre: "BUGA Fibre Pavilion | ICD/ITKE University of Stuttgart", autor: "Roland Halbe", fuente: "arch2o.com", anio: "2019", url: "https://www.arch2o.com/?p=305284" },
-    "referente-04-digital-water-pavilion": { nombre: "Digital Water Pavilion, a project by Carlo Ratti Associati", autor: "Ramak Fazal", fuente: "mab14.mediaarchitecture.org", anio: "2014", url: "https://mab14.mediaarchitecture.org/?p=1022" },
-    "referente-05-poem-pavilion": { nombre: "UK Pavilion at Dubai Expo 2020 by Es Devlin", autor: "Ry Galloway y Alin Constantin", fuente: "dezeen.com", anio: "2021", url: "https://www.dezeen.com/2021/09/29/dubai-expo-2020-uk-pavilion-es-devlin/" },
-    "referente-06-philips-pavilion": { nombre: "AD Classics: Expo '58 Philips Pavilion / Le Corbusier and Iannis Xenakis", autor: "Wouter Hagens", fuente: "archdaily.com", anio: "s. f.", url: "https://www.archdaily.com/157658/ad-classics-expo-58-philips-pavilion-le-corbusier-and-iannis-xenakis" },
-    "referente-07-hive-pavilion": { nombre: "The Hive: A Human and Robot Collaborative Building Process", autor: "", fuente: "icd.uni-stuttgart.de", anio: "s. f.", url: "https://icd.uni-stuttgart.de/?p=15961" },
-    "referente-08-seed-cathedral": { nombre: "UK Pavilion for Shanghai World Expo 2010 | Heatherwick Studio", autor: "Daniele Mattioli", fuente: "arch2o.com", anio: "2010", url: "https://www.arch2o.com/?p=72184" },
-    "referente-09-future-space-pavilion": { nombre: "Future Space Pavilion in Milan", autor: "Oskar Da Riz", fuente: "e-architect.com", anio: "2018", url: "https://e-architect.com/milan/future-space-pavilion-in-milan" },
+    "referente-01-research-pavilion": { nombre: "ICD/ITKE Research Pavilion 2016-17", autor: "ICD/ITKE", fuente: "archdaily.com", anio: "2017", url: "https://www.archdaily.com/869450/icd-itke-research-pavilion-2016-17-icd-itke-university-of-stuttgart" },
+    "referente-02-zoom-pavilion": { nombre: "Zoom Pavillion, 2015", autor: "Antimodular Studio", fuente: "vice.com", anio: "2015", url: "https://www.vice.com/en/article/pseudomatisms-exhibition-finds-patterns-in-the-randomness" },
+    "referente-03-buga-fibre-pavilion": { nombre: "BUGA Fibre Pavilion", autor: "Roland Halbe", fuente: "arch2o.com", anio: "2019", url: "https://www.arch2o.com/?p=305284" },
+    "referente-04-digital-water-pavilion": { nombre: "Digital Water Pavilion", autor: "Ramak Fazal", fuente: "mab14.mediaarchitecture.org", anio: "2014", url: "https://mab14.mediaarchitecture.org/?p=1022" },
+    "referente-05-poem-pavilion": { nombre: "UK Pavilion at Dubai Expo 2020", autor: "Galloway y Constantin", fuente: "dezeen.com", anio: "2021", url: "https://www.dezeen.com/2021/09/29/dubai-expo-2020-uk-pavilion-es-devlin/" },
+    "referente-06-philips-pavilion": { nombre: "Philips Pavilion, Expo '58", autor: "Wouter Hagens", fuente: "archdaily.com", anio: "s. f.", url: "https://www.archdaily.com/157658/ad-classics-expo-58-philips-pavilion-le-corbusier-and-iannis-xenakis" },
+    "referente-07-hive-pavilion": { nombre: "The Hive", autor: "", fuente: "icd.uni-stuttgart.de", anio: "s. f.", url: "https://icd.uni-stuttgart.de/?p=15961" },
+    "referente-08-seed-cathedral": { nombre: "UK Pavilion, Shanghai Expo 2010", autor: "Daniele Mattioli", fuente: "arch2o.com", anio: "2010", url: "https://www.arch2o.com/?p=72184" },
+    "referente-09-future-space-pavilion": { nombre: "Future Space Pavilion", autor: "Oskar Da Riz", fuente: "e-architect.com", anio: "2018", url: "https://e-architect.com/milan/future-space-pavilion-in-milan" },
     "referente-10-hy-fi": { nombre: "Hy-Fi at MoMA PS1", autor: "Barkow Photo", fuente: "world-architects.com", anio: "2014", url: "https://www.world-architects.com/de/architecture-news/found/hy-fi-at-moma-ps1" },
-    "referente-11-smart-police-station": { nombre: "A Smart Police Station in Dubai", autor: "Dubai Police (material suministrado)", fuente: "gulfnews.com", anio: "s. f.", url: "https://gulfnews.com/uae/16-smart-police-stations-now-operational-in-dubai-1.81194216" },
+    "referente-11-smart-police-station": { nombre: "Smart Police Station, Dubái", autor: "Dubai Police", fuente: "gulfnews.com", anio: "s. f.", url: "https://gulfnews.com/uae/16-smart-police-stations-now-operational-in-dubai-1.81194216" },
     "referente-12-we-design-pop-up": { nombre: "We Design Pop-Up", autor: "Ryan Pflaum", fuente: "ryan-id.com", anio: "s. f.", url: "https://ryan-id.com/we-design-pop-up" }
   };
 
@@ -472,6 +472,48 @@
       beta: "Las conclusiones hablan de una «proyección holográfica inteligente»: conviene confirmar la técnica (proyección sobre una superficie translúcida o un dispositivo volumétrico) antes de decidir.",
       visto: "", fuente: "" }
   ];
+  /* REFERENCIAS APA 7 de los recursos TIC (una o dos por recurso). Se comparten con la lista final. */
+  const A_MDN_WS = { c: "MDN, s. f.-a", h: 'MDN contributors. (s. f.-a). <i>The WebSocket API (WebSockets)</i>. MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API' };
+  const A_MDN_XR = { c: "MDN, s. f.-b", h: 'MDN contributors. (s. f.-b). <i>WebXR Device API</i>. MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API' };
+  const A_WIKI_QR = { c: "Wikipedia, s. f.-a", h: 'Wikipedia. (s. f.-a). <i>QR code</i>. https://en.wikipedia.org/wiki/QR_code' };
+  const A_WIKI_VOL = { c: "Wikipedia, s. f.-b", h: 'Wikipedia. (s. f.-b). <i>Volumetric display</i>. https://en.wikipedia.org/wiki/Volumetric_display' };
+  const A_MS_MR = { c: "Microsoft, s. f.-a", h: 'Microsoft. (s. f.-a). <i>Mixed reality</i>. Microsoft Learn. https://learn.microsoft.com/en-us/windows/mixed-reality/discover/mixed-reality' };
+  const A_MS_TOUCH = { c: "Microsoft, s. f.-b", h: 'Microsoft. (s. f.-b). <i>Touch interactions developer guide</i>. Microsoft Learn. https://learn.microsoft.com/en-us/windows/apps/design/input/touch-developer-guide' };
+  const A_BUCK = { c: "Buck, 2007", h: 'Buck, R. (2007, 13 de agosto). <i>3-D imaging technology tracks museum visitors</i>. Vision Systems Design. https://www.vision-systems.com/cameras-accessories/article/16749866/3-d-imaging-technology-tracks-museum-visitors' };
+  const TIC_APA = {
+    "proyeccion-interactiva": [
+      { c: "HKU, s. f.", h: 'HKU University of the Arts Utrecht. (s. f.). <i>What is projection mapping?</i> En <i>Projection mapping</i>. https://bookstack.hku.nl/books/projection-mapping-oKq/page/what-is-projection-mapping' },
+      { c: "UAL, s. f.", h: 'University of the Arts London. (s. f.). <i>Projection mapping: Intro</i>. https://lab.arts.ac.uk/books/projection-mapping/page/intro' }
+    ],
+    "interfaz-movil": [A_WIKI_QR, A_MDN_WS],
+    "sensores": [
+      { c: "Arrow Electronics, s. f.", h: 'Arrow Electronics. (s. f.). <i>How do passive infrared sensors work?</i> https://www.arrow.com/es-mx/research-and-events/articles/how-do-passive-infrared-sensors-work' },
+      A_BUCK
+    ],
+    "datos-tiempo-real": [A_MDN_WS, APA[5][0]],
+    "multitactil": [A_MS_TOUCH],
+    "superficies": [A_BUCK],
+    "ar-movil": [A_MDN_XR],
+    "audiovisual-generativo": [
+      { c: "Tate, s. f.", h: 'Tate. (s. f.). <i>Generative art</i>. En <i>Art terms</i>. https://www.tate.org.uk/art/art-terms/g/generative-art' }
+    ],
+    "ia-interactiva": [
+      { c: "Google, s. f.", h: 'Google. (s. f.). <i>What is machine learning?</i> En <i>Introduction to machine learning</i>. Google for Developers. https://developers.google.com/machine-learning/intro-to-ml/what-is-ml' },
+      APA[5][0]
+    ],
+    "gestual": [
+      { c: "Google AI Edge, s. f.", h: 'Google AI Edge. (s. f.). <i>Hand landmarks detection guide for Web</i>. Google for Developers. https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker/web_js' }
+    ],
+    "realidad-virtual-mixta": [
+      A_MS_MR,
+      { c: "W3C, s. f.", h: 'Immersive Web Working Group. (s. f.). <i>WebXR Device API</i>. W3C. https://www.w3.org/TR/webxr/Overview.html' }
+    ],
+    "volumetrica": [
+      A_WIKI_VOL,
+      { c: "J. Phys.: Conf. Ser., 2021", h: '<i>Design of 3D volumetric display</i>. (2021). <i>Journal of Physics: Conference Series, 2070</i>(1), Artículo 012204. https://doi.org/10.1088/1742-6596/2070/1/012204' }
+    ]
+  };
+  TIC.forEach(t => { t.apa = TIC_APA[t.id] || []; });
   const JUST = {
     "proyeccion-interactiva": "Es la base de las dos incorporaciones propuestas.",
     "interfaz-movil": "Conecta al visitante con la proyección sin equipos adicionales.",
@@ -531,6 +573,14 @@
 
     function draw() {
       let figN = REF.length; /* las figuras de los recursos TIC siguen después de las 12 de referentes */
+      /* Registro de fuentes únicas: una misma fuente (p. ej. MDN) se lista una sola vez y enlaza a todas sus fichas. */
+      const REG = [], regKey = {};
+      const regAdd = (x, back) => { if (!(x.h in regKey)) { regKey[x.h] = REG.length; REG.push({ h: x.h, id: "apa-" + REG.length, back: [] }); } const e = REG[regKey[x.h]]; if (back && !e.back.some(b => b.href === back.href)) e.back.push(back); return e.id; };
+      regAdd({ h: `Cañaña. (2026). <i>Matriz de análisis de referentes</i> [Documento del curso]. <a href="${R}${PDF}" target="_blank" rel="noopener">${PDF}</a>` });
+      REF.forEach(r => { if (!r.apa && r.fuentes) r.apa = r.fuentes.map(f => ({ c: f[0], h: `${f[0]}. ${f[1]}` })); (r.apa || []).forEach(x => { x.id = regAdd(x, { href: "#ref-" + r.n, t: "Referente #" + pad(r.n) }); }); });
+      TIC.forEach((t, i) => t.apa.forEach(x => { x.id = regAdd(x, { href: "#tic-" + t.id, t: "Recurso TIC " + pad(i + 1) }); }));
+      REFERENCIAS.forEach(h => regAdd({ h }));
+      const chips = (list) => list.map((x, i) => `<a href="#${x.id}" title="${A(x.c)}" aria-label="Fuente ${i + 1}: ${A(x.c)}">${i + 1}</a>`).join("");
       const fig = (file, ratio, label, flagCode, num, big) => {
         const cr = CREDITOS[file] || {}, ok = !!cr.nombre, k = num || ++figN;
         return `<figure class="rf-fig"><div class="rf-fr" style="--r:${ratio}"><div class="rf-ph"><i>${label}</i><b>Imagen por incorporar</b><code>${file}</code></div><img src="${R}${IMG}${file}.jpg" alt="${A(cr.nombre || label)}" loading="lazy" onerror="RF_ERR(this)">${flagCode ? `<span class="rf-flag" title="${A(PAIS[flagCode] || flagCode)}">${flag(flagCode)}</span>` : ""}<button type="button" class="rf-zoom" aria-label="Ampliar: ${A(label)}">Ampliar</button></div>${big ? `<div class="rf-ths">${[2, 3].map(j => `<button type="button" class="rf-th" aria-label="Ver imagen ${j} de ${A(label)}"><img src="${R}${IMG}${file}-${j}.jpg" alt="" data-opt="1" loading="lazy" onerror="RF_ERR(this)"></button>`).join("")}</div>` : ""}<figcaption class="rf-cap${ok ? "" : " pend"}">${capH(cr, k)}</figcaption></figure>`;
@@ -553,7 +603,7 @@
     <div class="rf-two"><div><h4>Forma y composición</h4><p>${r.forma}</p></div><div><h4>Interacción y experiencia</h4><p>${r.inter}</p></div></div>
     <div class="rf-tabs" role="tablist" aria-label="Análisis de ${A(r.nombre)}">${tabs.map((t, i) => `<button type="button" role="tab" id="rt-${r.n}-${i}" aria-controls="rp-${r.n}-${i}" aria-selected="${i === 0}" tabindex="${i ? -1 : 0}">${t[1]}</button>`).join("")}</div>
     ${tabs.map((t, i) => `<div class="rf-panel${t[0] === "m" ? " warn" : ""}${t[0] === "ap" ? " key" : ""}" role="tabpanel" id="rp-${r.n}-${i}" aria-labelledby="rt-${r.n}-${i}" ${i ? "hidden" : ""}><p>${t[2]}</p></div>`).join("")}
-    ${r.apa ? `<p class="rf-srcs"><b>Fuentes:</b> ${r.apa.map((x, i) => `<a href="#apa-${r.n}-${i}">(${x.c})</a>`).join(" ")}</p>` : r.fuentes ? `<p class="rf-srcs"><b>Fuentes:</b> ${r.fuentes.map(f => `<a href="${f[1]}" target="_blank" rel="noopener">${f[0]}</a>`).join(" · ")}</p>` : ""}
+    ${r.apa && r.apa.length ? `<p class="rf-srcs"><b>Fuentes</b> ${chips(r.apa)}</p>` : ""}
   </div>
 </article>`;
       };
@@ -565,7 +615,7 @@
   ${mapCol(DEC.map(x => ({ k: x.id.toLowerCase(), b: x.st, t: x.t })), "d", "Decisiones")}
 </div><p class="rf-hint">Toca un referente, un aprendizaje o una decisión para ver con qué se conecta.</p>`;
 
-      const tic = (t, i) => `<details class="rf-tic ${t.c}" data-c="${t.c}" ${i === 0 ? "open" : ""}>
+      const tic = (t, i) => `<details class="rf-tic ${t.c}" id="tic-${t.id}" data-c="${t.c}" ${i === 0 ? "open" : ""}>
   <summary><span class="rf-tn">${pad(i + 1)}</span><span class="rf-tt">${t.nombre}</span><em class="rf-tag ${t.c}">${CLS[t.c].t}</em></summary>
   <div class="rf-tbody">
     <div class="rf-tfig">${fig(`tic-${pad(i + 1)}-${t.id}`, "4/3", "Recurso TIC " + pad(i + 1))}</div>
@@ -581,7 +631,7 @@
         <div class="beta"><dt>Potencial en BETA</dt><dd>${t.beta}</dd></div>
       </dl>
       ${t.visto ? `<p class="rf-seen"><b>Visto en el análisis:</b> ${t.visto}</p>` : ""}
-      <p class="rf-src${t.fuente ? "" : " pend"}">${t.fuente ? t.fuente : "Fuente por citar (APA 7)."}</p>
+      ${t.apa.length ? `<p class="rf-srcs"><b>Fuentes</b> ${chips(t.apa)}</p>` : ""}
     </div>
   </div>
 </details>`;
@@ -589,14 +639,11 @@
       const cls = ["pri", "com", "exp"].map(c => `<section class="rf-cls ${c} ed-rv" aria-labelledby="cls-${c}"><h3 id="cls-${c}">${CLS[c].t}s</h3><p>${CLS[c].d}</p><ul>${TIC.filter(t => t.c === c).map(t => `<li><b>${t.nombre}</b><span>${JUST[t.id]}</span></li>`).join("")}</ul></section>`).join("");
 
       const plain = (h) => h.replace(/<[^>]+>/g, "").toLowerCase();
-      const refItems = [{ id: "apa-matriz", n: 0, h: `Cañaña. (2026). <i>Matriz de análisis de referentes</i> [Documento del curso]. <a href="${R}${PDF}" target="_blank" rel="noopener">${PDF}</a>` }]
-        .concat(REF.flatMap(r => (r.apa || []).map((x, i) => ({ id: `apa-${r.n}-${i}`, n: r.n, h: x.h }))))
-        .concat(REF.filter(r => r.fuentes && !r.apa).flatMap(r => r.fuentes.map((f, i) => ({ id: `apa-${r.n}-x${i}`, n: r.n, h: `${f[0]}. <a href="${f[1]}" target="_blank" rel="noopener">${f[1]}</a>` }))))
-        .concat(REFERENCIAS.map((h, i) => ({ id: `apa-extra-${i}`, n: 0, h })))
-        .sort((x, y) => plain(x.h).localeCompare(plain(y.h), "es"));
       const linkify = (h) => h.replace(/(^|[\s>])(https?:\/\/[^\s<]+)/g, (m0, pre, u) => `${pre}<a href="${u}" target="_blank" rel="noopener">${u}</a>`);
-      const refsHtml = refItems.map(x => `<li id="${x.id}">${x.h.indexOf("<a ") > -1 ? x.h : linkify(x.h)}${x.n ? ` <a class="rf-back" href="#ref-${x.n}">↩ Referente #${pad(x.n)}</a>` : ""}</li>`).join("");
-      const figsHtml = REF.filter(r => CREDITOS[`referente-${pad(r.n)}-${r.id}`]).map(r => `<li id="fig-${r.n}">${capH(CREDITOS[`referente-${pad(r.n)}-${r.id}`], r.n)} <a class="rf-back" href="#ref-${r.n}">↩ Referente #${pad(r.n)}</a></li>`).join("");
+      const refsHtml = REG.slice().sort((x, y) => plain(x.h).localeCompare(plain(y.h), "es")).map(e => `<li id="${e.id}">${e.h.indexOf("<a ") > -1 ? e.h : linkify(e.h)}${e.back.map(b => ` <a class="rf-back" href="${b.href}">↩ ${b.t}</a>`).join("")}</li>`).join("");
+      const figKeys = REF.filter(r => CREDITOS[`referente-${pad(r.n)}-${r.id}`]);
+      const figsHtml = figKeys.map(r => `<li id="fig-${r.n}">${capH(CREDITOS[`referente-${pad(r.n)}-${r.id}`], r.n)} <a class="rf-back" href="#ref-${r.n}">↩ Referente #${pad(r.n)}</a></li>`).join("");
+      const nRefs = REG.filter(e => e.back.some(b => b.href.indexOf("#ref-") === 0)).length, nTic = REG.filter(e => e.back.some(b => b.href.indexOf("#tic-") === 0)).length;
       const prev = acts[idx - 1], next = acts[idx + 1];
       main.innerHTML = `
 <header class="rf-hero">
@@ -645,11 +692,12 @@
 
 <section id="referencias" class="ed-sec" aria-labelledby="referencias-t">
   ${head("05", "referencias", "Referencias", "Fuentes y documentos")}
-  <p class="ed-lead ed-rv">Lista en formato APA (7.ª edición) de las fuentes consultadas para cada referente. Cada fuente enlaza de vuelta a su ficha, y cada ficha cita sus fuentes al final.</p>
-  <h3 class="ed-h3 ed-rv">Fuentes consultadas</h3>
-  <ul class="rf-refs ed-rv">${refsHtml}</ul>
-  <h3 class="ed-h3 ed-rv">Créditos de las imágenes</h3>
-  <ul class="rf-refs rf-figs ed-rv">${figsHtml}</ul>
+  <p class="ed-lead ed-rv">Cada ficha cita sus fuentes con números; al tocarlos te llevan a la referencia APA 7 correspondiente.</p>
+  <div class="rf-refbox ed-rv">
+    <p class="rf-refsum"><b>${REG.length}</b> referencias · ${nRefs} de los referentes · ${nTic} de los recursos TIC · ${figKeys.length} créditos de imágenes</p>
+    <details class="rf-fold" id="rf-refs-d"><summary>Ver la lista completa de referencias (APA 7)</summary><ul class="rf-refs">${refsHtml}</ul></details>
+    <details class="rf-fold" id="rf-figs-d"><summary>Ver los créditos de las imágenes</summary><ul class="rf-refs rf-figs">${figsHtml}</ul></details>
+  </div>
   <p class="rf-pager"><a class="rf-btn" href="index.html">← Tercer corte</a>${prev ? `<a class="rf-btn" href="actividad.html?id=${prev.id}">Anterior</a>` : ""}${next ? `<a class="rf-btn fill" href="actividad.html?id=${next.id}">Siguiente</a>` : ""}</p>
 </section>
 <dialog class="rf-lb" aria-label="Imagen ampliada"><button type="button" class="rf-x" aria-label="Cerrar">Cerrar</button><img alt=""><p></p></dialog>`;
@@ -660,7 +708,8 @@
     function wire() {
       const $ = (s, r) => (r || main).querySelector(s), $$ = (s, r) => [...(r || main).querySelectorAll(s)];
       /* Altura del header para que el menú de la actividad se pegue debajo */
-      const hd = d.getElementById("site-header"), sh = () => d.documentElement.style.setProperty("--hh", (hd ? hd.offsetHeight : 0) + "px");
+      const hd = d.getElementById("site-header"); let navOff = false;
+      const sh = () => d.documentElement.style.setProperty("--hh", (navOff || !hd ? 0 : hd.offsetHeight) + "px");
       sh(); addEventListener("resize", sh);
 
       /* Pestañas de cada referente */
@@ -725,7 +774,12 @@
 
       /* Progreso, sección activa y revelado */
       const bar = $(".ed-prog i"), links = $$(".ed-nav a");
-      let t = 0; const upd = () => { const h = d.documentElement; bar.style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight))})`; t = 0; };
+      /* Al bajar, el encabezado y el menú de secciones se ocultan (queda solo la barra de progreso); al subir, reaparecen. */
+      const nav = $(".ed-nav"); let lastY = scrollY;
+      const setNav = (off) => { if (off === navOff) return; navOff = off; nav.classList.toggle("rf-off", off); if (hd) hd.classList.toggle("hd-hide", off); sh(); };
+      const navCheck = () => { const y = scrollY, dy = y - lastY; if (y < 140) setNav(false); else if (dy > 8) setNav(true); else if (dy < -8) setNav(false); if (Math.abs(dy) > 8) lastY = y; };
+      nav.addEventListener("focusin", () => setNav(false)); if (hd) hd.addEventListener("focusin", () => setNav(false));
+      let t = 0; const upd = () => { const h = d.documentElement; bar.style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight))})`; navCheck(); t = 0; };
       addEventListener("scroll", () => { if (!t) t = requestAnimationFrame(upd); }, { passive: true }); upd();
       const spy = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) links.forEach(l => l.toggleAttribute("aria-current", l.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-35% 0px -60% 0px" });
       $$(".ed-sec").forEach(s => spy.observe(s));
@@ -734,7 +788,20 @@
         const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .08 });
         $$(".ed-rv").forEach(el => io.observe(el));
       }
-      if (location.hash) { const el = d.getElementById(location.hash.slice(1)); if (el) setTimeout(() => el.scrollIntoView(), 50); }
+      const openTarget = (id) => {
+        const el = id && d.getElementById(id); if (!el) return false;
+        if (el.hidden) $$('.rf-filt button[data-f="all"]').forEach(b => b.click());
+        for (let q = el.tagName === "DETAILS" ? el : el.closest("details"); q; q = q.parentElement && q.parentElement.closest("details")) q.open = true;
+        setTimeout(() => el.scrollIntoView({ block: "center" }), 40);
+        return true;
+      };
+      main.addEventListener("click", (e) => {
+        const a = e.target.closest('a[href^="#"]'); if (!a || a.closest(".ed-nav")) return;
+        const id = a.getAttribute("href").slice(1);
+        if (/^(apa|fig|tic|ref)-/.test(id) && openTarget(id)) { e.preventDefault(); if (history.replaceState) history.replaceState(null, "", "#" + id); }
+      });
+      addEventListener("hashchange", () => openTarget(location.hash.slice(1)));
+      if (location.hash) setTimeout(() => openTarget(location.hash.slice(1)), 60);
     }
   };
 })();
