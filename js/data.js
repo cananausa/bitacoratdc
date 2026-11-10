@@ -232,11 +232,11 @@ integracion: [
       resumen: "Matriz de doce referentes, conclusiones y decisiones para BETA, e inventario de recursos TIC con su clasificación.",
       pdf: "assets/documentos/matriz-referentes.pdf" },
 
-    { id: "desarrollo-formal", formal: true, semana: "", fecha: "",
+    { id: "desarrollo-formal", formal: true, semana: "12", fecha: "8 de Noviembre de 2026",
       titulo: "DESARROLLO FORMAL: bitácora de evolución de BETA",
       resumen: "Bitácora cronológica por semanas con bocetos, dibujos, decisiones y comparaciones que muestran cómo la propuesta BETA se transforma y se perfecciona.",
       lema: "La forma de BETA se decide, se prueba y se corrige semana a semana.",
-      intro: "Aquí queda el rastro del proceso: bocetos, dibujos, estudios de forma, pruebas y las decisiones que fueron moviendo la propuesta de una versión a la siguiente.",
+      intro: "Aquí queda el rastro del proceso: bocetos, dibujos, pruebas y las decisiones que fueron moviendo la propuesta de una versión a la siguiente.",
       evolucionTexto: "Cada semana registra qué se quería resolver, qué se decidió, qué cambió frente a la versión anterior y qué problemas quedaron por resolver. La secuencia y la matriz muestran de un vistazo cómo se transforma la propuesta.",
       cierre: "Toda beta se mejora. Esta bitácora conserva el rastro de cada versión de BETA.",
       carpeta: "assets/img/formal/",
@@ -247,21 +247,54 @@ integracion: [
         { id: "tecnologia", t: "Tecnología e interacción" }
       ],
       semanas: [
-        { n: 1, id: "semana-01", periodo: "", titulo: "", objetivo: "",
-          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
-          galeria: [
-            { tipo: "Bocetos iniciales", pie: "" },
-            { tipo: "Dibujos exploratorios", pie: "" },
-            { tipo: "Estudios de forma y volumen", pie: "" }
-          ] },
-        { n: 2, id: "semana-02", periodo: "", titulo: "", objetivo: "",
-          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
-          galeria: [
-            { tipo: "Distribución espacial", pie: "" },
-            { tipo: "Exploración de materiales", pie: "" },
-            { tipo: "Pruebas de composición", pie: "" }
+               { n: 1, id: "semana-01", periodo: "28 de Octubre al 4 de Noviembre de 2026", titulo: "Esquema básico",
+          objetivo: "Al iniciar este proyecto, el objetivo era plasmar una idea desde la nada y eso hicimos: un mobiliario efímero tipo stand que se arma y desarma en una sola pieza, aplicando fuerza de abajo hacia arriba para que quede de pie con un túnel inferior en forma de triángulo. La idea de esta etapa es sentar las bases para construir el proyecto en las semanas siguientes.",
+          decisiones: [
+            { t: "Estructura base. ", d: "Stand efímero de una sola pieza con túnel inferior triangular, como se describe en el objetivo." },
+            { t: "Tragaluz. ", d: "Abertura superior con tablas superpuestas." },
+            { t: "Información para el visitante. ", d: "Un pendón interior con un QR, además de volantes." },
+            { t: "Cierre del recorrido. ", d: "Un estudiante al final que guía a nuestro público objetivo: estudiantes de 11° que quieren conocer la carrera de Diseño Digital de la Sergio." }
           ],
-          comparacion: { antes: "semana-01/01", despues: "semana-02/01", etiquetaAntes: "Semana 1", etiquetaDespues: "Semana 2", nota: "" } },
+          cambios: ["No hay cambios: es la primera concepción (incluso una preconcepción)."],
+          problemas: [
+            { p: "La carrera necesita venderse de forma más clara, y la Sergio tiene varias sedes y necesita un espacio para ferias y semanas culturales que pueda transportarse y promocionar la carrera.",
+              s: "Diseñamos un stand desmontable y transportable que, con un diseño extravagante y una lógica funcional tipo túnel, invita a los jóvenes a aventurarse a lo desconocido y conocer algo de la carrera." }
+          ],
+          resultados: "Como resultado tenemos el primer esquema básico, con la estructura más o menos clara. Como conclusión, sabemos que inicia la parte dura: contrastar nuestro proyecto con fuentes secundarias (referentes) y primarias (co-creación) para desarrollar el proceso de diseño debido y ver cómo debe evolucionar.",
+          ejes: ["forma", "espacio"],
+          galeria: [
+            { tipo: "Esquema Básico", pie: "BETA armado." },
+            { tipo: "BETA desarmado", pie: "En forma de tabla (una sola pieza)." },
+            { tipo: "Transición", pie: "BETA pasa de tabla a stand en un solo paso." }
+          ] },
+        { n: 2, id: "semana-02", periodo: "4-11 de Noviembre de 2026", titulo: "Después de los referentes",
+          objetivo: "Hacer un análisis de 12 referentes internacionales relacionados con arquitectura, arquitectura efímera, stands publicitarios y cualquier propuesta de mobiliario que sirviera de marco inspirativo para mejorar nuestra propuesta, importando conceptos de innovación y creatividad de otros lugares.",
+          decisiones: [
+            { t: "Consola de proyección con QR. ", d: "Para explorar intereses, proyectos y énfasis académicos." },
+            { t: "Cascada de píxeles en la entrada. ", d: "Proyecta las respuestas de los estudiantes mediante un sensor de movimiento." },
+            { t: "Arcos desmontables. ", d: "Se rediseñan con tres tablas unidas con piezas metálicas y tornillos, para facilitar el transporte, el ensamblaje y la estabilidad." },
+            { t: "Plantas sintéticas. ", d: "Se añaden para dar color al exterior del mueble." },
+            { t: "Techo modular. ", d: "Se rediseña con una estructura modular de triángulos que permite armar, desarmar y trasladar fácilmente, igual que los pilares laterales." }
+          ],
+          cambios: [
+            "Se abandonan los recursos análogos (pendones y folletos informativos): se reemplazan por proyecciones digitales e interactivas que comunican la información y facilitan la participación de los estudiantes.",
+            "Se modifica el diseño del techo y de los pilares principales.",
+            "Se mantiene la figura del estudiante guía al final del recorrido, como acompañamiento y conexión directa con los visitantes."
+          ],
+          problemas: [
+            { p: "La falta de usos digitales: la carrera pretende incentivar e innovar en este campo, por lo que incorporar estos recursos era necesario como solución integral.",
+              s: "Se incorporan la consola de proyección con QR y la cascada de píxeles." },
+            { p: "Aunque era modular, el montaje y desmontaje se hacía en un solo paso y la tabla original era enorme.",
+              s: "Ahora es más fácil: el techo también se puede desarmar (arcos de tres tablas y techo modular de triángulos)." }
+          ],
+          resultados: "La propuesta evoluciona hacia una experiencia más dinámica e interactiva, sustituyendo los recursos impresos por herramientas digitales que facilitan la exploración y la participación de los estudiantes. Los ajustes estructurales simplifican el montaje, el transporte y el almacenamiento, sin perder la identidad espacial del túnel.",
+          ejes: ["forma", "espacio", "materiales", "tecnologia"],
+          galeria: [
+            { tipo: "Rediseño de BETA", pie: "Con plantas y techo modular." },
+            { tipo: "Interior de BETA", pie: "Con la consola interactiva proyectada en la pared." },
+            { tipo: "Exterior de BETA", pie: "Con cortina proyectada que se actualiza con la información que va poniendo el estudiante." }
+          ],
+          comparacion: { antes: "semana-01/01", despues: "semana-02/01", etiquetaAntes: "Semana 1", etiquetaDespues: "Semana 2", nota: "Del esquema básico de una sola pieza al rediseño con arcos de tres tablas, techo modular, plantas y proyecciones digitales." } },
         { n: 3, id: "semana-03", periodo: "", titulo: "", objetivo: "",
           decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
           galeria: [
