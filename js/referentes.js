@@ -24,7 +24,21 @@
     "referente-09-future-space-pavilion": { nombre: "Future Space Pavilion", autor: "Oskar Da Riz", fuente: "e-architect.com", anio: "2018", url: "https://e-architect.com/milan/future-space-pavilion-in-milan" },
     "referente-10-hy-fi": { nombre: "Hy-Fi at MoMA PS1", autor: "Barkow Photo", fuente: "world-architects.com", anio: "2014", url: "https://www.world-architects.com/de/architecture-news/found/hy-fi-at-moma-ps1" },
     "referente-11-smart-police-station": { nombre: "Smart Police Station, Dubái", autor: "Dubai Police", fuente: "gulfnews.com", anio: "s. f.", url: "https://gulfnews.com/uae/16-smart-police-stations-now-operational-in-dubai-1.81194216" },
-    "referente-12-we-design-pop-up": { nombre: "We Design Pop-Up", autor: "Ryan Pflaum", fuente: "ryan-id.com", anio: "s. f.", url: "https://ryan-id.com/we-design-pop-up" }
+    "referente-12-we-design-pop-up": { nombre: "We Design Pop-Up", autor: "Ryan Pflaum", fuente: "ryan-id.com", anio: "s. f.", url: "https://ryan-id.com/we-design-pop-up" },
+
+    /* Recursos TIC: figuras 13 a 24. Clave = tic-NN-id (igual al nombre del archivo de la imagen). */
+    "tic-01-proyeccion-interactiva": { nombre: "Proyección interactiva y mapping", autor: "", fuente: "bizbash.com", anio: "s. f.", url: "https://www.bizbash.com/event-fabrication/interactive-projection-mapping" },
+    "tic-02-interfaz-movil": { nombre: "Interfaces móviles (QR y web)", autor: "", fuente: "qr-code-generator.com", anio: "s. f.", url: "https://www.qr-code-generator.com/blog/qr-codes-in-museums-and-art-galleries/" },
+    "tic-03-sensores": { nombre: "Sensores de movimiento y proximidad (PIR)", autor: "Adafruit", fuente: "learn.adafruit.com", anio: "s. f.", url: "https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work" },
+    "tic-04-datos-tiempo-real": { nombre: "Visualización de datos en tiempo real", autor: "", fuente: "sixteen-nine.net", anio: "2025", url: "https://www.sixteen-nine.net/2025/03/24/video-barcelona-hospital-uses-data-visualization-on-video-wall-to-show-real-time-pulse-of-facility-operations/" },
+    "tic-05-multitactil": { nombre: "Pantallas multitáctiles", autor: "", fuente: "blackboxav.co.uk", anio: "2016", url: "https://www.blackboxav.co.uk/2016/06/20/multi-touch-kiosks-ideal-museum-heritage-applications/" },
+    "tic-06-superficies": { nombre: "Superficies interactivas (piso o mesa)", autor: "EyeClick", fuente: "eyeclick.com", anio: "s. f.", url: "https://eyeclick.com/surface/interactive-floor-projectors" },
+    "tic-07-ar-movil": { nombre: "Realidad aumentada en el celular", autor: "", fuente: "arloopa.com", anio: "s. f.", url: "https://www.arloopa.com/blog/webar-for-museums-and-education-bringing-learning-to-life" },
+    "tic-08-audiovisual-generativo": { nombre: "Instalaciones audiovisuales generativas", autor: "", fuente: "liaworks.com", anio: "s. f.", url: "https://www.liaworks.com/archive/30x1-a-spatial-audiovisual-composition/" },
+    "tic-09-ia-interactiva": { nombre: "Inteligencia artificial interactiva", autor: "", fuente: "blooloop.com", anio: "s. f.", url: "https://blooloop.com/dpt-hands-on-hallucinations/" },
+    "tic-10-gestual": { nombre: "Interfaces gestuales", autor: "GestureTek", fuente: "gesturetek.com", anio: "s. f.", url: "https://gesturetek.com/wordpress/3ddepth/3d-depth-introduction/" },
+    "tic-11-realidad-virtual-mixta": { nombre: "Realidad virtual y mixta", autor: "", fuente: "skarredghost.com", anio: "2017", url: "https://skarredghost.com/2017/06/06/showcase-vr-exhibitions/" },
+    "tic-12-volumetrica": { nombre: "Visualización volumétrica", autor: "Voxon", fuente: "80.lv", anio: "s. f.", url: "https://80.lv/articles/creating-holograms-with-blender-voxon-s-volumetric-display" }
   };
 
   const EJES = { int: "Interacción y audiovisual", fab: "Fabricación y estructura", mat: "Material y exhibición" };
@@ -643,6 +657,8 @@
       const refsHtml = REG.slice().sort((x, y) => plain(x.h).localeCompare(plain(y.h), "es")).map(e => `<li id="${e.id}">${e.h.indexOf("<a ") > -1 ? e.h : linkify(e.h)}${e.back.map(b => ` <a class="rf-back" href="${b.href}">↩ ${b.t}</a>`).join("")}</li>`).join("");
       const figKeys = REF.filter(r => CREDITOS[`referente-${pad(r.n)}-${r.id}`]);
       const figsHtml = figKeys.map(r => `<li id="fig-${r.n}">${capH(CREDITOS[`referente-${pad(r.n)}-${r.id}`], r.n)} <a class="rf-back" href="#ref-${r.n}">↩ Referente #${pad(r.n)}</a></li>`).join("");
+      const ticFigsHtml = TIC.map((t, i) => { const k = `tic-${pad(i + 1)}-${t.id}`; return CREDITOS[k] ? `<li id="fig-tic-${i + 1}">${capH(CREDITOS[k], REF.length + i + 1)} <a class="rf-back" href="#tic-${t.id}">↩ Recurso TIC ${pad(i + 1)}</a></li>` : ""; }).join("");
+      const nTicFigs = TIC.filter((t, i) => CREDITOS[`tic-${pad(i + 1)}-${t.id}`]).length;
       const nRefs = REG.filter(e => e.back.some(b => b.href.indexOf("#ref-") === 0)).length, nTic = REG.filter(e => e.back.some(b => b.href.indexOf("#tic-") === 0)).length;
       const prev = acts[idx - 1], next = acts[idx + 1];
       main.innerHTML = `
@@ -694,9 +710,9 @@
   ${head("05", "referencias", "Referencias", "Fuentes y documentos")}
   <p class="ed-lead ed-rv">Cada ficha cita sus fuentes con números; al tocarlos te llevan a la referencia APA 7 correspondiente.</p>
   <div class="rf-refbox ed-rv">
-    <p class="rf-refsum"><b>${REG.length}</b> referencias · ${nRefs} de los referentes · ${nTic} de los recursos TIC · ${figKeys.length} créditos de imágenes</p>
+    <p class="rf-refsum"><b>${REG.length}</b> referencias · ${nRefs} de los referentes · ${nTic} de los recursos TIC · ${figKeys.length + nTicFigs} créditos de imágenes</p>
     <details class="rf-fold" id="rf-refs-d"><summary>Ver la lista completa de referencias (APA 7)</summary><ul class="rf-refs">${refsHtml}</ul></details>
-    <details class="rf-fold" id="rf-figs-d"><summary>Ver los créditos de las imágenes</summary><ul class="rf-refs rf-figs">${figsHtml}</ul></details>
+    <details class="rf-fold" id="rf-figs-d"><summary>Ver los créditos de las imágenes</summary><ul class="rf-refs rf-figs">${figsHtml}${ticFigsHtml}</ul></details>
   </div>
   <p class="rf-pager"><a class="rf-btn" href="index.html">← Tercer corte</a>${prev ? `<a class="rf-btn" href="actividad.html?id=${prev.id}">Anterior</a>` : ""}${next ? `<a class="rf-btn fill" href="actividad.html?id=${next.id}">Siguiente</a>` : ""}</p>
 </section>
