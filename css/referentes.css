@@ -127,3 +127,25 @@ body.rf main{background:#fffaf0}
   .rf-tic summary{flex-wrap:wrap;gap:.4rem .8rem}.rf-zoom{opacity:1}
 }
 @media(prefers-reduced-motion:reduce){.rf-btn,.rf-idx a,.rf-nd,.rf-tic summary::after{transition:none}}
+
+/* Fuentes en la ficha: chips numerados (compacto) */
+.rf-srcs{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem;margin:.9rem 0 0;font-size:.8rem}
+.rf-srcs b{font:.85rem Marvin,Georgia,serif;font-weight:400;color:var(--coral);margin-right:.15rem}
+.rf-srcs a{display:inline-grid;place-items:center;min-width:1.6rem;height:1.6rem;padding:0 .35rem;border:1.5px solid var(--vino);border-radius:2rem;color:var(--vino);text-decoration:none;font-size:.78rem;transition:background .2s,color .2s}
+.rf-srcs a:hover,.rf-srcs a:focus-visible{background:var(--vino);color:var(--mostaza)}
+.rf-cap{font-size:.78rem;line-height:1.35}
+
+/* Lista final de referencias plegada */
+.rf-refsum{margin:0 0 1rem;font-size:1rem}.rf-refsum b{font:1.6rem Marvin,Georgia,serif;font-weight:400;color:var(--coral);margin-right:.2rem}
+.rf-fold{max-width:74ch;border:2px solid var(--vino);background:#fffaf0;margin:0 0 .8rem}
+.rf-fold summary{display:flex;align-items:center;gap:.8rem;cursor:pointer;list-style:none;padding:.9rem 1.1rem;font:1.1rem Marvin,Georgia,serif}
+.rf-fold summary::-webkit-details-marker{display:none}
+.rf-fold summary::after{content:"+";margin-left:auto;font:1.7rem/1 Marvin,Georgia,serif;transition:transform .25s var(--ease)}
+.rf-fold[open] summary{background:var(--mostaza)}.rf-fold[open] summary::after{transform:rotate(45deg)}
+.rf-fold summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.rf-fold .rf-refs{margin:0;padding:1.1rem 1.2rem 1.3rem;max-width:none}
+
+/* Menú de secciones: se oculta al bajar y reaparece al subir (queda la barra de progreso) */
+.ed-nav{transition:top .35s var(--ease),transform .35s var(--ease)}
+.ed-nav.rf-off{transform:translateY(-100%)}
+@media(prefers-reduced-motion:reduce){.ed-nav,.rf-fold summary::after{transition:none}}
