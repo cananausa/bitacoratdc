@@ -39,7 +39,7 @@
 
     main.innerHTML = `
 <header class="cc-hero"><div class="cc-blob" aria-hidden="true"></div>
-  <div class="cc-hero-in"><div class="cc-hero-t"><p class="cc-eye">Tercer corte · TDC-IV · ${a.semana}</p>
+  <div class="cc-hero-in"><div class="cc-hero-t"><p class="cc-eye">Tercer corte · TDC-IV · ${a.semana} · ${a.fecha}</p>
     <h1><span class="cc-mega">Procesos de</span><span class="cc-mega y">Co-Creación</span></h1>
     <p class="cc-lema">${a.lema}</p><p class="cc-sub">Cómo una versión de BETA que pusimos a prueba terminó cambiando todo.</p>
     <a class="cc-go" href="#porque">Empezar el recorrido <span aria-hidden="true">↓</span></a></div>
@@ -49,7 +49,7 @@
 
 <section id="porque" class="cc-sec" aria-labelledby="porque-t">${head("01", "porque", "¿Por qué volvimos a diseñar BETA?", "Contexto")}
   <div class="cc-two-c cc-rv"><p class="cc-big">${P.intro}</p><p>${P.giro}</p></div>
-  <ol class="cc-steps">${P.pasos.map((p, i) => `<li class="cc-rv${i === 3 ? " last" : ""}"><span class="cc-st-k">${p.k}</span><h3>${p.t}</h3><p>${p.d}</p></li>`).join("")}</ol>
+  <ol class="cc-steps">${P.pasos.map((p, i) => `<li class="cc-rv${i === 2 ? " last" : ""}"><span class="cc-st-k">${p.k}</span><h3>${p.t}</h3><p>${p.d}</p></li>`).join("")}</ol>
   <aside class="cc-callout cc-rv"><b>Del tutor</b><p>${P.tutor}</p></aside></section>
 
 <section id="prueba" class="cc-sec cc-dark" aria-labelledby="prueba-t">${head("02", "prueba", "La propuesta que pusimos a prueba", "Versión 3")}
@@ -63,8 +63,8 @@
   <div class="cc-grid3 cc-rv">${slot("proceso-conversacion", "4/3", "Foto del proceso: conversando la propuesta")}${slot("tablero-canva", "4/3", "Captura del tablero de Canva con las notas adhesivas")}${slot("encuesta-captura", "4/3", "Captura de un fragmento de la encuesta")}</div>
   <p class="cc-callout cc-rv"><b>Ojo</b> ${C.nota}</p></section>
 
-<section id="entrevistas" class="cc-sec cc-tint" aria-labelledby="entrevistas-t">${head("04", "entrevistas", "Lo que nos contaron", "Siete voces")}
-  <p class="cc-lead cc-rv">Elige a cada persona para ver qué destacó, qué cuestionó, qué ideas dejó y cómo lo leímos. Son resúmenes de las entrevistas, no transcripciones.</p>
+<section id="entrevistas" class="cc-sec cc-tint" aria-labelledby="entrevistas-t">${head("04", "entrevistas", "Lo que nos contaron: las entrevistas", "Siete entrevistas · siete voces")}
+  <p class="cc-lead cc-rv">Elige una entrevista para ver qué destacó, qué cuestionó y qué ideas dejó cada persona. Son resúmenes, no transcripciones.</p>
   <div class="cc-ent"><div class="cc-tabs" role="tablist" aria-label="Entrevistados">${a.entrevistas.map((e, i) => `<button role="tab" id="tb-${e.id}" aria-controls="pn-${e.id}" aria-selected="${i === 0}" tabindex="${i ? -1 : 0}"><span>${i + 1}</span><b>${e.nombre}</b><small>${e.perfil}</small></button>`).join("")}</div>
   <div class="cc-panels">${a.entrevistas.map((e, i) => `<article class="cc-pn" role="tabpanel" id="pn-${e.id}" aria-labelledby="tb-${e.id}" ${i ? "hidden" : ""}>
     <div class="cc-pn-top">${slot("entrevista-" + e.id, "3/4", "Foto de la entrevista con " + e.nombre, "cc-sm")}<div><p class="cc-k">Entrevista ${i + 1} de 7</p><h3>${e.nombre}</h3><p class="cc-perfil">${e.perfil}</p><dl class="cc-meta"><div><dt>Entrevistó</dt><dd>${e.por}</dd></div><div><dt>Vio</dt><dd>${e.vio}</dd></div></dl>${e.aviso ? `<p class="cc-aviso">${e.aviso}</p>` : ""}${btn(e.video, "▶ Ver el video de la entrevista")}</div></div>
@@ -72,56 +72,54 @@
     <div class="cc-read"><div><h4>Cómo lo leímos</h4><p>${e.lectura}</p></div><div>${tag(e.tag)}<p>${e.decision}</p></div></div></article>`).join("")}</div></div></section>
 
 <section id="encuesta" class="cc-sec cc-dark" aria-labelledby="encuesta-t">${head("05", "encuesta", "Lo que encontramos en la encuesta", "20 personas · " + E.fecha)}
-  <p class="cc-lead cc-rv">${E.lectura}</p>
+  <p class="cc-met cc-rv">${E.lectura}</p>
   <div class="cc-bigs cc-rv"><div><b>59%</b><span>de acuerdo promedio con la V3 (V2: 43%, V1: 35%)</span></div><div><b>45%</b><span>elige la V3 como «la mejor» (V2: 40%, V1: 10%)</span></div><div><b>89%</b><span>conservaría la consola en alguna forma</span></div><div><b>55%</b><span>quiere un espacio interior más amplio</span></div></div>
   <div class="cc-btnrow cc-rv">${btn(a.encuestaUrl, "Abrir la encuesta original", "alt")}</div>
 
   <h3 class="cc-h3 cc-rv">Comparador V1 · V2 · V3</h3>
   <div class="cc-cmp cc-rv"><div class="cc-crit" role="group" aria-label="Criterio">${E.criterios.map((c, i) => `<button data-c="${c.id}" aria-pressed="${i === 0}" class="${i ? "" : "on"}">${c.t}</button>`).join("")}<button data-c="prom" aria-pressed="false">Promedio general</button></div>
-    <div class="cc-cmpv" aria-live="polite"></div><label class="cc-chkl" hidden><input type="checkbox"> Excluir las 2 respuestas atípicas (#6 y #8, que respondieron casi todo «Totalmente en desacuerdo»)</label>
-    <p class="cc-met">Barras: % de acuerdo (4-5). Puntaje medio en escala 1-5. n = 20.</p></div>
-  <p class="cc-take cc-rv"><b>Lo que se ve:</b> ninguna versión supera 50% en «se entiende qué es y cómo funciona» (35% / 25% / 50%). La V2 mejora a la V1 en 4 de 5 criterios, pero la V3 la iguala o supera en todos. Sin las 2 respuestas atípicas el orden V3 &gt; V2 &gt; V1 se mantiene.</p>
+    <div class="cc-cmpv" aria-live="polite"></div><label class="cc-chkl" hidden><input type="checkbox"> Sin las 2 respuestas atípicas (#6 y #8)</label>
+    <p class="cc-met">% de acuerdo (4-5) y puntaje medio 1-5 · n = 20</p></div>
+  <p class="cc-chip cc-rv">Ninguna versión pasa de 50% en «se entiende» · la V3 iguala o supera a las otras en todo</p>
 
   <h3 class="cc-h3 cc-rv">¿Cuál está mejor resuelta?</h3>
   <div class="cc-stack cc-rv">${E.resuelta.map(r => `<div class="cc-srow"><span>${r.t}</span><div class="cc-sbar">${r.v.map((v, i) => v ? `<i class="s${i}" style="--w:${v}%" title="${["V1", "V2", "V3", "Ninguna"][i]} ${v}%"><b>${v}%</b></i>` : "").join("")}</div></div>`).join("")}<p class="cc-leg"><i class="s0"></i>V1 <i class="s1"></i>V2 <i class="s2"></i>V3 <i class="s3"></i>Ninguna</p></div>
-  <p class="cc-take cc-rv">La V3 gana 4 de 5 criterios con mayoría relativa. La excepción es la coherencia de componentes (V3 40%, V2 35%), donde la V2 muestra su fortaleza. La V2 se elige más por razones funcionales (modularidad, montaje, holograma, plantas); la V3, por razones emocionales y formales (silueta, intriga, asombro).</p>
 
-  <div class="cc-2g"><div class="cc-rv"><h3 class="cc-h3">¿Qué hace atractiva a la versión favorita?</h3>${E.atractivo.map(x => bar(x[0], x[1])).join("")}<p class="cc-met">Lo que enamora es la envolvente exterior, no el interior.</p></div>
-  <div class="cc-rv"><h3 class="cc-h3">Semáforo de componentes</h3><p class="cc-met">Base: 19 personas. % que conserva (verde oscuro) y que ajusta (verde claro). Los demás votos están repartidos entre simplificar, reorganizar, reemplazar y eliminar.</p>${E.componentes.map(c => `<div class="cc-bar sem"><span>${c.t}</span><div class="cc-trk"><i style="--v:${c.c}%"></i><u style="--v:${c.aj || 0}%;--o:${c.c}%"></u></div><b>${c.c}%${c.aj ? " · " + c.aj + "%" : ""}</b></div>`).join("")}</div></div>
-  <div class="cc-zonas cc-rv">${E.zonas.map(z => `<article><h4>${z.t}</h4><p>${z.d}</p></article>`).join("")}</div>
+  <div class="cc-2g"><div class="cc-rv"><h3 class="cc-h3">¿Qué hace atractiva a la favorita?</h3>${E.atractivo.map(x => bar(x[0], x[1])).join("")}<p class="cc-chip">Enamora la envolvente exterior, no el interior</p></div>
+  <div class="cc-rv"><h3 class="cc-h3">Semáforo de componentes</h3><p class="cc-met">Base 19 · verde oscuro: conservar · verde claro: ajustar</p>${E.componentes.map(c => `<div class="cc-bar sem"><span>${c.t}</span><div class="cc-trk"><i style="--v:${c.c}%"></i><u style="--v:${c.aj || 0}%;--o:${c.c}%"></u></div><b>${c.c}%</b></div>`).join("")}</div></div>
+  <div class="cc-zn cc-rv">${E.zonas.map(z => `<article class="z-${z.c}"><h4>${z.t}</h4><ul>${z.items.map(i => `<li>${i}</li>`).join("")}</ul></article>`).join("")}</div>
 
   <h3 class="cc-h3 cc-rv">La consola: conservar, pero integrada</h3>
   <div class="cc-bigs cc-rv">${E.consola.map(c => `<div><b>${c[0]}</b><span>${c[1]}</span></div>`).join("")}</div>
-  <p class="cc-take cc-rv">${E.consolaNota}</p>
-  <div class="cc-rv"><h4 class="cc-h4">Problemas con los recursos tecnológicos</h4>${E.problemas.map(x => bar(x[0], x[1])).join("")}</div>
+  <p class="cc-chip cc-rv">${E.consolaNota}</p>
+  <div class="cc-rv"><h4 class="cc-h4">Problemas con lo tecnológico</h4>${E.problemas.map(x => bar(x[0], x[1])).join("")}</div>
 
-  <h3 class="cc-h3 cc-rv">Estructura y prioridades de cambio</h3>
+  <h3 class="cc-h3 cc-rv">Estructura y prioridades</h3>
   <div class="cc-bigs cc-rv">${E.estructura.map(c => `<div><b>${c[0]}</b><span>${c[1]}</span></div>`).join("")}</div>
-  <div class="cc-2g"><div class="cc-rv"><h4 class="cc-h4">¿Qué cambiarías en la estructura?</h4>${E.cambiarias.map(x => bar(x[0], x[1])).join("")}</div><div class="cc-rv"><h4 class="cc-h4">¿Qué cambiar primero?</h4>${E.primero.map(x => bar(x[0], x[1])).join("")}</div></div>
-  <p class="cc-take cc-rv">El consenso más claro es ampliar el espacio interior (55%). La modularidad y el desmontaje tienen el respaldo más fuerte (70%), y entre lo «acertado» se repiten lo plegable, lo fácil de armar y lo inflable-portátil. La estabilidad percibida está dividida: 50% de acuerdo, 30% en desacuerdo.</p>
+  <div class="cc-2g"><div class="cc-rv"><h4 class="cc-h4">¿Qué cambiarías?</h4>${E.cambiarias.map(x => bar(x[0], x[1])).join("")}</div><div class="cc-rv"><h4 class="cc-h4">¿Qué cambiar primero?</h4>${E.primero.map(x => bar(x[0], x[1])).join("")}</div></div>
 
   <h3 class="cc-h3 cc-rv">Voz de los encuestados</h3>
-  <div class="cc-voces cc-rv">${E.voces.map(v => `<article><b>${v[1]}</b><h4>${v[0]}</h4><p>${v[2]}</p></article>`).join("")}</div><p class="cc-met cc-rv">${E.voz2}</p>
-  <p class="cc-take cc-rv"><b>Inferencia clave del informe:</b> el problema de fondo no es estético sino comunicativo: la propuesta gusta, pero una de cada tres personas no entiende qué es. Una placa o letrero, un dibujo desde varios ángulos y una frase explicativa son la mejora de menor costo y mayor impacto.</p>
+  <div class="cc-bub cc-rv" role="list">${E.voces.map(v => `<span role="listitem" style="--s:${v[1]}"><b>${v[1]}</b>${v[0]}</span>`).join("")}</div>
+  <p class="cc-met cc-rv">Número de comentarios abiertos (de 20) que tocan cada tema · cifras aproximadas · ≈6 sin comentarios</p>
+  <p class="cc-chip cc-rv">El problema de fondo es comunicativo: una de cada tres personas no entiende qué es</p>
 
-  <h3 class="cc-h3 cc-rv">Datos curiosos</h3><ul class="cc-cur cc-rv">${E.curiosos.map(c => `<li>${c}</li>`).join("")}</ul>
+  <h3 class="cc-h3 cc-rv">Datos curiosos</h3><ul class="cc-cur cc-rv">${E.curiosos.map(c => `<li><b>${c[0]}</b>${c[1]}</li>`).join("")}</ul>
 
   <h3 class="cc-h3 cc-rv">Tres pilares y qué tan firme es la evidencia</h3>
-  <div class="cc-pil cc-rv">${E.pilares.map(p => `<article><span class="cc-ev">${p.e}</span><h4>${p.t}</h4><p>${p.d}</p></article>`).join("")}</div>
-  <details class="cc-det cc-rv"><summary>Sobre la mesa: por qué lo tratamos como hipótesis</summary><p>La encuesta no incluyó una pregunta sobre mesa. Tres señales indirectas la respaldan:</p><ul>${E.mesaSenales.map(x => `<li>${x}</li>`).join("")}</ul><p>El informe recomienda validarla con una pregunta directa en la siguiente ronda.</p></details>
-  <p class="cc-met cc-rv">Nota metodológica: porcentajes sobre 20 respuestas salvo indicación (la decisión por componente usa 19). «De acuerdo» incluye «Totalmente de acuerdo». Los conteos de comentarios abiertos son una lectura cualitativa aproximada.</p></section>
+  <div class="cc-pil cc-rv">${E.pilares.map(p => `<article><span class="cc-lvl" role="img" aria-label="Solidez ${p.l} de 3">${[1, 2, 3].map(n => `<i class="${n <= p.l ? "on" : ""}"></i>`).join("")}</span><span class="cc-ev">${p.e}</span><h4>${p.t}</h4><p>${p.d}</p></article>`).join("")}</div>
+  <p class="cc-met cc-rv">Porcentajes sobre 20 respuestas (la decisión por componente, sobre 19). «De acuerdo» incluye «Totalmente de acuerdo».</p></section>
 
 <section id="decisiones" class="cc-sec" aria-labelledby="decisiones-t">${head("06", "decisiones", "De las opiniones a las decisiones", "El corazón de la actividad")}
-  <p class="cc-lead cc-rv">Escuchar no significó hacer todo lo que nos dijeron. Algunas ideas las adoptamos, otras las adaptamos y otras las descartamos porque no encajaban con el concepto, las posibilidades o lo efímero de BETA. Primero, el tablero completo; después, los siete hallazgos.</p>
-  <h3 class="cc-h3 cc-rv">Tablero de aportes: ¿qué pasó con cada idea?</h3>
+  <p class="cc-lead cc-rv">Escuchar no fue obedecer: unas ideas se adoptaron, otras se adaptaron y otras se descartaron.</p>
+  <h3 class="cc-h3 cc-rv">¿Qué pasó con cada idea?</h3>
   <div class="cc-filt cc-rv" role="group" aria-label="Filtrar aportes"><button class="on" data-t="todas" aria-pressed="true">Todas</button>${Object.keys(TAGS).map(k => `<button data-t="${k}" aria-pressed="false">${TAGS[k]}</button>`).join("")}</div>
-  <ul class="cc-led">${a.aportes.map(x => `<li data-t="${x.tag}">${tag(x.tag)}<div><h4>${x.t}</h4><p class="cc-q"><b>Lo que escuchamos:</b> ${x.q}</p><p><b>Lo que hicimos:</b> ${x.d}</p></div></li>`).join("")}</ul>
-  <h3 class="cc-h3 cc-rv">Los siete hallazgos</h3><p class="cc-lead cc-rv">Cada uno conecta tres cosas: qué escuchamos o encontramos, qué interpretamos como diseñadores y qué decidimos cambiar.</p>
+  <ul class="cc-led">${a.aportes.map(x => `<li data-t="${x.tag}">${tag(x.tag)}<div><h4>${x.t}</h4><p class="cc-q">${x.de}</p><p class="cc-do">→ ${x.d}</p></div></li>`).join("")}</ul>
+  <h3 class="cc-h3 cc-rv">Los siete hallazgos</h3><p class="cc-lead cc-rv">Qué escuchamos → qué interpretamos → qué decidimos.</p>
   <div class="cc-hall">${a.hallazgos.map((h, i) => `<details class="cc-hz cc-rv" id="${h.id}" ${i === 0 ? "open" : ""}><summary><span class="cc-hn">${String(h.n).padStart(2, "0")}</span><h3>${h.t}</h3>${h.validar ? `<span class="cc-tag t-validar">Por validar</span>` : ""}</summary>
-    <div class="cc-hb"><div class="cc-hcols"><section class="c1"><h4>① Qué escuchamos</h4><ul>${h.oimos.map(x => `<li>${x}</li>`).join("")}</ul></section><section class="c2"><h4>② Qué interpretamos</h4><p>${h.interpretamos}</p></section><section class="c3"><h4>③ Qué decidimos</h4><p>${h.decidimos}</p></section></div>${VIZ[h.viz]()}${h.n === 4 ? slot("cortina-proyeccion", "16/9", "Referencia o render de la proyección tipo cortina en la entrada") : ""}${h.n === 5 ? slot("mesa-plegable", "16/9", "Render o boceto de la mesa plegable (evolución del mando)") : ""}${h.n === 2 ? slot("dos-caras", "16/9", "Render de las dos caras del inflable: mando y pantalla con glitch") : ""}</div></details>`).join("")}</div></section>
+    <div class="cc-hb"><div class="cc-hcols"><section class="c1"><h4>① Qué escuchamos</h4><div class="cc-cif"><b>${h.cifra[0]}</b><span>${h.cifra[1]}</span></div><ul>${h.oimos.map(x => `<li>${x}</li>`).join("")}</ul></section><section class="c2"><h4>② Qué interpretamos</h4><p>${h.interpretamos}</p></section><section class="c3"><h4>③ Qué decidimos</h4><p>${h.decidimos}</p></section></div>${VIZ[h.viz]()}${h.n === 4 ? slot("cortina-proyeccion", "16/9", "Referencia o render de la proyección tipo cortina en la entrada") : ""}${h.n === 5 ? slot("mesa-plegable", "16/9", "Render o boceto de la mesa plegable (evolución del mando)") : ""}${h.n === 2 ? slot("dos-caras", "16/9", "Render de las dos caras del inflable: mando y pantalla con glitch") : ""}</div></details>`).join("")}</div></section>
 
 <section id="resultado" class="cc-sec cc-neon" aria-labelledby="resultado-t">${head("07", "resultado", "Así cambió la propuesta", "Resultado general")}
-  <p class="cc-lead cc-rv">Mueve el interruptor para ver qué tenía la V3 que pusimos a prueba y en qué se convirtió BETA después de escuchar.</p>
+  <p class="cc-lead cc-rv">Mueve el interruptor: la V3 que pusimos a prueba frente a BETA hoy.</p>
   <div class="cc-ba cc-rv" data-s="ahora"><div class="cc-sw" role="group" aria-label="Versión"><button data-s="antes" aria-pressed="false">Antes · V3 a prueba</button><button class="on" data-s="ahora" aria-pressed="true">Ahora · BETA</button></div>
     <dl class="cc-bal"></dl></div>
   <div class="cc-grid3 cc-rv">${slot("resultado-dos-caras", "4/3", "Las dos caras del inflable")}${slot("resultado-mesas", "4/3", "Las mesas plegables junto al inflable")}${slot("resultado-recorrido", "4/3", "El recorrido bilateral: entradas, salidas y estudiantes")}</div>
