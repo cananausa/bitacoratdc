@@ -129,6 +129,11 @@
       const s = document.createElement("script"); s.src = R + "js/referentes.js";
       s.onload = () => window.CANANA_REFERENTES(a, R, main, acts, i); document.body.appendChild(s);
     }
+         else if (a.cocreacion) {
+      document.title = a.titulo + " · " + A.nombre;
+      const s = document.createElement("script"); s.src = R + "js/cocreacion.js";
+      s.onload = () => window.CANANA_COCREACION(a, R, main, acts, i); document.body.appendChild(s);
+    }
          else if (a.formal) {
       document.title = a.titulo + " · " + A.nombre;
       const s = document.createElement("script"); s.src = R + "js/formal.js";
