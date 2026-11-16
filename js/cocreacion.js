@@ -44,7 +44,7 @@
     <h1><span class="cc-mega">Procesos de</span><span class="cc-mega y">Co-Creación</span></h1>
     <p class="cc-lema">${a.lema}</p><p class="cc-sub">Cómo una versión de BETA que pusimos a prueba terminó cambiando todo.</p>
     <a class="cc-go" href="#porque">Empezar el recorrido <span aria-hidden="true">↓</span></a></div>
-    ${slot("portada", "4/5", "Portada: el inflable en forma de mando (primer boceto de la V3)", "cc-arch")}</div>
+    ${slot("portada", "4/5", "Portada: el stand neumático con forma de mando (el lugar a donde llegamos)", "cc-arch")}</div>
   <ul class="cc-cifras">${a.cifras.map(c => `<li class="cc-rv"><b>${c.v}</b><span>${c.t}</span></li>`).join("")}</ul></header>
 <div class="cc-nav" role="navigation" aria-label="Secciones de la actividad"><div class="cc-prog" aria-hidden="true"><i></i></div><ol>${secs.map((s, i) => `<li><a href="#${s[0]}"><span>0${i + 1}</span>${s[1]}</a></li>`).join("")}</ol></div>
 
