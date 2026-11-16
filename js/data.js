@@ -292,7 +292,7 @@ integracion: [
           galeria: [
             { tipo: "Rediseño de BETA", pie: "Con plantas y techo modular." },
             { tipo: "Interior de BETA", pie: "Con la consola interactiva proyectada en la pared." },
-            { tipo: "Exterior de BETA", pie: "Con cortina proyectada que se actualiza con la información que va poniendo el estudiante." }
+            { tipo: "Exterior de BETA", pie: "Con cortina holográfica proyectada que se actualiza con la información que va poniendo el estudiante." }
           ],
           comparacion: { antes: "semana-01/01", despues: "semana-02/01", etiquetaAntes: "Semana 1", etiquetaDespues: "Semana 2", nota: "Del esquema básico de una sola pieza al rediseño con arcos de tres tablas, techo modular, plantas y proyecciones digitales." } },
         { n: 3, id: "semana-03", periodo: "11-15 de Noviembre de 2026", titulo: "Después de la co-creación",
@@ -301,7 +301,7 @@ integracion: [
             { t: "Estructura inflable. ", d: "Cambiamos los arcos, el techo y los pilares de tablas por una estructura neumática inspirada en el mando. Se monta fácil, es liviana y deja un interior mucho más amplio." },
             { t: "Dos caras. ", d: "Una es el mando; la otra, una pantalla con cursor y glitch. Así BETA no queda como si Diseño Digital fuera solo videojuegos." },
             { t: "Dos puertas holográficas. ", d: "Por ambas se entra y se sale. Cada una tiene su proyección, su mesa y un estudiante que recibe y despide." },
-            { t: "Cortina de proyección. ", d: "La imagen de la puerta va sobre una superficie opaca con respaldo blackout, para que la luz de afuera no la dañe y no se vea lo de atrás." },
+            { t: "Cortina de proyección. ", d: "La imagen de la entrada usa una proyección holográfica con respaldo blackout, para que la luz de afuera no la dañe y no se vea lo de atrás." },
             { t: "Una mesa plegable por puerta. ", d: "Sirve para recibir y dar información, y también guarda las conexiones, los controles, la luz y el sistema de insuflado del inflable." },
             { t: "Color y luz. ", d: "Morado, azul y amarillo neón junto a los tonos de la universidad, con luz neón alrededor para que se vea de lejos." },
             { t: "Interior con realidad virtual. ", d: "Adentro, a oscuras, un estudiante se pone el visor y recorre los tres énfasis (Videojuegos, Creación de contenido y Diseño de objetos). Los demás lo ven en una pared gracias a un proyector." },
@@ -320,7 +320,7 @@ integracion: [
             { p: "El túnel quedaba estrecho, la estructura daba miedo de caerse y el armado era complicado.",
               s: "Pasamos a una estructura inflable: más espacio libre, montaje y desmontaje fáciles, y más segura." },
             { p: "La luz de afuera arruinaba las proyecciones y la entrada no era clara.",
-              s: "Cortina opaca con blackout y dos puertas donde se entra y se sale, cada una con su estudiante." },
+              s: "Entrada con proyección holográfica con tecnología opaca con blackout y dos puertas donde se entra y se sale, cada una con su estudiante." },
             { p: "La consola atraía, pero se veía aislada y reducía la carrera a un videojuego.",
               s: "Mesa plegable por puerta y un interior donde los visitantes crean, se llevan su recuerdo y ven su experiencia proyectada en la entrada." }
           ],
@@ -401,7 +401,7 @@ integracion: [
           destaco: ["V1: le gustó el sistema de plegado, la experiencia inicial y el espacio triangular por dentro.", "V2: le pareció súper atractivo el holograma justo en la puerta de entrada.", "V3: le gustó mucho; la sintió curiosa y con bastante potencial para atraer público."],
           cuestiono: ["V1: demasiado simple y abstracta visualmente; no sería llamativa.", "V2: tanta planta adentro podía estorbar la dinámica del lugar.", "V3: verla tan gris en los dibujos."],
           ideas: ["Meter morados, verdes neón o negros en los botones para darle calor y vida.", "Cortina de tela con cremallera para que la luz exterior no arruine las pantallas.", "Que los botones del control reaccionaran con luces de colores al tocarlos.", "Variar lo proyectado con luces brillantes y elementos tipo videojuego.", "Un mini espacio de atención o una mesita en la zona trasera para organizar entrada y salida.", "Su camino ideal: la V3 con la puerta holográfica de la V2 en el ingreso, sin letreros tradicionales."],
-          lectura: "Santiago fue el que más ideas concretas nos dejó, y casi todas terminaron en la mesa de decisiones: color, cortina, holograma y mesa. La de los botones que reaccionan al tacto la dejamos de lado (más abajo contamos por qué).",
+          lectura: "Santiago fue el que más ideas concretas nos dejó, y casi todas terminaron en la mesa de decisiones: color, holograma tipo cortina blackout y mesa. La de los botones que reaccionan al tacto la dejamos de lado (más abajo contamos por qué).",
           tag: "adoptada", decision: "Elegimos la V3 como camino, el holograma de entrada se queda, el color cambia y aparece la mesa. La luz exterior la resolvemos con proyecciones opacas tipo cortina." },
         { id: "oscar", nombre: "Óscar Solano", perfil: "Profesor de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "",
           destaco: ["V1: al principio la veía como la más práctica, factible y económica.", "V2: se volvió su preferida al saber que el presupuesto era ilimitado; ofrece una visión más amplia e integral del diseño. Le pareció un puntazo el holograma de entrada, la consola con QR y la realidad aumentada en los celulares."],
