@@ -327,11 +327,12 @@ integracion: [
           resultados: "BETA dio un giro grande: pasó de una idea básica a una propuesta con criterio y argumentos. Ahora es un inflable de dos caras, con dos puertas holográficas, mesas de apoyo y un interior de realidad virtual que enseña qué se puede hacer en Diseño Digital. Escuchar no fue obedecer: algunas ideas se adoptaron, otras se adaptaron y otras se descartaron. El detalle está en la actividad de Procesos de co-creación.",
           ejes: ["forma", "espacio", "materiales", "tecnologia"],
           galeria: [
-            { tipo: "Diagramas de funcionamiento", pie: "Recorrido bilateral: dos puertas, entrada y salida por ambas, con mesa y estudiante." },
-            { tipo: "Modelo tridimensional", pie: "El inflable con sus dos caras y las mesas plegables." },
-            { tipo: "Renderizado", pie: "BETA por fuera, con cortina proyectada y luz neón." },
-            { tipo: "Interior con realidad virtual", pie: "Un estudiante con el visor mientras los demás lo ven proyectado en la pared." },
-            { tipo: "Galería en las puertas", pie: "Las creaciones y respuestas de los visitantes proyectadas en tiempo real en la entrada." }
+            { tipo: "Resultado final neumático", pie: "BETA después de la co-creación." },
+            { tipo: "Primer boceto antes de la co-creación", pie: "La versión 3 que pusimos a prueba." },
+            { tipo: "Lado A", pie: "Una de las dos caras del inflable." },
+            { tipo: "Lado B", pie: "La otra cara del inflable." },
+            { tipo: "Vista superior y lateral del recorrido", pie: "Cómo se mueven los visitantes por las dos puertas." },
+            { tipo: "Interior de la estructura", pie: "El espacio por dentro, donde ocurre la experiencia." }
           ],
           comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
         { n: 4, id: "semana-04", periodo: "", titulo: "", objetivo: "",
