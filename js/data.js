@@ -295,24 +295,43 @@ integracion: [
             { tipo: "Exterior de BETA", pie: "Con cortina proyectada que se actualiza con la información que va poniendo el estudiante." }
           ],
           comparacion: { antes: "semana-01/01", despues: "semana-02/01", etiquetaAntes: "Semana 1", etiquetaDespues: "Semana 2", nota: "Del esquema básico de una sola pieza al rediseño con arcos de tres tablas, techo modular, plantas y proyecciones digitales." } },
-        { n: 3, id: "semana-03", periodo: "", titulo: "", objetivo: "",
-          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
-          galeria: [
-            { tipo: "Diagramas de funcionamiento", pie: "" },
-            { tipo: "Modelo tridimensional", pie: "" },
-            { tipo: "Renderizado", pie: "" }
-          ],
-          comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "" } },
-        { n: 4, id: "semana-04", periodo: "", titulo: "", objetivo: "",
-          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
-          galeria: [
-            { tipo: "Prototipo", pie: "" },
-            { tipo: "Pruebas de interacción", pie: "" },
-            { tipo: "Renderizado final", pie: "" }
-          ],
-          comparacion: { antes: "semana-03/01", despues: "semana-04/01", etiquetaAntes: "Semana 3", etiquetaDespues: "Semana 4", nota: "" } }
-      ]
-    }
+        { n: 3, id: "semana-03", periodo: "11-15 de Noviembre de 2026", titulo: "Después de la co-creación",
+  objetivo: "Salir a conversar BETA con profesores, estudiantes y otras personas (7 entrevistas y una encuesta a 20 personas) para ver qué funcionaba y qué no, y con eso transformar la propuesta de fondo. Antes armamos una versión 3 (un inflable con forma de mando) solo para ponerla a prueba.",
+  decisiones: [
+    { t: "Estructura inflable. ", d: "Cambiamos los arcos, el techo y los pilares de tablas por una estructura neumática inspirada en el mando. Se monta fácil, es liviana y deja un interior mucho más amplio." },
+    { t: "Dos caras. ", d: "Una es el mando; la otra, una pantalla con cursor y glitch. Así BETA no queda como si Diseño Digital fuera solo videojuegos." },
+    { t: "Dos puertas holográficas. ", d: "Por ambas se entra y se sale. Cada una tiene su proyección, su mesa y un estudiante que recibe y despide." },
+    { t: "Cortina de proyección. ", d: "La imagen de la puerta va sobre una superficie opaca con respaldo blackout, para que la luz de afuera no la dañe y no se vea lo de atrás." },
+    { t: "Una mesa plegable por puerta. ", d: "Sirve para recibir y dar información, y también guarda las conexiones, los controles, la luz y el sistema de insuflado del inflable." },
+    { t: "Color y luz. ", d: "Morado, azul y amarillo neón junto a los tonos de la universidad, con luz neón alrededor para que se vea de lejos." },
+    { t: "Interior con realidad virtual. ", d: "Adentro, a oscuras, un estudiante se pone el visor y recorre los tres énfasis (Videojuegos, Creación de contenido y Diseño de objetos). Los demás lo ven en una pared gracias a un proyector." },
+    { t: "Recuerdo y galería. ", d: "Al final escanean un QR, descargan lo que crearon y, si quieren, publican su experiencia. Se proyecta en tiempo real en las puertas, con filtro de palabras y solo nombre o apodo, porque son menores de edad." }
+  ],
+  cambios: [
+    "Se abandonan los arcos de tres tablas, el techo modular y los pilares: la estructura ahora es inflable.",
+    "Se pasa de una sola entrada a dos puertas, y de un solo estudiante al final a uno por puerta.",
+    "La consola proyectada con QR se reemplaza por una experiencia de realidad virtual donde los visitantes crean cosas.",
+    "El mando deja de ser la fachada única y pasa a ser una de las dos caras. Su idea también se vuelve mesa plegable.",
+    "Se cambia el gris por morado, azul y amarillo neón, con luz ambiental."
+  ],
+  problemas: [
+    { p: "Ninguna versión pasó de 50% en «se entiende», y el mando solo encasillaba la carrera en videojuegos.",
+      s: "Le sumamos una segunda cara (pantalla con cursor y glitch), y el interior con realidad virtual muestra los tres énfasis." },
+    { p: "El túnel quedaba estrecho, la estructura daba miedo de caerse y el armado era complicado.",
+      s: "Pasamos a una estructura inflable: más espacio libre, montaje y desmontaje fáciles, y más segura." },
+    { p: "La luz de afuera arruinaba las proyecciones y la entrada no era clara.",
+      s: "Cortina opaca con blackout y dos puertas donde se entra y se sale, cada una con su estudiante." },
+    { p: "La consola atraía, pero se veía aislada y reducía la carrera a un videojuego.",
+      s: "Mesa plegable por puerta y un interior donde los visitantes crean, se llevan su recuerdo y ven su experiencia proyectada en la entrada." }
+  ],
+  resultados: "BETA dio un giro grande: pasó de una idea básica a una propuesta con criterio y argumentos. Ahora es un inflable de dos caras, con dos puertas holográficas, mesas de apoyo y un interior de realidad virtual que enseña qué se puede hacer en Diseño Digital. Escuchar no fue obedecer: algunas ideas se adoptaron, otras se adaptaron y otras se descartaron. El detalle está en la actividad de Procesos de co-creación.",
+  ejes: ["forma", "espacio", "materiales", "tecnologia"],
+  galeria: [
+    { tipo: "Diagramas de funcionamiento", pie: "Recorrido bilateral: dos puertas, entrada y salida por ambas, con mesa y estudiante." },
+    { tipo: "Modelo tridimensional", pie: "El inflable con sus dos caras y las mesas plegables." },
+    { tipo: "Renderizado", pie: "BETA por fuera, con cortina proyectada y luz neón." }
+  ],
+  comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
 ,
     { id: "procesos-de-co-creacion", cocreacion: true, semana: "Semana 3 del proyecto", fecha: "11 al 15 de Noviembre de 2026",
       titulo: "Procesos de co-creación: de las opiniones a las decisiones de BETA",
