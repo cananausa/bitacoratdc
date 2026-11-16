@@ -25,6 +25,7 @@
     if (!d.getElementById("df-css")) {
       const l = d.createElement("link"); l.id = "df-css"; l.rel = "stylesheet"; l.href = R + "css/formal.css";
       l.onload = l.onerror = go; d.head.appendChild(l); setTimeout(go, 1500);
+      const l2 = d.createElement("link"); l2.id = "df-css2"; l2.rel = "stylesheet"; l2.href = R + "css/formal-extra.css"; d.head.appendChild(l2);
     } else go();
 
     function build() {
@@ -79,28 +80,31 @@
           <p class="df-cap${c.nota ? "" : " pend"}">${c.nota ? esc(c.nota) : "Nota de comparación por completar: qué cambió entre las dos versiones y por qué."}</p></div>`;
       };
 
+      const acc = (t, h, open) => `<details class="df-d"${open ? " open" : ""}><summary>${t}</summary><div>${h}</div></details>`;
+      const interior = (s) => !s.interior ? "" : `<div class="df-int ed-rv"><h3 class="ed-h3">${s.interiorTitulo || "La experiencia por dentro"}</h3>${s.interiorIntro ? `<p class="df-intro">${s.interiorIntro}</p>` : ""}<div class="df-acc">${s.interior.map((x, k) => `<details class="df-d"${k === 0 ? " open" : ""}><summary>${x.t}</summary><div>${x.p ? `<p>${x.p}</p>` : ""}${x.items ? `<div class="df-cards">${x.items.map((i) => `<article><h4>${i.t}</h4><p>${i.d}</p></article>`).join("")}</div>` : ""}</div></details>`).join("")}</div></div>`;
       const week = (s, i) => {
         const n = i + 1, prev = S[i - 1], next = S[i + 1];
         const tiles = (s.galeria || []).map((it, k) => tile(refOf(s, k), it.tipo, it.pie, s.id, `Semana ${n} · ${pad(k + 1)}`)).join("");
         return `<section id="${s.id}" class="ed-sec df-week${n % 2 === 0 ? " ed-tint" : ""}${n % 2 === 0 ? " alt" : ""}" aria-labelledby="${s.id}-t">
           ${head(pad(n), s.id, esc(s.titulo) || pend("Título de la fase por definir"), `Semana ${n} · ${esc(s.periodo) || "Fecha por definir"}`)}
-          <div class="df-wk">
+          <div class="df-wk df-wk2">
             <div class="df-gal ed-rv">${tiles || pend("Galería por incorporar")}</div>
-            <aside class="df-info ed-rv" aria-label="Registro de la semana ${n}"><dl>
-              <dt>Objetivo de diseño</dt><dd>${txt(s.objetivo, "Objetivo por documentar")}</dd>
-              <dt>Decisiones tomadas</dt><dd>${list(s.decisiones, (x) => `<li><b>${x.t}</b>${x.d || ""}</li>`, "Decisiones por documentar")}</dd>
-              <dt>Cambios respecto a la versión anterior</dt><dd>${list(s.cambios, (x) => `<li>${x}</li>`, n === 1 ? "Versión de partida: sin cambios previos" : "Cambios por documentar")}</dd>
-              <dt>Problemas y soluciones</dt><dd>${list(s.problemas, (x) => `<li><b>Problema</b>${x.p}<br><b>Solución</b>${x.s || "Por definir"}</li>`, "Problemas por documentar")}</dd>
-              <dt>Resultados y conclusiones</dt><dd>${txt(s.resultados, "Resultados por documentar")}</dd>
-            </dl></aside>
+            <div class="df-acc ed-rv" aria-label="Registro de la semana ${n}">
+              ${acc("Objetivo de diseño", txt(s.objetivo, "Objetivo por documentar"), 1)}
+              ${acc("Decisiones tomadas", list(s.decisiones, (x) => `<li><b>${x.t}</b>${x.d || ""}</li>`, "Decisiones por documentar"))}
+              ${acc("Cambios respecto a la versión anterior", list(s.cambios, (x) => `<li>${x}</li>`, n === 1 ? "Versión de partida: sin cambios previos" : "Cambios por documentar"))}
+              ${acc("Problemas y soluciones", list(s.problemas, (x) => `<li><b>Problema</b>${x.p}<br><b>Solución</b>${x.s || "Por definir"}</li>`, "Problemas por documentar"))}
+              ${acc("Resultados y conclusiones", txt(s.resultados, "Resultados por documentar"))}
+            </div>
           </div>
+          ${interior(s)}
           ${cmp(s)}
           <p class="df-wpager">${prev ? `<a href="#${prev.id}"><span aria-hidden="true">←</span> Semana ${n - 1}</a>` : `<a href="#evolucion"><span aria-hidden="true">↑</span> Evolución general</a>`}
             ${next ? `<a href="#${next.id}">Semana ${n + 1} <span aria-hidden="true">→</span></a>` : `<a href="#cierre">Cierre <span aria-hidden="true">↓</span></a>`}</p>
         </section>`;
       };
 
-      const film = S.map((s, i) => `<li>${tile(refOf(s, 0), `Semana ${i + 1}`, s.titulo || "", "evo", `Semana ${i + 1} · 01`, 1)}<a class="df-film-l" href="#${s.id}">Ir a la semana ${i + 1} <span aria-hidden="true">→</span></a></li>`).join("");
+      const film = S.map((s, i) => `<li>${tile(refOf(s, s.portada || 0), `Semana ${i + 1}`, s.titulo || "", "evo", `Semana ${i + 1} · ${pad((s.portada || 0) + 1)}`, 1)}<a class="df-film-l" href="#${s.id}">Ir a la semana ${i + 1} <span aria-hidden="true">→</span></a></li>`).join("");
 
       const secs = [["evolucion", "Evolución", "00"]].concat(S.map((s, i) => [s.id, `Semana ${i + 1}`, pad(i + 1)])).concat([["cierre", "Cierre", "→"]]);
       const prevA = acts[idx - 1], nextA = acts[idx + 1];
