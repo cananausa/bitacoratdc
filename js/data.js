@@ -296,55 +296,65 @@ integracion: [
           ],
           comparacion: { antes: "semana-01/01", despues: "semana-02/01", etiquetaAntes: "Semana 1", etiquetaDespues: "Semana 2", nota: "Del esquema básico de una sola pieza al rediseño con arcos de tres tablas, techo modular, plantas y proyecciones digitales." } },
         { n: 3, id: "semana-03", periodo: "11-15 de Noviembre de 2026", titulo: "Después de la co-creación",
-  objetivo: "Salir a conversar BETA con profesores, estudiantes y otras personas (7 entrevistas y una encuesta a 20 personas) para ver qué funcionaba y qué no, y con eso transformar la propuesta de fondo. Antes armamos una versión 3 (un inflable con forma de mando) solo para ponerla a prueba.",
-  decisiones: [
-    { t: "Estructura inflable. ", d: "Cambiamos los arcos, el techo y los pilares de tablas por una estructura neumática inspirada en el mando. Se monta fácil, es liviana y deja un interior mucho más amplio." },
-    { t: "Dos caras. ", d: "Una es el mando; la otra, una pantalla con cursor y glitch. Así BETA no queda como si Diseño Digital fuera solo videojuegos." },
-    { t: "Dos puertas holográficas. ", d: "Por ambas se entra y se sale. Cada una tiene su proyección, su mesa y un estudiante que recibe y despide." },
-    { t: "Cortina de proyección. ", d: "La imagen de la puerta va sobre una superficie opaca con respaldo blackout, para que la luz de afuera no la dañe y no se vea lo de atrás." },
-    { t: "Una mesa plegable por puerta. ", d: "Sirve para recibir y dar información, y también guarda las conexiones, los controles, la luz y el sistema de insuflado del inflable." },
-    { t: "Color y luz. ", d: "Morado, azul y amarillo neón junto a los tonos de la universidad, con luz neón alrededor para que se vea de lejos." },
-    { t: "Interior con realidad virtual. ", d: "Adentro, a oscuras, un estudiante se pone el visor y recorre los tres énfasis (Videojuegos, Creación de contenido y Diseño de objetos). Los demás lo ven en una pared gracias a un proyector." },
-    { t: "Recuerdo y galería. ", d: "Al final escanean un QR, descargan lo que crearon y, si quieren, publican su experiencia. Se proyecta en tiempo real en las puertas, con filtro de palabras y solo nombre o apodo, porque son menores de edad." }
-  ],
-  cambios: [
-    "Se abandonan los arcos de tres tablas, el techo modular y los pilares: la estructura ahora es inflable.",
-    "Se pasa de una sola entrada a dos puertas, y de un solo estudiante al final a uno por puerta.",
-    "La consola proyectada con QR se reemplaza por una experiencia de realidad virtual donde los visitantes crean cosas.",
-    "El mando deja de ser la fachada única y pasa a ser una de las dos caras. Su idea también se vuelve mesa plegable.",
-    "Se cambia el gris por morado, azul y amarillo neón, con luz ambiental."
-  ],
-  problemas: [
-    { p: "Ninguna versión pasó de 50% en «se entiende», y el mando solo encasillaba la carrera en videojuegos.",
-      s: "Le sumamos una segunda cara (pantalla con cursor y glitch), y el interior con realidad virtual muestra los tres énfasis." },
-    { p: "El túnel quedaba estrecho, la estructura daba miedo de caerse y el armado era complicado.",
-      s: "Pasamos a una estructura inflable: más espacio libre, montaje y desmontaje fáciles, y más segura." },
-    { p: "La luz de afuera arruinaba las proyecciones y la entrada no era clara.",
-      s: "Cortina opaca con blackout y dos puertas donde se entra y se sale, cada una con su estudiante." },
-    { p: "La consola atraía, pero se veía aislada y reducía la carrera a un videojuego.",
-      s: "Mesa plegable por puerta y un interior donde los visitantes crean, se llevan su recuerdo y ven su experiencia proyectada en la entrada." }
-  ],
-  resultados: "BETA dio un giro grande: pasó de una idea básica a una propuesta con criterio y argumentos. Ahora es un inflable de dos caras, con dos puertas holográficas, mesas de apoyo y un interior de realidad virtual que enseña qué se puede hacer en Diseño Digital. Escuchar no fue obedecer: algunas ideas se adoptaron, otras se adaptaron y otras se descartaron. El detalle está en la actividad de Procesos de co-creación.",
-  ejes: ["forma", "espacio", "materiales", "tecnologia"],
-  galeria: [
-    { tipo: "Diagramas de funcionamiento", pie: "Recorrido bilateral: dos puertas, entrada y salida por ambas, con mesa y estudiante." },
-    { tipo: "Modelo tridimensional", pie: "El inflable con sus dos caras y las mesas plegables." },
-    { tipo: "Renderizado", pie: "BETA por fuera, con cortina proyectada y luz neón." }
-  ],
-  comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
+          objetivo: "Salir a conversar BETA con profesores, estudiantes y otras personas (7 entrevistas y una encuesta a 20 personas) para ver qué funcionaba y qué no, y con eso transformar la propuesta de fondo. Antes armamos una versión 3 (un inflable con forma de mando) solo para ponerla a prueba.",
+          decisiones: [
+            { t: "Estructura inflable. ", d: "Cambiamos los arcos, el techo y los pilares de tablas por una estructura neumática inspirada en el mando. Se monta fácil, es liviana y deja un interior mucho más amplio." },
+            { t: "Dos caras. ", d: "Una es el mando; la otra, una pantalla con cursor y glitch. Así BETA no queda como si Diseño Digital fuera solo videojuegos." },
+            { t: "Dos puertas holográficas. ", d: "Por ambas se entra y se sale. Cada una tiene su proyección, su mesa y un estudiante que recibe y despide." },
+            { t: "Cortina de proyección. ", d: "La imagen de la puerta va sobre una superficie opaca con respaldo blackout, para que la luz de afuera no la dañe y no se vea lo de atrás." },
+            { t: "Una mesa plegable por puerta. ", d: "Sirve para recibir y dar información, y también guarda las conexiones, los controles, la luz y el sistema de insuflado del inflable." },
+            { t: "Color y luz. ", d: "Morado, azul y amarillo neón junto a los tonos de la universidad, con luz neón alrededor para que se vea de lejos." },
+            { t: "Interior con realidad virtual. ", d: "Adentro, a oscuras, un estudiante se pone el visor y recorre los tres énfasis (Videojuegos, Creación de contenido y Diseño de objetos). Los demás lo ven en una pared gracias a un proyector." },
+            { t: "Recuerdo y galería. ", d: "Al final escanean un QR, descargan lo que crearon y, si quieren, publican su experiencia. Se proyecta en tiempo real en las puertas, con filtro de palabras y solo nombre o apodo, porque son menores de edad." }
+          ],
+          cambios: [
+            "Se abandonan los arcos de tres tablas, el techo modular y los pilares: la estructura ahora es inflable.",
+            "Se pasa de una sola entrada a dos puertas, y de un solo estudiante al final a uno por puerta.",
+            "La consola proyectada con QR se reemplaza por una experiencia de realidad virtual donde los visitantes crean cosas.",
+            "El mando deja de ser la fachada única y pasa a ser una de las dos caras. Su idea también se vuelve mesa plegable.",
+            "Se cambia el gris por morado, azul y amarillo neón, con luz ambiental."
+          ],
+          problemas: [
+            { p: "Ninguna versión pasó de 50% en «se entiende», y el mando solo encasillaba la carrera en videojuegos.",
+              s: "Le sumamos una segunda cara (pantalla con cursor y glitch), y el interior con realidad virtual muestra los tres énfasis." },
+            { p: "El túnel quedaba estrecho, la estructura daba miedo de caerse y el armado era complicado.",
+              s: "Pasamos a una estructura inflable: más espacio libre, montaje y desmontaje fáciles, y más segura." },
+            { p: "La luz de afuera arruinaba las proyecciones y la entrada no era clara.",
+              s: "Cortina opaca con blackout y dos puertas donde se entra y se sale, cada una con su estudiante." },
+            { p: "La consola atraía, pero se veía aislada y reducía la carrera a un videojuego.",
+              s: "Mesa plegable por puerta y un interior donde los visitantes crean, se llevan su recuerdo y ven su experiencia proyectada en la entrada." }
+          ],
+          resultados: "BETA dio un giro grande: pasó de una idea básica a una propuesta con criterio y argumentos. Ahora es un inflable de dos caras, con dos puertas holográficas, mesas de apoyo y un interior de realidad virtual que enseña qué se puede hacer en Diseño Digital. Escuchar no fue obedecer: algunas ideas se adoptaron, otras se adaptaron y otras se descartaron. El detalle está en la actividad de Procesos de co-creación.",
+          ejes: ["forma", "espacio", "materiales", "tecnologia"],
+          galeria: [
+            { tipo: "Diagramas de funcionamiento", pie: "Recorrido bilateral: dos puertas, entrada y salida por ambas, con mesa y estudiante." },
+            { tipo: "Modelo tridimensional", pie: "El inflable con sus dos caras y las mesas plegables." },
+            { tipo: "Renderizado", pie: "BETA por fuera, con cortina proyectada y luz neón." }
+          ],
+          comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
+        { n: 4, id: "semana-04", periodo: "", titulo: "", objetivo: "",
+          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
+          galeria: [
+            { tipo: "Prototipo", pie: "" },
+            { tipo: "Pruebas de interacción", pie: "" },
+            { tipo: "Renderizado final", pie: "" }
+          ],
+          comparacion: { antes: "semana-03/01", despues: "semana-04/01", etiquetaAntes: "Semana 3", etiquetaDespues: "Semana 4", nota: "" } }
+      ]
+    }
 ,
     { id: "procesos-de-co-creacion", cocreacion: true, semana: "Semana 3 del proyecto", fecha: "11 al 15 de Noviembre de 2026",
       titulo: "Procesos de co-creación: de las opiniones a las decisiones de BETA",
       resumen: "Sacamos una tercera versión de BETA (un inflable con forma de mando) a conversar con profesores, estudiantes y otras personas: 7 entrevistas y una encuesta a 20 personas. Esto fue lo que escuchamos y lo que cambiamos.",
       lema: "Escuchar no es obedecer: es contrastar, interpretar y decidir.",
       /* ENLACES REALES: pega aquí las URL. Mientras estén vacías, el botón aparece como «enlace pendiente». */
-      encuestaUrl: "https://tally.so/r/QoevkY",
+      encuestaUrl: "",
       formalUrl: "actividad.html?id=desarrollo-formal",
       carpeta: "assets/img/cocreacion/",
       cifras: [
         { v: "20", t: "personas respondieron la encuesta" },
         { v: "7", t: "entrevistas, cada una con su voz" },
-        { v: "89%", t: "mantendría el diseño de la consola (conservar, ajustar o reorganizar)" },
+        { v: "89%", t: "mantendría la consola (conservar, ajustar o reorganizar)" },
         { v: "55%", t: "quiere un espacio interior más amplio" }
       ],
       porque: {
@@ -352,13 +362,13 @@ integracion: [
         giro: "Entonces hicimos algo medio atrevido: antes de co-crear, armamos una tercera versión de BETA, completamente distinta de las anteriores, solo para ponerla frente a gente de afuera del equipo y ver si ese camino tenía potencial.",
         pasos: [
           { k: "Versión 1 · el «antes»", t: "Túnel triangular «Beta»", d: "La primera estructura: un túnel triangular plegable que se despliega aplicando fuerza desde abajo, con dinámicas e interactivos de la carrera. Se alzaba entre varias personas y la descartamos por peligrosa." },
-          { k: "Versión 2", t: "Mejoras del antes", d: "Es la misma V1 (versión 1) pero con mejoras: arcos desmontables con luces LED, plantas, QR, consola proyectada y holograma (cascada de píxeles) en la entrada." },
-          { k: "Versión 3", t: "El inflable mando", d: "Una estructura efímera neumática con la silueta de un control de consola. Es la que pusimos a prueba. Misma tecnología TIC que la V2 pero diseño exterior totalmente diferente." }
+          { k: "Versión 2", t: "Arcos desmontables", d: "Arcos desmontables con luces LED, plantas, QR, consola proyectada y holograma (cascada de píxeles) en la entrada." },
+          { k: "Versión 3", t: "El inflable mando", d: "Una estructura efímera neumática con la silueta de un control de consola. Es la que pusimos a prueba." }
         ],
-        tutor: "Las reservas del tutor fueron con la Versión 1 y 2: esas fueron las que consideró demasiado básicas."
+        tutor: "Las reservas del tutor fueron con la Versión 1, no con ninguna versión del mando. Esa fue la que consideró demasiado básica."
       },
       prueba: {
-        intro: "La V3 (versión 3) es un inflable de gran formato con la silueta de un control de consola de videojuegos, un guiño a uno de los énfasis de Diseño Digital de la Universidad Sergio Arboleda. Medía 3 × 4 metros.",
+        intro: "La V3 es un inflable de gran formato con la silueta de un control de consola de videojuegos, un guiño a uno de los énfasis de Diseño Digital de la Universidad Sergio Arboleda. Medía 3 × 4 metros.",
         conserva: [
           "La proyección holográfica ubicada en la entrada.",
           "La experiencia interactiva durante el recorrido.",
@@ -372,43 +382,43 @@ integracion: [
         nota: "Dos de las siete entrevistas (Joan y Byron) vieron solo la V1; el resto conoció la evolución completa o varias versiones. Lo avisamos en cada ficha para no ponerle a nadie opiniones que no dio."
       },
       entrevistas: [
-        { id: "joan", nombre: "Joan Flores", perfil: "Estudiante de Marketing y Negocios Internacionales", por: "Víctor Viadett", vio: "Solo la V1 (Tabla con túnel triangular)", aviso: "", video: "https://youtu.be/TC1jqERGVxM",
+        { id: "joan", nombre: "Joan Flores", perfil: "Estudiante de Marketing y Negocios Internacionales", por: "Víctor Viadet", vio: "Solo la V1 (túnel triangular Beta)", aviso: "No conoció ni opinó sobre la V2 ni la V3.", video: "",
           destaco: ["Al principio le parece una estructura rara porque rompe con la arquitectura convencional, pero dice que el ojo se adapta rápido.", "Su forma innovadora asombra y despierta una curiosidad natural: la gente se acercaría a curiosear.", "Le encanta la idea de usarlo como kiosco cubierto con contenidos proyectados y juegos interactivos para promocionar la carrera."],
           cuestiono: ["Quitar tubos de soporte para abrir ventanas o rendijas: pondría en riesgo la estabilidad y la seguridad.", "El túnel se siente algo estrecho porque las bases de soporte están justo en el centro."],
           ideas: ["Alinear y organizar muy bien los estantes informativos dentro y alrededor de la figura.", "Curvar un poco el techo, mover las bases a las esquinas y escoger materiales más flexibles para ganar espacio sin perder firmeza."],
           lectura: "De Joan nos quedó una pregunta que nos persiguió todo el proceso: ¿cómo ganamos espacio adentro sin que la estructura se sienta insegura?",
           tag: "adaptada", decision: "Se refleja en el paso a la estructura neumática: más espacio libre interior y una forma menos atada a geometrías básicas." },
-        { id: "byron", nombre: "Byron Ríos", perfil: "Estudiante de Marketing y Negocios Internacionales", por: "Víctor Viadett", vio: "Solo la V1 (Tabla con túnel triangular)", aviso: "", video: "https://youtu.be/7_g-vbQrzso",
+        { id: "byron", nombre: "Byron", perfil: "Estudiante de Diseño Digital y Marketing", por: "Víctor Viadet", vio: "Solo la V1 (túnel triangular Beta)", aviso: "No conoció ni opinó sobre la V2 ni la V3.", video: "",
           destaco: ["Primera impresión muy buena: juvenil y tecnológica gracias al estilo neón y al contraste entre colores.", "No le cambiaría nada del colorido general.", "Un mobiliario así le daría intriga por saber qué hay adentro y lo animaría a acercarse."],
           cuestiono: ["Rechazó volver la entrada curva o cuadrada: la curva sería genérica y la cuadrada se ve en todos lados."],
           ideas: ["Aperturas o rendijas arriba o a los lados para que la gente «chismosee» hacia adentro.", "Un túnel largo, para caminar con paciencia y a su ritmo.", "Un recorrido interior en línea recta, sin caminos confusos."],
           lectura: "Byron nos confirmó que el neón y la curiosidad desde afuera funcionan. Las ventanas no las llevamos tal cual, pero la idea de que el exterior invite a mirar sí la tradujimos a otras cosas.",
-          tag: "adaptada", decision: "El neón entra como recurso ambiental, el recorrido se mantiene claro y lineal (dos puertas, y por ambas se entra y se sale) y la curiosidad la despiertan las proyecciones y las dos caras, no ventanas. (más adelante se entenderá mejor nuestra idea de las dos caras)." },
-        { id: "santiago", nombre: "Santiago Sanjuan", perfil: "Estudiante de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "https://youtu.be/fxsPo7lOB4c",
+          tag: "adaptada", decision: "El neón entra como recurso ambiental, el recorrido se mantiene claro y lineal (dos puertas, y por ambas se entra y se sale) y la curiosidad la despiertan las proyecciones y las dos caras, no ventanas." },
+        { id: "santiago", nombre: "Santiago", perfil: "Estudiante de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "",
           destaco: ["V1: le gustó el sistema de plegado, la experiencia inicial y el espacio triangular por dentro.", "V2: le pareció súper atractivo el holograma justo en la puerta de entrada.", "V3: le gustó mucho; la sintió curiosa y con bastante potencial para atraer público."],
           cuestiono: ["V1: demasiado simple y abstracta visualmente; no sería llamativa.", "V2: tanta planta adentro podía estorbar la dinámica del lugar.", "V3: verla tan gris en los dibujos."],
           ideas: ["Meter morados, verdes neón o negros en los botones para darle calor y vida.", "Cortina de tela con cremallera para que la luz exterior no arruine las pantallas.", "Que los botones del control reaccionaran con luces de colores al tocarlos.", "Variar lo proyectado con luces brillantes y elementos tipo videojuego.", "Un mini espacio de atención o una mesita en la zona trasera para organizar entrada y salida.", "Su camino ideal: la V3 con la puerta holográfica de la V2 en el ingreso, sin letreros tradicionales."],
           lectura: "Santiago fue el que más ideas concretas nos dejó, y casi todas terminaron en la mesa de decisiones: color, cortina, holograma y mesa. La de los botones que reaccionan al tacto la dejamos de lado (más abajo contamos por qué).",
           tag: "adoptada", decision: "Elegimos la V3 como camino, el holograma de entrada se queda, el color cambia y aparece la mesa. La luz exterior la resolvemos con proyecciones opacas tipo cortina." },
-        { id: "oscar", nombre: "Óscar Solano", perfil: "Profesor de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "https://youtu.be/JtrxbpT25mg",
+        { id: "oscar", nombre: "Óscar Solano", perfil: "Profesor de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "",
           destaco: ["V1: al principio la veía como la más práctica, factible y económica.", "V2: se volvió su preferida al saber que el presupuesto era ilimitado; ofrece una visión más amplia e integral del diseño. Le pareció un puntazo el holograma de entrada, la consola con QR y la realidad aumentada en los celulares."],
           cuestiono: ["V1: la imagen en 2D no le dejaba claro cómo funcionaba por dentro ni por arriba; pidió un modelo 3D.", "V3: la rechazó tajantemente. Dice que el mando encasilla la carrera y crea un sesgo en jóvenes de grado 11, que creerían que van a estudiar solo videojuegos. También le preocupan los efectos del juego excesivo (aislamiento, ansiedad, desnutrición)."],
           ideas: ["Poner una mesa adelante para recibir a la gente.", "Meterle la ficha al trasfondo de la experiencia más que a la forma exterior; todo diseño debe cumplir viabilidad, deseabilidad y factibilidad.", "Un aire acondicionado artesanal sin electricidad, con cilindros.", "Un video tipo documental con el detrás de cámaras de cómo construimos el stand, más hologramas o realidad aumentada de bienvenida."],
           lectura: "Óscar fue la voz más opuesta a la V3 y por eso mismo una de las que más nos movió. Su crítica nos obligó a preguntarnos cómo conservar el gancho del mando sin que sea la única cara de Diseño Digital. De su lista, la mesa pasó, el aire acondicionado no.",
           tag: "adaptada", decision: "Adaptada: el mando se queda, pero con una segunda cara que no es videojuego (pantalla con cursor y glitch). La mesa se adopta. El aire acondicionado se descarta por viabilidad. Lo del interior (QR, AR, documental) se revisa en Desarrollo formal." },
-        { id: "maria", nombre: "María Victoria Noguera", perfil: "Auditora de sistemas", por: "Nicole Salas", vio: "La evolución completa: Versión 1, arcos con LED y holograma, e inflable mando", aviso: "", video: "https://www.youtube.com/watch?v=fOlfWaEFjJM",
+        { id: "maria", nombre: "María Victoria Noguera", perfil: "Auditora de sistemas", por: "Nicole Salas", vio: "La evolución completa: Versión 1, arcos con LED y holograma, e inflable mando", aviso: "", video: "",
           destaco: ["El control es más llamativo para adolescentes.", "La altura le parece adecuada."],
           cuestiono: ["Escanear un QR y responder una pregunta le daría pereza a los estudiantes.", "La puerta con cascada de información en píxeles le pareció poco interesante y muy parecida a Matrix.", "Dejó una nota adhesiva en el tablero de Canva: para el público objetivo, lo propuesto todavía no llega al nivel que se desearía."],
           ideas: ["Con poca luz, dejar los LED dentro de la estructura y rodear el borde con una tira de luces blancas para que el exterior no pase desapercibido.", "Algo más experimental e inmersivo: un juego, interacción con inteligencia artificial, fotos modificadas con IA o realidad alterada.", "Proyectar en la puerta una animación con una figura, un muñeco o un anime que genere expectativa."],
           lectura: "María Victoria fue la más crítica y se lo agradecemos: esa nota adhesiva la tomamos como punto de partida. Su idea de que el borde se vea en la noche nos sirvió para pensar la luz como parte de la forma.",
           tag: "adaptada", decision: "La luz del borde inspira la iluminación neón como recurso ambiental. Lo de la experiencia interior (juego, IA, animación) se desarrolla en Desarrollo formal." },
-        { id: "julia", nombre: "Julia", perfil: "Estudiante de cine y audiovisuales, Universidad del Magdalena", por: "Nicole Salas", vio: "La evolución: Versión 1 y versión con arcos, plantas, QR y holograma", aviso: "", video: "https://www.youtube.com/watch?v=irIxx183FvI",
+        { id: "julia", nombre: "Julia", perfil: "Estudiante de cine y audiovisuales, Universidad del Magdalena", por: "Nicole Salas", vio: "La evolución: Versión 1 y versión con arcos, plantas, QR y holograma", aviso: "", video: "",
           destaco: ["Le gustó más la versión con plantas porque se ve más acogedora.", "Como estudiante de último grado entraría por pura curiosidad: las propuestas de otras universidades le parecían aburridas.", "El holograma le pareció súper llamativo y no lo quitaría.", "No le pareció pequeño el túnel: en el dibujo se ve buen espacio sobre la cabeza."],
           cuestiono: ["Su miedo principal era que la estructura se cayera."],
           ideas: ["Pintar el techo y las partes grises en color madera, que combina con las plantas y se vería futurista junto al holograma.", "Columnas aparte, como las de una carpa de camping, o triángulos rectos en vez de inclinados para ganar estabilidad.", "Maderas muy livianas o madera sintética (plástico mezclado, resistente y más amable con el ambiente), dato que nos pasó por su papá, que es maderero.", "Un abanico que proyecta fotos y videos con el giro de sus aspas, una tecnología que podríamos explorar (no del todo)."],
           lectura: "Julia nos recordó que el holograma es un imán y que la seguridad de la estructura no se puede dar por hecha. Sus ideas de materiales y del abanico las dejamos anotadas: son interesantes, pero con el giro al inflable cambiaron de contexto.",
           tag: "libreta", decision: "El holograma se queda. Las ideas de madera, columnas y abanico holográfico quedan en la libreta: no hay una decisión registrada sobre ellas." },
-        { id: "raul", nombre: "Raúl Pérez", perfil: "Contador público y especialista en gerencia de gestión humana", por: "Nicole Salas", vio: "Versión triangular y el inflable con forma de control", aviso: "", video: "https://www.youtube.com/watch?v=phVPvC59hUM",
+        { id: "raul", nombre: "Raúl Pérez", perfil: "Contador público y especialista en gerencia de gestión humana", por: "Nicole Salas", vio: "Versión triangular y el inflable con forma de control", aviso: "", video: "",
           destaco: ["El morado le parece acertado y muy llamativo, sobre todo por ser el color de la universidad.", "Eligió el inflable sobre la versión triangular (que le recordó a un museo, un jardín botánico o un coworking): despierta curiosidad, se monta y desmonta fácil y con sus luces LED transmite tecnología y futuro.", "No le cambiaría nada, ni siquiera los colores negro y gris."],
           cuestiono: ["La consola atrae sobre todo a hombres y deja de lado a las mujeres, aunque reconoce que eso ha ido cambiando. En su nota final dice que estaría excluyendo a parte del público objetivo.", "Las encuestas vocacionales pueden resultar tediosas."],
           ideas: ["Como es un pasillo que la gente recorre, debería haber cosas con las que interactuar y personas que orienten, más allá de los QR.", "Un demo por programa: un mini diseño hecho desde el celular (escudo, bandera, logo) o una versión beta de un videojuego para probar y comentar.", "Encuestas vocacionales muy visuales e interactivas.", "Jugar con los colores y las luces del inflable para no dejar a nadie por fuera.", "Un pasillo iluminado y lleno de información, no oscuro como una casa del terror."],
@@ -487,7 +497,7 @@ integracion: [
         { n: 2, id: "h2", t: "Una sola fachada se queda corta", viz: "caras", cifra: ["≈30%", "pide complementar la consola con otro elemento"], oimos: ["Óscar: el mando encasilla la carrera.", "Encuesta: sola, la consola reduce Diseño Digital a un videojuego.", "Raúl: atrae sobre todo a hombres."], interpretamos: "El mando es gancho, no identidad completa; y una sola fachada desperdicia la mitad del mobiliario.", decidimos: "Dos caras: el mando y una pantalla con cursor y glitch." },
         { n: 3, id: "h3", t: "Entrar y salir son dos momentos", viz: "recorrido", cifra: ["74%", "conserva al estudiante guía"], oimos: ["Santiago: organizar entrada y salida.", "Raúl: personas que orienten."], interpretamos: "Entrar y salir son dos momentos de la misma puerta. Y si hay dos caras, ambas necesitan función.", decidimos: "Recorrido bilateral con dos puertas. Cada puerta funciona a la vez como entrada y como salida: por ambas se puede entrar y salir. No son cuatro puertas. Cada una tiene su proyección, su mesa y un estudiante que recibe y despide." },
         { n: 4, id: "h4", t: "Queremos una cortina, no un vidrio", viz: "cortina", cifra: ["25%", "ve el holograma poco visible"], oimos: ["Santiago: la luz exterior arruina las pantallas.", "74% conserva la cascada / holograma."], interpretamos: "Gusta, pero debe verse bien y ocultar lo de atrás.", decidimos: "Las proyecciones de las puertas son cortinas visuales: superficie opaca de retroproyección con respaldo blackout, para que no se vea el fondo exterior y la imagen quede nítida." },
-        { n: 5, id: "h5", t: "La mesa deja de ser un adorno", viz: "mesas", cifra: ["35%", "percibe la consola desconectada"], oimos: ["Óscar, Santiago y una persona de la encuesta pidieron mesa.", "QR (30%), textos (20%) y botones (15%) piden una superficie cómoda."], interpretamos: "El lenguaje de la Versión 1 del mobiliario (tabla que se convierte en túnel) sirve a menor escala: recepción, información y apoyo. Por ello el diseño original sirve tal cual pero más pequeño para complementar la estructura neumática.", decidimos: "El antiguo mobiliario que parte de una tabla a un túnel pasa a ser una mesa plegable, ubicada frente a cada puerta, atendida por un estudiante que recibe, explica y entrega información y materiales (folletos). Son módulos auxiliares: alojan y distribuyen conexiones eléctricas, controles, iluminación y proyecciones, y una aloja el sistema de insuflado; ambas están conectadas al inflable y son una extensión del mismo. No generan aire ni energía por sí solas." },
+        { n: 5, id: "h5", t: "La mesa deja de ser un adorno", viz: "mesas", cifra: ["35%", "percibe la consola desconectada"], oimos: ["Óscar, Santiago y una persona de la encuesta pidieron mesa.", "QR (30%), textos (20%) y botones (15%) piden una superficie cómoda."], interpretamos: "El lenguaje del mando sirve a menor escala: recepción, información y apoyo. El informe la trata como hipótesis.", decidimos: "El antiguo mando pasa a ser una mesa plegable por puerta, atendida por un estudiante que recibe, explica y entrega información y materiales (folletos). Son módulos auxiliares: alojan y distribuyen conexiones eléctricas, controles, iluminación y proyecciones, y una aloja el sistema de insuflado, conectado al inflable con conductos. No generan aire ni energía por sí solas." },
         { n: 6, id: "h6", t: "Color y luz también son diseño", viz: "paleta", cifra: ["15%", "pide más color y menos aspecto metálico"], oimos: ["Santiago: se ve muy gris.", "Raúl: el morado es el de la universidad.", "María Victoria: que el borde se vea con luz."], interpretamos: "Color y luz hacen que se lea de lejos y que sea de la Sergio.", decidimos: "Morado, azul y amarillo neón con tonos institucionales, e iluminación neón ambiental. No reacciona al tacto." },
         { n: 7, id: "h7", t: "Lo efímero manda", viz: "efimero", cifra: ["70%", "ve conveniente un sistema desmontable"], oimos: ["Joan: las bases centrales estrechan el túnel.", "Óscar: aire acondicionado artesanal.", "Charla con el profesor Iván Darío sobre mobiliario efímero."], interpretamos: "Las estructuras neumáticas se montan fácil, son maleables, dan espacio libre amplio y permiten formas poco convencionales.", decidimos: "La estructura neumática es la propuesta definitiva; el aire acondicionado se descarta por viabilidad." }
       ],
