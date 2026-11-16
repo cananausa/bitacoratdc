@@ -785,3 +785,6 @@ html.js .cc-rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(-
 .cc-cif{display:flex;flex-direction:column;margin-bottom:.6rem}.cc-cif b{font:clamp(2.4rem,5vw,3.4rem)/1 Marvin,serif;color:var(--coral)}.cc-cif span{font-size:.85rem;font-weight:600}
 .cc-do{font-weight:600}.cc-led .cc-q{opacity:.75;font-size:.8rem}
 @media(max-width:900px){.cc-steps,.cc-zn{grid-template-columns:1fr}}
+
+.cc-grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.cc-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2rem 0}
+@media(max-width:900px){.cc-grid4{grid-template-columns:1fr 1fr}}@media(max-width:520px){.cc-grid2,.cc-grid4{grid-template-columns:1fr}}
