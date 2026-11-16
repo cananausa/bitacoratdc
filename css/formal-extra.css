@@ -5,6 +5,9 @@
 .df-wk2 .df-gal .df-tile:first-child,.df-wk2 .df-gal .df-tile:last-child:nth-child(even){grid-column:1/-1}
 .df-wk2 .df-open{display:block;width:100%;aspect-ratio:4/3;position:relative;overflow:hidden}
 .df-wk2 .df-tile:first-child .df-open{aspect-ratio:16/9}
+/* Nunca verticales: formal.css pone 3/4 en cada segunda imagen y 21/9 en cada tercera; aquí se anula con mayor especificidad */
+.df-wk2 .df-gal .df-tile .df-open{aspect-ratio:4/3}
+.df-wk2 .df-gal .df-tile:first-child .df-open,.df-wk2 .df-gal .df-tile:last-child:nth-child(even) .df-open{aspect-ratio:16/9}
 .df-wk2 .df-open img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .df-wk2 .df-open .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;text-align:center;padding:1rem}
 .df-acc{display:grid;gap:.6rem;margin:0 0 1.2rem}
