@@ -329,7 +329,9 @@ integracion: [
           galeria: [
             { tipo: "Diagramas de funcionamiento", pie: "Recorrido bilateral: dos puertas, entrada y salida por ambas, con mesa y estudiante." },
             { tipo: "Modelo tridimensional", pie: "El inflable con sus dos caras y las mesas plegables." },
-            { tipo: "Renderizado", pie: "BETA por fuera, con cortina proyectada y luz neón." }
+            { tipo: "Renderizado", pie: "BETA por fuera, con cortina proyectada y luz neón." },
+            { tipo: "Interior con realidad virtual", pie: "Un estudiante con el visor mientras los demás lo ven proyectado en la pared." },
+            { tipo: "Galería en las puertas", pie: "Las creaciones y respuestas de los visitantes proyectadas en tiempo real en la entrada." }
           ],
           comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
         { n: 4, id: "semana-04", periodo: "", titulo: "", objetivo: "",
