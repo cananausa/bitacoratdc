@@ -319,13 +319,13 @@ integracion: [
       resumen: "Sacamos una tercera versión de BETA (un inflable con forma de mando) a conversar con profesores, estudiantes y otras personas: 7 entrevistas y una encuesta a 20 personas. Esto fue lo que escuchamos y lo que cambiamos.",
       lema: "Escuchar no es obedecer: es contrastar, interpretar y decidir.",
       /* ENLACES REALES: pega aquí las URL. Mientras estén vacías, el botón aparece como «enlace pendiente». */
-      encuestaUrl: "",
+      encuestaUrl: "https://tally.so/r/QoevkY",
       formalUrl: "actividad.html?id=desarrollo-formal",
       carpeta: "assets/img/cocreacion/",
       cifras: [
         { v: "20", t: "personas respondieron la encuesta" },
         { v: "7", t: "entrevistas, cada una con su voz" },
-        { v: "89%", t: "mantendría la consola (conservar, ajustar o reorganizar)" },
+        { v: "89%", t: "mantendría el diseño de la consola (conservar, ajustar o reorganizar)" },
         { v: "55%", t: "quiere un espacio interior más amplio" }
       ],
       porque: {
@@ -333,13 +333,13 @@ integracion: [
         giro: "Entonces hicimos algo medio atrevido: antes de co-crear, armamos una tercera versión de BETA, completamente distinta de las anteriores, solo para ponerla frente a gente de afuera del equipo y ver si ese camino tenía potencial.",
         pasos: [
           { k: "Versión 1 · el «antes»", t: "Túnel triangular «Beta»", d: "La primera estructura: un túnel triangular plegable que se despliega aplicando fuerza desde abajo, con dinámicas e interactivos de la carrera. Se alzaba entre varias personas y la descartamos por peligrosa." },
-          { k: "Versión 2", t: "Arcos desmontables", d: "Arcos desmontables con luces LED, plantas, QR, consola proyectada y holograma (cascada de píxeles) en la entrada." },
-          { k: "Versión 3", t: "El inflable mando", d: "Una estructura efímera neumática con la silueta de un control de consola. Es la que pusimos a prueba." }
+          { k: "Versión 2", t: "Mejoras del antes", d: "Es la misma V1 (versión 1) pero con mejoras: arcos desmontables con luces LED, plantas, QR, consola proyectada y holograma (cascada de píxeles) en la entrada." },
+          { k: "Versión 3", t: "El inflable mando", d: "Una estructura efímera neumática con la silueta de un control de consola. Es la que pusimos a prueba. Misma tecnología TIC que la V2 pero diseño exterior totalmente diferente." }
         ],
-        tutor: "Las reservas del tutor fueron con la Versión 1, no con ninguna versión del mando. Esa fue la que consideró demasiado básica."
+        tutor: "Las reservas del tutor fueron con la Versión 1 y 2: esas fueron las que consideró demasiado básicas."
       },
       prueba: {
-        intro: "La V3 es un inflable de gran formato con la silueta de un control de consola de videojuegos, un guiño a uno de los énfasis de Diseño Digital de la Universidad Sergio Arboleda. Medía 3 × 4 metros.",
+        intro: "La V3 (versión 3) es un inflable de gran formato con la silueta de un control de consola de videojuegos, un guiño a uno de los énfasis de Diseño Digital de la Universidad Sergio Arboleda. Medía 3 × 4 metros.",
         conserva: [
           "La proyección holográfica ubicada en la entrada.",
           "La experiencia interactiva durante el recorrido.",
@@ -353,19 +353,19 @@ integracion: [
         nota: "Dos de las siete entrevistas (Joan y Byron) vieron solo la V1; el resto conoció la evolución completa o varias versiones. Lo avisamos en cada ficha para no ponerle a nadie opiniones que no dio."
       },
       entrevistas: [
-        { id: "joan", nombre: "Joan Flores", perfil: "Estudiante de Marketing y Negocios Internacionales", por: "Víctor Viadet", vio: "Solo la V1 (túnel triangular Beta)", aviso: "No conoció ni opinó sobre la V2 ni la V3.", video: "https://youtu.be/TC1jqERGVxM",
+        { id: "joan", nombre: "Joan Flores", perfil: "Estudiante de Marketing y Negocios Internacionales", por: "Víctor Viadett", vio: "Solo la V1 (Tabla con túnel triangular)", aviso: "", video: "https://youtu.be/TC1jqERGVxM",
           destaco: ["Al principio le parece una estructura rara porque rompe con la arquitectura convencional, pero dice que el ojo se adapta rápido.", "Su forma innovadora asombra y despierta una curiosidad natural: la gente se acercaría a curiosear.", "Le encanta la idea de usarlo como kiosco cubierto con contenidos proyectados y juegos interactivos para promocionar la carrera."],
           cuestiono: ["Quitar tubos de soporte para abrir ventanas o rendijas: pondría en riesgo la estabilidad y la seguridad.", "El túnel se siente algo estrecho porque las bases de soporte están justo en el centro."],
           ideas: ["Alinear y organizar muy bien los estantes informativos dentro y alrededor de la figura.", "Curvar un poco el techo, mover las bases a las esquinas y escoger materiales más flexibles para ganar espacio sin perder firmeza."],
           lectura: "De Joan nos quedó una pregunta que nos persiguió todo el proceso: ¿cómo ganamos espacio adentro sin que la estructura se sienta insegura?",
           tag: "adaptada", decision: "Se refleja en el paso a la estructura neumática: más espacio libre interior y una forma menos atada a geometrías básicas." },
-        { id: "byron", nombre: "Byron", perfil: "Estudiante de Diseño Digital y Marketing", por: "Víctor Viadet", vio: "Solo la V1 (túnel triangular Beta)", aviso: "No conoció ni opinó sobre la V2 ni la V3.", video: "https://youtu.be/7_g-vbQrzso",
+        { id: "byron", nombre: "Byron Ríos", perfil: "Estudiante de Marketing y Negocios Internacionales", por: "Víctor Viadett", vio: "Solo la V1 (Tabla con túnel triangular)", aviso: "", video: "https://youtu.be/7_g-vbQrzso",
           destaco: ["Primera impresión muy buena: juvenil y tecnológica gracias al estilo neón y al contraste entre colores.", "No le cambiaría nada del colorido general.", "Un mobiliario así le daría intriga por saber qué hay adentro y lo animaría a acercarse."],
           cuestiono: ["Rechazó volver la entrada curva o cuadrada: la curva sería genérica y la cuadrada se ve en todos lados."],
           ideas: ["Aperturas o rendijas arriba o a los lados para que la gente «chismosee» hacia adentro.", "Un túnel largo, para caminar con paciencia y a su ritmo.", "Un recorrido interior en línea recta, sin caminos confusos."],
           lectura: "Byron nos confirmó que el neón y la curiosidad desde afuera funcionan. Las ventanas no las llevamos tal cual, pero la idea de que el exterior invite a mirar sí la tradujimos a otras cosas.",
-          tag: "adaptada", decision: "El neón entra como recurso ambiental, el recorrido se mantiene claro y lineal (dos puertas, y por ambas se entra y se sale) y la curiosidad la despiertan las proyecciones y las dos caras, no ventanas." },
-        { id: "santiago", nombre: "Santiago", perfil: "Estudiante de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "https://youtu.be/fxsPo7lOB4c",
+          tag: "adaptada", decision: "El neón entra como recurso ambiental, el recorrido se mantiene claro y lineal (dos puertas, y por ambas se entra y se sale) y la curiosidad la despiertan las proyecciones y las dos caras, no ventanas. (más adelante se entenderá mejor nuestra idea de las dos caras)." },
+        { id: "santiago", nombre: "Santiago Sanjuan", perfil: "Estudiante de Diseño Digital", por: "Juan Domingo Vilá", vio: "V1, V2 y V3", aviso: "", video: "https://youtu.be/fxsPo7lOB4c",
           destaco: ["V1: le gustó el sistema de plegado, la experiencia inicial y el espacio triangular por dentro.", "V2: le pareció súper atractivo el holograma justo en la puerta de entrada.", "V3: le gustó mucho; la sintió curiosa y con bastante potencial para atraer público."],
           cuestiono: ["V1: demasiado simple y abstracta visualmente; no sería llamativa.", "V2: tanta planta adentro podía estorbar la dinámica del lugar.", "V3: verla tan gris en los dibujos."],
           ideas: ["Meter morados, verdes neón o negros en los botones para darle calor y vida.", "Cortina de tela con cremallera para que la luz exterior no arruine las pantallas.", "Que los botones del control reaccionaran con luces de colores al tocarlos.", "Variar lo proyectado con luces brillantes y elementos tipo videojuego.", "Un mini espacio de atención o una mesita en la zona trasera para organizar entrada y salida.", "Su camino ideal: la V3 con la puerta holográfica de la V2 en el ingreso, sin letreros tradicionales."],
