@@ -105,7 +105,7 @@
         <div class="tc-art"><svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${ART[i % ART.length]}</svg><span class="tc-n" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span></div>
         <div class="tc-body">
           <p class="tc-meta">${[a.semana, a.fecha].filter(Boolean).join(" · ") || "Actividad"}${a.demo ? ' <b class="tc-demo">Demostración</b>' : ""}</p>
-          <h2><a href="actividad.html?id=${a.id}">${a.titulo}</a></h2>
+          <h2><a href="${a.url || 'actividad.html?id=' + a.id}">${a.titulo}</a></h2>
           <p class="tc-res">${a.resumen || ""}</p>
           <span class="tc-go" aria-hidden="true">Abrir actividad</span>
         </div></article></li>`; }).join("")}</ul>
@@ -124,6 +124,7 @@
   if (page === "actividad") {
     const id = new URLSearchParams(location.search).get("id"), i = acts.findIndex(a => a.id === id), a = acts[i];
     if (!a) main.innerHTML = `<h1>Actividad no encontrada</h1><a class="btn" href="index.html">Volver al Tercer corte</a>`;
+        else if (a.externa) { location.replace(a.url); }
         else if (a.referentes) {
       document.title = a.titulo + " · " + A.nombre;
       const s = document.createElement("script"); s.src = R + "js/referentes.js";
