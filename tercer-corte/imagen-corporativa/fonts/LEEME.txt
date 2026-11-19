@@ -1,0 +1,17 @@
+TIPOGRAFÍAS DE LA ACTIVIDAD «Diseño de la imagen corporativa»
+=============================================================
+Esta carpeta contiene las fuentes disponibles en el repositorio:
+  BauhausBold.ttf        -> títulos y todo lo que debe llamar la atención (ITC Bauhaus)
+  korinna-regular-bt.ttf -> cuerpo de texto (Korinna BT)
+
+Para usar las fuentes oficiales del proyecto (.OTF, .TTF, .WOFF o .WOFF2):
+  1. Copia el archivo en esta carpeta (fonts/).
+  2. Abre ../css/dd.css y busca el bloque «SLOTS DE TIPOGRAFÍA OFICIAL» (al inicio).
+  3. Añade tu archivo como primera línea del src de la familia que corresponda.
+     Ejemplo:  src: url("../fonts/ITC-Bauhaus-Bold.woff2") format("woff2"), url("../fonts/BauhausBold.ttf") format("truetype");
+No hace falta tocar nada más: toda la página usa las variables --f-titulo y --f-texto.
+
+NOTA: BauhausBold.ttf es el archivo original del repositorio con sus tablas de metadatos
+reparadas (los glifos no se modificaron), porque el original no lo aceptaban los navegadores.
+
+GUÍA COMPLETA, PASO A PASO (tipografías y subida a GitHub): ver GUIA_TIPOGRAFIAS_Y_GITHUB.md en la raíz del repositorio.
