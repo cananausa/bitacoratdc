@@ -527,8 +527,20 @@ integracion: [
         ],
         cierre: "La co-creación no fue el final del proceso: fue la etapa que nos permitió pasar de una idea básica a una propuesta más completa, con criterio y con argumentos."
       }
+    },
+
+         /* ACTIVIDAD EXTERNA: diseño de logo de diseño digital*/
+    {
+      id: "imagen-corporativa-dd",
+      externa: true,
+      url: "imagen-corporativa/index.html",
+      semana: "Tercer corte",
+      fecha: "19 de Noviembre de 2026",
+      titulo: "Diseño de la imagen corporativa del programa",
+      resumen: "Exposición interactiva de la nueva identidad visual del programa de Diseño Digital (Universidad Sergio Arboleda · COM+ID): concepto, imagotipo, logotipo, color, tipografía y sistema gráfico."
     }
 
   ]
+   
   /* FIN: ACTIVIDADES DEL TERCER CORTE */
 };
