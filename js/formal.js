@@ -101,30 +101,34 @@
         return `<div class="dfx df-log" id="${s.id}-logistica"><p class="k">${L.k}</p><h3>${L.t}</h3><p class="log-intro">${L.intro}</p>
           <nav class="log-nav" aria-label="Momentos de la logística">${L.momentos.map((m, i) => `<a href="#${s.id}-${m.id}"><b>${pad(i + 1)}</b> ${m.t}</a>`).join("")}</nav>${moms}</div>`; };
 
-      const dev = (s) => { const v = s.dev; if (!v) return ""; const g = s.id, P = v.plano, C = v.caras, W = v.poder, F = v.cara3, M = v.membrana;
+      const dev = (s) => { const v = s.dev; if (!v) return ""; const g = s.id, I = v.identidad, P = v.plano, C = v.caras, W = v.poder, F = v.cara3, M = v.membrana;
         return `<div class="dfx df4">
           <div class="df4-plan ed-rv" id="${g}-plano"><div class="pl-txt"><p class="k">${P.k}</p><h3>${P.t}</h3><p>${P.texto}</p>
             <ol class="pl-key">${P.leyenda.map((l, i) => `<li><a href="#${g}-${l.a}"><b>${i + 1}</b><span><em>${l.t}</em>${l.d}</span></a></li>`).join("")}</ol></div>
             <div class="pl-img" data-par="-.04">${T(`${g}/planimetria`, P, g, "Planimetría")}</div></div>
 
+          ${I ? `<div class="df4-id ed-rv" id="${g}-identidad"><div class="id-txt"><p class="k">${I.k}</p><h3>${I.t}</h3><p>${I.texto}</p>
+            <ul class="id-pal">${I.paleta.map((c) => `<li style="--c:${c.h}"><i aria-hidden="true"></i><b>${c.n}</b><code>${c.h}</code><span>${c.d}</span></li>`).join("")}</ul><p class="id-tp">${I.tipografia}</p></div>
+            <div class="id-img" data-par="-.04">${T(`${g}/identidad`, I, g, "Identidad")}</div></div>` : ""}
+
           <div class="df4-caras" id="${g}-caras"><div class="hd ed-rv"><p class="k">${C.k}</p><h3>${C.t}</h3><p>${C.texto}</p></div>
-            <div class="c1 ed-rv" data-par="-.03">${T(`${g}/cara-01`, C.c1, g, "Cara 1")}</div>
+            <div class="c1 ed-rv" data-par="-.03">${T(`${g}/cara-01`, C.c1, g, "Cara A")}</div>
             <div class="cambio ed-rv"><p class="k">Cambio conceptual</p><h4>${C.cambioT}</h4>
-              <svg class="cmb" viewBox="0 0 400 140" role="img" aria-label="Antes: mesa separada del inflable. Ahora: mesa unida a una esquina del inflable">
+              <svg class="cmb" viewBox="0 0 400 140" role="img" aria-label="Antes: mesa separada del inflable. Ahora: mesa inflable unida a una esquina, con asientos">
                 <g fill="none" stroke="currentColor" stroke-width="3"><rect x="14" y="18" width="130" height="84" rx="14"/><rect x="156" y="70" width="40" height="32" stroke-dasharray="5 4"/><path d="M208 10V110" stroke-width="1.5" stroke-dasharray="3 5"/><rect x="222" y="18" width="130" height="84" rx="14"/></g>
                 <rect x="330" y="70" width="52" height="32" fill="var(--coral)" stroke="currentColor" stroke-width="3"/>
-                <g font-family="Marvin,Georgia,serif" font-size="12" letter-spacing="2" fill="currentColor"><text x="14" y="128">ANTES · MESA APARTE</text><text x="222" y="128">AHORA · MESA INTEGRADA</text></g></svg>
+                <g font-family="Marvin,Georgia,serif" font-size="12" letter-spacing="2" fill="currentColor"><text x="14" y="128">ANTES · MESA APARTE</text><text x="222" y="128">AHORA · MESA INFLABLE</text></g></svg>
               <p>${C.cambio}</p></div>
-            <div class="c2 ed-rv" data-par="-.07">${T(`${g}/cara-02`, C.c2, g, "Cara 2")}</div></div>
+            <div class="c2 ed-rv" data-par="-.07">${T(`${g}/cara-02`, C.c2, g, "Cara B")}</div></div>
 
           <div class="df4-poder" id="${g}-poder"><div class="ed-rv"><p class="k">${W.k}</p><h3>${W.t}</h3><p>${W.texto}</p>
-            <svg class="pw" viewBox="0 0 300 120" role="img" aria-label="Esquema en planta: la fuente de poder queda detrás de la cara principal">
-              <g fill="none" stroke="currentColor" stroke-width="3"><rect x="30" y="16" width="170" height="88" rx="14"/><path d="M200 60H222" stroke-dasharray="4 4"/></g><path d="M30 24V96" stroke="var(--coral)" stroke-width="8" stroke-linecap="round"/>
-              <rect x="222" y="42" width="52" height="36" fill="var(--mostaza)" stroke="currentColor" stroke-width="3"/><g font-family="Marvin,Georgia,serif" font-size="11" letter-spacing="2" fill="currentColor"><text x="36" y="114">CARA PRINCIPAL</text><text x="226" y="94">FUENTE</text></g></svg></div>
-            <div class="ed-rv" data-par=".05">${T(`${g}/fuente-poder`, W, g, "Fuente de poder")}</div></div>
+            <svg class="pw" viewBox="0 0 300 120" role="img" aria-label="Esquema en planta: la fuente de energía independiente queda detrás de la cara principal">
+              <g fill="none" stroke="currentColor" stroke-width="3"><rect x="30" y="16" width="170" height="88" rx="14"/></g><path d="M30 24V96" stroke="var(--coral)" stroke-width="8" stroke-linecap="round"/>
+              <rect x="222" y="42" width="52" height="36" fill="var(--mostaza)" stroke="currentColor" stroke-width="3"/><g font-family="Marvin,Georgia,serif" font-size="11" letter-spacing="2" fill="currentColor"><text x="36" y="114">CARA PRINCIPAL</text><text x="214" y="94">FUENTE INDEP.</text></g></svg></div>
+            <div class="ed-rv" data-par=".05">${T(`${g}/fuente-poder`, W, g, "Fuente de energía")}</div></div>
 
-          <div class="df4-c3 ed-rv" id="${g}-cara3"><div class="im" data-par="-.03">${T(`${g}/cara-03`, F, g, "Cara 3")}</div>
-            <div><span class="badge">Énfasis · Creación de Objetos 3D</span><p class="k">${F.k}</p><h3>${F.t}</h3><p>${F.texto}</p>
+          <div class="df4-c3 ed-rv" id="${g}-cara3"><div class="im" data-par="-.03">${T(`${g}/cara-03`, F, g, "Cara C")}</div>
+            <div><span class="badge">Cara C · Objetos 3D</span><p class="k">${F.k}</p><h3>${F.t}</h3><p>${F.texto}</p>
               <ul class="c3-feats">${F.datos.map((x) => `<li><b>${x.t}</b>${x.d}</li>`).join("")}</ul></div></div>
 
           <div class="df4-mem" id="${g}-membrana"><div class="im ed-rv">${T(`${g}/membrana`, M, g, "Membrana")}</div>
