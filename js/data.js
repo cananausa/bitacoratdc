@@ -334,15 +334,97 @@ integracion: [
             { tipo: "Vista superior y lateral del recorrido", pie: "Cómo se mueven los visitantes por las dos puertas." },
             { tipo: "Interior de la estructura", pie: "El espacio por dentro, donde ocurre la experiencia." }
           ],
+          montaje: {
+            kicker: "Procedimiento · mesa plegable", titulo: "Montaje y desmontaje de la mesa",
+            intro: "Cada puerta tiene su mesa plegable: recibe a los visitantes y guarda las conexiones, los controles, la luz y el sistema de insuflado. Estos tres momentos muestran cómo pasa de pieza guardada a mesa lista para usar; para desmontarla se recorre el mismo camino a la inversa.",
+            pasos: [
+              { tipo: "Mesa plegada", pie: "Punto de partida: la mesa guardada, lista para transportarse." },
+              { tipo: "Despliegue", pie: "El paso central: la mesa se abre hasta alcanzar su forma de trabajo." },
+              { tipo: "Mesa montada", pie: "Mesa lista en la puerta; el desmontaje repite estos pasos en sentido contrario." }
+            ] },
           comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
-        { n: 4, id: "semana-04", periodo: "", titulo: "", objetivo: "",
-          decisiones: [], cambios: [], problemas: [], resultados: "", ejes: [],
-          galeria: [
-            { tipo: "Prototipo", pie: "" },
-            { tipo: "Pruebas de interacción", pie: "" },
-            { tipo: "Renderizado final", pie: "" }
+        { n: 4, id: "semana-04", periodo: "", titulo: "Configuración definitiva del mobiliario inflable",
+          objetivo: "Consolidar la forma final de BETA: un mobiliario inflable de tres caras, con la mesa integrada como extensión de la estructura, la fuente de poder resuelta detrás de la cara principal, una cara nueva para el énfasis de Creación de Objetos 3D y una pared de membrana translúcida que lleva las proyecciones interiores al exterior.",
+          decisiones: [
+            { t: "Planimetría de tres caras. ", d: "La distribución en planta ordena las caras, sus entradas y la relación entre componentes." },
+            { t: "Mesa integrada. ", d: "Deja de montarse por separado: es una extensión del inflable, ubicada en una esquina de cada cara." },
+            { t: "Fuente de poder. ", d: "Se ubica detrás de la cara principal, oculta a la lectura estética del diseño." },
+            { t: "Tercera cara: Objetos 3D. ", d: "Diseño propio, entrada independiente y portafolio gráfico del énfasis de Creación de Objetos 3D." },
+            { t: "Membrana translúcida. ", d: "Una cara se transforma en pared que deja ver desde afuera las proyecciones del interior." }
           ],
-          comparacion: { antes: "semana-03/01", despues: "semana-04/01", etiquetaAntes: "Semana 3", etiquetaDespues: "Semana 4", nota: "" } }
+          cambios: [
+            "La mesa plegable independiente se integra al inflable.",
+            "Se pasa de dos caras a tres, con una entrada propia para cada énfasis representado.",
+            "Una de las caras pasa a ser membrana translúcida: la superficie se vuelve medio de comunicación.",
+            "Se incorpora la identidad institucional (paleta y logotipos de la Universidad Sergio Arboleda) en las caras."
+          ],
+          problemas: [
+            { p: "La mesa como objeto aparte complicaba el montaje y rompía la unidad del conjunto.", s: "Se integra a una esquina de cada cara, como parte de la estructura." },
+            { p: "Las proyecciones interiores solo se veían desde adentro.", s: "Una cara de membrana translúcida las hace visibles desde el exterior." },
+            { p: "El componente técnico de alimentación podía afectar la lectura estética.", s: "La fuente de poder queda detrás de la cara principal." }
+          ],
+          resultados: "BETA llega a su configuración definitiva: un inflable de tres caras con identidad institucional, una cara propia para Objetos 3D, mesas integradas y una superficie que comunica. Además queda documentada la secuencia de montaje, desmontaje, transporte y empaque de la instalación itinerante.",
+          ejes: ["forma", "espacio", "materiales", "tecnologia"],
+          portada: 0,
+          galeria: [{ tipo: "Planimetría", pie: "Vista superior del mobiliario.", archivo: "semana-04/planimetria" }],
+          dev: {
+            plano: { k: "Referencia general · vista superior", t: "Planimetría del mobiliario", texto: "Todo el sistema formal se lee desde aquí: las tres caras, sus entradas, la disposición de los componentes y cómo se relacionan en el espacio.", tipo: "Planimetría", pie: "Vista superior: tres caras, entradas y componentes.",
+              leyenda: [
+                { t: "Cara 1 · institucional", d: "Paleta y logotipos de la Sergio.", a: "caras" },
+                { t: "Cara 2 · institucional", d: "Segunda cara, misma identidad gráfica.", a: "caras" },
+                { t: "Cara 3 · Objetos 3D", d: "Diseño y entrada propios.", a: "cara3" },
+                { t: "Pared de membrana", d: "Proyección visible desde afuera.", a: "membrana" },
+                { t: "Fuente de poder", d: "Detrás de la cara principal.", a: "poder" },
+                { t: "Mesas integradas", d: "Una esquina de cada cara.", a: "caras" }
+              ] },
+            caras: { k: "Caras 1 y 2 · identidad institucional", t: "La mesa deja de ser un objeto aparte",
+              texto: "Las dos primeras caras usan la paleta cromática de la Universidad Sergio Arboleda y sus logotipos. El cambio conceptual del proyecto: la mesa ya no se monta por separado, sino que es una extensión del propio inflable, ubicada en una esquina de cada cara.",
+              c1: { tipo: "Cara 1", pie: "Identidad institucional y mesa integrada en la esquina." },
+              c2: { tipo: "Cara 2", pie: "Segunda cara, con su mesa en una esquina." },
+              cambioT: "Del artefacto independiente a la extensión integrada",
+              cambio: "Antes, la mesa plegable se montaba aparte. Ahora nace del inflable y permanece unida a la estructura principal en una esquina de cada cara." },
+            poder: { k: "Componente técnico", t: "Fuente de poder detrás de la cara principal",
+              texto: "La fuente de poder se ubica detrás de la cara principal: alimenta el inflable sin aparecer en la lectura estética del diseño.", tipo: "Fuente de poder", pie: "Ubicación detrás de la cara principal." },
+            cara3: { k: "Cara 3 · énfasis de Diseño Digital", t: "Creación de Objetos 3D",
+              texto: "No es una variación decorativa de las otras caras: es una tercera propuesta formal, con diseño, entrada y portafolio gráfico propios sobre el modelado de objetos tridimensionales.", tipo: "Cara de Creación de Objetos 3D", pie: "Entrada independiente y portafolio gráfico.",
+              datos: [
+                { t: "Entrada propia", d: "Acceso independiente, con su forma y volumen." },
+                { t: "Portafolio gráfico", d: "Comunica el trabajo de creación y modelado 3D." },
+                { t: "Lenguaje de objetos y aire", d: "Relación entre los objetos 3D y la arquitectura neumática." }
+              ] },
+            membrana: { k: "Cara de membrana translúcida", t: "La superficie como medio de comunicación",
+              texto: "Una de las caras se transforma en pared de membrana translúcida. Las proyecciones audiovisuales del interior se ven también desde el exterior, y el inflable pasa a ser pantalla.", tipo: "Pared de membrana translúcida", pie: "La proyección interior se lee desde afuera.",
+              flujo: ["Adentro: se proyecta la experiencia audiovisual.", "En la superficie: la membrana deja pasar y difunde la imagen.", "Afuera: el público ve la proyección y se acerca."] },
+            logistica: { k: "Itinerancia", t: "Secuencia técnica: montaje, desmontaje, transporte y empaque",
+              intro: "BETA está pensada para viajar: se arma, se desarma, se traslada y se vuelve a instalar en otro lugar. Cada momento tiene su propia secuencia; desplázala con las flechas, el teclado o con el dedo.",
+              momentos: [
+                { id: "montaje", t: "Montaje y desmontaje", intro: "Cómo se arma la instalación, cómo se desarma y cómo se deja lista para reinstalarse en otro lugar.", reqT: "Qué se necesita", req: ["Espacio despejado y nivelado", "Toma eléctrica para la fuente de poder", "Planimetría a la mano"],
+                  slides: [
+                    { fase: "Montaje", t: "Preparar el sitio", pie: "Área despejada y huella marcada.", d: "Se despeja y nivela el área y se ubica la huella de las tres caras según la planimetría." },
+                    { fase: "Montaje", t: "Conectar la fuente de poder", pie: "Conexión detrás de la cara principal.", d: "La fuente de poder se ubica detrás de la cara principal y se conecta al sistema de insuflado antes de inflar." },
+                    { fase: "Montaje", t: "Insuflado", pie: "La estructura se levanta.", d: "El inflable se llena de aire y se levanta; se verifica que las tres caras y sus entradas queden alineadas." },
+                    { fase: "Montaje", t: "Mesas y proyección", pie: "Mesas integradas y equipos listos.", d: "Se despliegan las mesas de las esquinas y se conectan la proyección y la luz." },
+                    { fase: "Desmontaje", t: "Apagado y desinsuflado", pie: "Equipos apagados, aire liberado.", d: "Se apagan los equipos, se desconecta la proyección y se libera el aire." },
+                    { fase: "Desmontaje", t: "Plegado de la estructura", pie: "Plegado cara por cara.", d: "Con la estructura vacía se pliega cara por cara, cuidando las zonas con logotipos y portafolio." },
+                    { fase: "Reinstalación", t: "Listo para otro lugar", pie: "Piezas revisadas y rotuladas.", d: "Se revisan y rotulan las piezas para repetir el montaje en un nuevo espacio." }
+                  ] },
+                { id: "transporte", t: "Transporte", intro: "Cómo se traslada BETA entre espacios y qué condiciones se necesitan para hacerlo.", reqT: "Condiciones", req: ["Vehículo cubierto y seco", "Acceso libre al lugar de instalación", "Personas suficientes para cargar y descargar"],
+                  slides: [
+                    { fase: "Carga", t: "Orden de carga", pie: "Lo más pesado, abajo.", d: "Se carga en un orden definido, con los contenedores más pesados primero." },
+                    { fase: "Carga", t: "Aseguramiento", pie: "Carga asegurada para el viaje.", d: "La carga se asegura para evitar movimientos durante el trayecto." },
+                    { fase: "Traslado", t: "Condiciones del trayecto", pie: "Protección frente a humedad y golpes.", d: "El traslado se hace protegiendo los componentes de la humedad y los golpes." },
+                    { fase: "Llegada", t: "Descarga", pie: "Descarga junto al sitio de montaje.", d: "Se descarga cerca del sitio de instalación, listo para iniciar el montaje." }
+                  ] },
+                { id: "empaque", t: "Empaque", intro: "Cómo se organizan, protegen y disponen los componentes para guardarlos y trasladarlos.", reqT: "Principios", req: ["Cada componente con su lugar", "Protección de superficies gráficas", "Rotulado para el siguiente montaje"],
+                  slides: [
+                    { fase: "Estructura", t: "Inflable plegado", pie: "Estructura plegada y protegida.", d: "La estructura se pliega y se protege antes de guardarla." },
+                    { fase: "Componentes", t: "Mesas y equipos", pie: "Mesas, fuente de poder y cables.", d: "Mesas, fuente de poder, proyección y cables se agrupan por función." },
+                    { fase: "Gráfica", t: "Logotipos y portafolio", pie: "Piezas gráficas protegidas.", d: "Las piezas con identidad institucional y portafolio se guardan sin dobleces." },
+                    { fase: "Almacenamiento", t: "Contenedores rotulados", pie: "Todo rotulado y listo.", d: "Cada contenedor queda rotulado para su almacenamiento y traslado." }
+                  ] }
+              ] }
+          },
+          comparacion: { antes: "semana-03/01", despues: "semana-04/planimetria", etiquetaAntes: "Semana 3", etiquetaDespues: "Semana 4", nota: "De un inflable de dos caras con mesas plegables a un mobiliario de tres caras, con mesas integradas, membrana translúcida y fuente de poder resuelta." } }
       ]
     }
 ,

@@ -26,6 +26,7 @@
       const l = d.createElement("link"); l.id = "df-css"; l.rel = "stylesheet"; l.href = R + "css/formal.css";
       l.onload = l.onerror = go; d.head.appendChild(l); setTimeout(go, 1500);
       const l2 = d.createElement("link"); l2.id = "df-css2"; l2.rel = "stylesheet"; l2.href = R + "css/formal-extra.css"; d.head.appendChild(l2);
+      const l3 = d.createElement("link"); l3.id = "df-css3"; l3.rel = "stylesheet"; l3.href = R + "css/formal-dev.css"; d.head.appendChild(l3);
     } else go();
 
     function build() {
@@ -82,13 +83,62 @@
 
       const acc = (t, h, open) => `<details class="df-d"${open ? " open" : ""}><summary>${t}</summary><div>${h}</div></details>`;
       const interior = (s) => !s.interior ? "" : `<div class="df-int ed-rv"><h3 class="ed-h3">${s.interiorTitulo || "La experiencia por dentro"}</h3>${s.interiorIntro ? `<p class="df-intro">${s.interiorIntro}</p>` : ""}<div class="df-acc">${s.interior.map((x, k) => `<details class="df-d"${k === 0 ? " open" : ""}><summary>${x.t}</summary><div>${x.p ? `<p>${x.p}</p>` : ""}${x.items ? `<div class="df-cards">${x.items.map((i) => `<article><h4>${i.t}</h4><p>${i.d}</p></article>`).join("")}</div>` : ""}</div></details>`).join("")}</div></div>`;
+      /* ===== Semana 3 · montaje de la mesa · Semana 4 · desarrollo formal y logística ===== */
+      const T = (ref, o, g, lab) => tile(ref, o.tipo, o.pie, g, lab, 1);
+      const montaje = (s) => { const m = s.montaje; if (!m) return "";
+        const t = (k) => T(`${s.id}/montaje-${pad(k + 1)}`, m.pasos[k], s.id + "-mesa", "Paso " + pad(k + 1));
+        return `<div class="dfx df3m ed-rv" id="${s.id}-mesa"><div class="df3m-head"><p class="k">${m.kicker}</p><h3>${m.titulo}</h3><p>${m.intro}</p></div>
+          <div class="df3m-grid"><div class="a" data-par="-.05"><span class="st" aria-hidden="true">01</span>${t(0)}</div><div class="b" data-par=".04"><span class="st" aria-hidden="true">02</span>${t(1)}</div><div class="c" data-par="-.02"><span class="st" aria-hidden="true">03</span>${t(2)}</div></div></div>`; };
+
+      const logis = (s) => { const L = s.dev.logistica; if (!L) return "";
+        const moms = L.momentos.map((m, mi) => {
+          const g = `${s.id}-${m.id}`, fases = [...new Set(m.slides.map((x) => x.fase))];
+          return `<section class="mom${mi % 2 ? " alt" : ""} ed-rv" id="${g}" aria-labelledby="${g}-t">
+            <div class="mom-side"><span class="mom-n" aria-hidden="true">${pad(mi + 1)}</span><h4 id="${g}-t">${m.t}</h4><p>${m.intro}</p>${m.req ? `<p class="k">${m.reqT || "Condiciones"}</p><ul>${m.req.map((r) => `<li>${r}</li>`).join("")}</ul>` : ""}</div>
+            <div class="mom-car" data-car><div class="car-top"><div class="car-chips" role="group" aria-label="Fases de ${esc(m.t)}">${fases.map((f, fi) => `<button type="button" data-f="${esc(f)}" aria-pressed="${fi === 0}">${esc(f)}</button>`).join("")}</div><span class="car-count" aria-live="polite"></span></div>
+              <div class="car-track" tabindex="0" role="group" aria-label="Secuencia de ${esc(m.t)}, desplazable">${m.slides.map((x, k) => `<article class="car-s" data-fase="${esc(x.fase)}"><div class="car-im">${T(`${s.id}/${m.id}-${pad(k + 1)}`, { tipo: x.t, pie: x.pie }, g, `${m.t} · ${pad(k + 1)}`)}</div><div class="car-t"><span class="num" aria-hidden="true">${pad(k + 1)}</span><h5>${x.t}</h5><p>${x.d}</p></div></article>`).join("")}</div>
+              <div class="car-ctl"><button type="button" data-d="-1" aria-label="Paso anterior">←</button><div class="car-bar" aria-hidden="true"><i></i></div><button type="button" data-d="1" aria-label="Paso siguiente">→</button></div></div></section>`; }).join("");
+        return `<div class="dfx df-log" id="${s.id}-logistica"><p class="k">${L.k}</p><h3>${L.t}</h3><p class="log-intro">${L.intro}</p>
+          <nav class="log-nav" aria-label="Momentos de la logística">${L.momentos.map((m, i) => `<a href="#${s.id}-${m.id}"><b>${pad(i + 1)}</b> ${m.t}</a>`).join("")}</nav>${moms}</div>`; };
+
+      const dev = (s) => { const v = s.dev; if (!v) return ""; const g = s.id, P = v.plano, C = v.caras, W = v.poder, F = v.cara3, M = v.membrana;
+        return `<div class="dfx df4">
+          <div class="df4-plan ed-rv" id="${g}-plano"><div class="pl-txt"><p class="k">${P.k}</p><h3>${P.t}</h3><p>${P.texto}</p>
+            <ol class="pl-key">${P.leyenda.map((l, i) => `<li><a href="#${g}-${l.a}"><b>${i + 1}</b><span><em>${l.t}</em>${l.d}</span></a></li>`).join("")}</ol></div>
+            <div class="pl-img" data-par="-.04">${T(`${g}/planimetria`, P, g, "Planimetría")}</div></div>
+
+          <div class="df4-caras" id="${g}-caras"><div class="hd ed-rv"><p class="k">${C.k}</p><h3>${C.t}</h3><p>${C.texto}</p></div>
+            <div class="c1 ed-rv" data-par="-.03">${T(`${g}/cara-01`, C.c1, g, "Cara 1")}</div>
+            <div class="cambio ed-rv"><p class="k">Cambio conceptual</p><h4>${C.cambioT}</h4>
+              <svg class="cmb" viewBox="0 0 400 140" role="img" aria-label="Antes: mesa separada del inflable. Ahora: mesa unida a una esquina del inflable">
+                <g fill="none" stroke="currentColor" stroke-width="3"><rect x="14" y="18" width="130" height="84" rx="14"/><rect x="156" y="70" width="40" height="32" stroke-dasharray="5 4"/><path d="M208 10V110" stroke-width="1.5" stroke-dasharray="3 5"/><rect x="222" y="18" width="130" height="84" rx="14"/></g>
+                <rect x="330" y="70" width="52" height="32" fill="var(--coral)" stroke="currentColor" stroke-width="3"/>
+                <g font-family="Marvin,Georgia,serif" font-size="12" letter-spacing="2" fill="currentColor"><text x="14" y="128">ANTES · MESA APARTE</text><text x="222" y="128">AHORA · MESA INTEGRADA</text></g></svg>
+              <p>${C.cambio}</p></div>
+            <div class="c2 ed-rv" data-par="-.07">${T(`${g}/cara-02`, C.c2, g, "Cara 2")}</div></div>
+
+          <div class="df4-poder" id="${g}-poder"><div class="ed-rv"><p class="k">${W.k}</p><h3>${W.t}</h3><p>${W.texto}</p>
+            <svg class="pw" viewBox="0 0 300 120" role="img" aria-label="Esquema en planta: la fuente de poder queda detrás de la cara principal">
+              <g fill="none" stroke="currentColor" stroke-width="3"><rect x="30" y="16" width="170" height="88" rx="14"/><path d="M200 60H222" stroke-dasharray="4 4"/></g><path d="M30 24V96" stroke="var(--coral)" stroke-width="8" stroke-linecap="round"/>
+              <rect x="222" y="42" width="52" height="36" fill="var(--mostaza)" stroke="currentColor" stroke-width="3"/><g font-family="Marvin,Georgia,serif" font-size="11" letter-spacing="2" fill="currentColor"><text x="36" y="114">CARA PRINCIPAL</text><text x="226" y="94">FUENTE</text></g></svg></div>
+            <div class="ed-rv" data-par=".05">${T(`${g}/fuente-poder`, W, g, "Fuente de poder")}</div></div>
+
+          <div class="df4-c3 ed-rv" id="${g}-cara3"><div class="im" data-par="-.03">${T(`${g}/cara-03`, F, g, "Cara 3")}</div>
+            <div><span class="badge">Énfasis · Creación de Objetos 3D</span><p class="k">${F.k}</p><h3>${F.t}</h3><p>${F.texto}</p>
+              <ul class="c3-feats">${F.datos.map((x) => `<li><b>${x.t}</b>${x.d}</li>`).join("")}</ul></div></div>
+
+          <div class="df4-mem" id="${g}-membrana"><div class="im ed-rv">${T(`${g}/membrana`, M, g, "Membrana")}</div>
+            <div class="mem-card ed-rv"><p class="k">${M.k}</p><h3>${M.t}</h3><p>${M.texto}</p><ol class="mem-flow">${M.flujo.map((x) => `<li>${x}</li>`).join("")}</ol></div></div>
+        </div>${logis(s)}`; };
+
       const week = (s, i) => {
         const n = i + 1, prev = S[i - 1], next = S[i + 1];
         const tiles = (s.galeria || []).map((it, k) => tile(refOf(s, k), it.tipo, it.pie, s.id, `Semana ${n} · ${pad(k + 1)}`)).join("");
         return `<section id="${s.id}" class="ed-sec df-week${n % 2 === 0 ? " ed-tint" : ""}${n % 2 === 0 ? " alt" : ""}" aria-labelledby="${s.id}-t">
           ${head(pad(n), s.id, esc(s.titulo) || pend("Título de la fase por definir"), `Semana ${n} · ${esc(s.periodo) || "Fecha por definir"}`)}
+          ${dev(s)}
           <div class="df-wk df-wk2">
-            <div class="df-gal ed-rv">${tiles || pend("Galería por incorporar")}</div>
+            ${s.dev ? "" : `<div class="df-gal ed-rv">${tiles || pend("Galería por incorporar")}</div>`}
             <div class="df-acc ed-rv" aria-label="Registro de la semana ${n}">
               ${acc("Objetivo de diseño", txt(s.objetivo, "Objetivo por documentar"), 1)}
               ${acc("Decisiones tomadas", list(s.decisiones, (x) => `<li><b>${x.t}</b>${x.d || ""}</li>`, "Decisiones por documentar"))}
@@ -97,6 +147,7 @@
               ${acc("Resultados y conclusiones", txt(s.resultados, "Resultados por documentar"))}
             </div>
           </div>
+          ${montaje(s)}
           ${interior(s)}
           ${cmp(s)}
           <p class="df-wpager">${prev ? `<a href="#${prev.id}"><span aria-hidden="true">←</span> Semana ${n - 1}</a>` : `<a href="#evolucion"><span aria-hidden="true">↑</span> Evolución general</a>`}
@@ -150,6 +201,26 @@ ${S.map(week).join("")}
   <p class="ed-statement ed-rv">${a.cierre}</p>
   <p class="pager ed-rv"><a class="btn ghost" href="index.html">← Tercer corte</a>${prevA ? `<a class="btn ghost" href="actividad.html?id=${prevA.id}">Anterior</a>` : ""}${nextA ? `<a class="btn" href="actividad.html?id=${nextA.id}">Siguiente</a>` : ""}</p>
 </section>`;
+
+      /* Carruseles de la secuencia técnica */
+      const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      main.querySelectorAll("[data-car]").forEach((c) => {
+        const tr = c.querySelector(".car-track"), sl = [...tr.children], cnt = c.querySelector(".car-count"), bar = c.querySelector(".car-bar i"),
+          chips = [...c.querySelectorAll(".car-chips button")], pv = c.querySelector('[data-d="-1"]'), nx = c.querySelector('[data-d="1"]');
+        const idx = () => { let b = 0, m = 1e9; sl.forEach((x, i) => { const q = Math.abs(x.offsetLeft - tr.scrollLeft); if (q < m) { m = q; b = i; } }); return b; };
+        const upd = () => { const end = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4, j = end ? sl.length - 1 : idx();
+          cnt.textContent = `${pad(j + 1)} / ${pad(sl.length)}`; bar.style.width = ((j + 1) / sl.length * 100) + "%";
+          chips.forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === sl[j].dataset.fase)); pv.disabled = tr.scrollLeft < 4; nx.disabled = end; };
+        const go = (i) => tr.scrollTo({ left: sl[Math.max(0, Math.min(sl.length - 1, i))].offsetLeft, behavior: RM ? "auto" : "smooth" });
+        pv.onclick = () => go(idx() - 1); nx.onclick = () => go(idx() + 1);
+        chips.forEach((b) => b.onclick = () => go(sl.findIndex((x) => x.dataset.fase === b.dataset.f)));
+        tr.addEventListener("keydown", (e) => { if (e.key === "ArrowRight") { e.preventDefault(); go(idx() + 1); } else if (e.key === "ArrowLeft") { e.preventDefault(); go(idx() - 1); } });
+        let q = 0; tr.addEventListener("scroll", () => { if (!q) q = requestAnimationFrame(() => { upd(); q = 0; }); }, { passive: true }); upd();
+      });
+      /* Profundidad: parallax suave en imágenes de composición (se desactiva con «reducir movimiento» y en móvil por CSS) */
+      const pars = [...main.querySelectorAll("[data-par]")];
+      if (pars.length && !RM) { let q = 0; const run = () => { pars.forEach((el) => { const r = el.getBoundingClientRect(); if (r.bottom < -200 || r.top > innerHeight + 200) return; el.style.setProperty("--py", ((r.top + r.height / 2 - innerHeight / 2) * parseFloat(el.dataset.par)).toFixed(1) + "px"); }); q = 0; };
+        addEventListener("scroll", () => { if (!q) q = requestAnimationFrame(run); }, { passive: true }); addEventListener("resize", run); run(); }
 
       /* Comparador */
       main.querySelectorAll(".df-cmp input").forEach((inp) => inp.addEventListener("input", () => inp.parentElement.style.setProperty("--p", inp.value + "%")));
