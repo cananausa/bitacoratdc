@@ -202,6 +202,8 @@ ${S.map(week).join("")}
 <section id="cierre" class="ed-sec ed-end" aria-labelledby="cierre-t">
   ${head("→", "cierre", "Cierre", "Siguiente versión")}
   <p class="ed-statement ed-rv">${a.cierre}</p>
+  <div class="df-pendon ed-rv"><p class="k">Resultado final</p><p class="df-pendon-t">Así quedó el pendón final de nuestro proyecto</p>
+    <a class="btn alt df-pendon-b" href="${R}${encodeURI(a.pendon || "assets/documentos/PENDÓN TDC.pdf")}" target="_blank" rel="noopener">Abrir pendón</a></div>
   <p class="pager ed-rv"><a class="btn ghost" href="index.html">← Tercer corte</a>${prevA ? `<a class="btn ghost" href="actividad.html?id=${prevA.id}">Anterior</a>` : ""}${nextA ? `<a class="btn" href="actividad.html?id=${nextA.id}">Siguiente</a>` : ""}</p>
 </section>`;
 
