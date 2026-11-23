@@ -101,10 +101,9 @@
 .car-t{position:relative;padding:.4rem 0 0 3.2rem;min-height:4.5rem}
 .car-t .num{position:absolute;left:0;top:.2rem;font:400 2.4rem/1 Marvin,Georgia,serif;color:var(--coral)}
 .car-t p{margin:0;font:.95rem/1.5 system-ui,"Segoe UI",Arial,sans-serif}
-.car-ctl{display:flex;align-items:center;gap:1rem}
+.car-ctl{display:flex;align-items:center;justify-content:flex-end;gap:.8rem}
 .car-ctl button{width:2.9rem;height:2.9rem;border-radius:50%;border:2px solid var(--vino);background:var(--mostaza);color:var(--vino);font:1.3rem system-ui,sans-serif;cursor:pointer;transition:background .25s,transform .25s var(--ease)}
 .car-ctl button:hover:not(:disabled){background:var(--coral);transform:translateY(-2px)}.car-ctl button:disabled{opacity:.35;cursor:default}
-.car-bar{flex:1;height:5px;background:rgba(92,10,10,.18);border-radius:3px;overflow:hidden}.car-bar i{display:block;height:100%;width:0;background:var(--coral);transition:width .35s var(--ease)}
 
 /* ---------- Responsive ---------- */
 @media(max-width:860px){
@@ -117,7 +116,7 @@
   .df4-poder .df-open{--ar:16/10}
 }
 @media(max-width:560px){.car-s{flex-basis:92%}.df3m{border-radius:1.5rem}.df4-plan,.df4-c3{border-radius:1.5rem .3rem 1.5rem .3rem}}
-@media(prefers-reduced-motion:reduce){.dfx .df-open,.df4-mem .df-open::before,.car-bar i{transition:none}.dfx [data-par]{transform:none!important}}
+@media(prefers-reduced-motion:reduce){.dfx .df-open,.df4-mem .df-open::before{transition:none}.dfx [data-par]{transform:none!important}}
 
 /* ---------- Identidad visual de Diseño Digital (aplicada a todo el mobiliario) ---------- */
 .df4-id{background:#FEFD10;color:#013E6D;display:grid;grid-template-columns:6fr 6fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;padding:clamp(1.2rem,4vw,3rem);border-radius:3rem .5rem 3rem .5rem;position:relative}
