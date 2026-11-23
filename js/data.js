@@ -61,7 +61,7 @@ vision: [
      Agrega un objeto por actividad (ver LEEME.md). Se crea sola su página:
      tercer-corte/actividad.html?id=<id>. bloques: texto | imagen | galeria | cita */
   actividades: [
-    { id: "concepto-cultura-arquitectura", editorial: true, semana: "1", fecha: "28 oct - 4 nov 2026",
+    { id: "concepto-cultura-arquitectura", editorial: true, semana: "SEMANA 1", fecha: "28 oct - 4 nov 2026",
       titulo: "BETA: instalación para promocionar Diseño Digital, cultura digital y arquitectura efímera",
       resumen: "Una instalación universitaria interactiva que muestra qué se crea al estudiar Diseño Digital, con síntesis de cultura digital, la carrera y arquitectura efímera.",
       pdf: "assets/documentos/referencias-apa7.pdf",
@@ -227,12 +227,12 @@ integracion: [
         ]
             },
     },
-    { id: "analisis-de-referentes", referentes: true, semana: "2", fecha: "4-11 nov 2026",
+    { id: "analisis-de-referentes", referentes: true, semana: "SEMANA 2", fecha: "4-11 nov 2026",
       titulo: "Análisis de referentes",
       resumen: "Matriz de doce referentes, conclusiones y decisiones para BETA, e inventario de recursos TIC con su clasificación.",
       pdf: "assets/documentos/matriz-referentes.pdf" },
 
-    { id: "desarrollo-formal", formal: true, semana: "12-15", fecha: "8 nov 2026",
+    { id: "desarrollo-formal", formal: true, semana: "SEMANAS 12-15", fecha: "8 nov 2026",
       titulo: "DESARROLLO FORMAL: bitácora de evolución de BETA",
       resumen: "Bitácora cronológica por semanas con bocetos, dibujos, decisiones y comparaciones que muestran cómo la propuesta BETA se transforma.",
       lema: "La forma de BETA se decide, se prueba y se corrige semana a semana.",
@@ -439,7 +439,7 @@ integracion: [
       ]
     }
 ,
-    { id: "procesos-de-co-creacion", cocreacion: true, semana: "3", fecha: "11-18 nov 2026",
+    { id: "procesos-de-co-creacion", cocreacion: true, semana: "SEMANA 3", fecha: "11-18 nov 2026",
       titulo: "Procesos de co-creación: de las opiniones a las decisiones de BETA",
       resumen: "Sacamos una tercera versión de BETA (un inflable con forma de mando) a conversar con profesores, estudiantes y otras personas.",
       lema: "Escuchar no es obedecer: es contrastar, interpretar y decidir.",
@@ -627,7 +627,7 @@ integracion: [
       id: "imagen-corporativa-dd",
       externa: true,
       url: "imagen-corporativa/index.html",
-      semana: "4",
+      semana: "SEMANA 4",
       fecha: "18-25 nov 2026",
       titulo: "Diseño de la imagen corporativa del programa",
       resumen: "Exposición interactiva de la nueva identidad visual del programa de Diseño Digital (Universidad Sergio Arboleda · COM+ID): concepto, imagotipo, y todo el sistema gráfico."
