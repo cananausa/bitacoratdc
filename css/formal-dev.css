@@ -137,3 +137,31 @@
 .df-pendon .k{flex:0 0 100%;margin:0;font:.8rem Marvin,Georgia,serif;letter-spacing:.18em;text-transform:uppercase}
 .df-pendon-t{margin:0;flex:1 1 18rem;font:400 clamp(1.5rem,3.5vw,2.3rem)/1.1 Marvin,Georgia,serif}
 .df-pendon-b{flex:0 0 auto}
+
+
+/* ---------- MAQUETA FINAL · carrusel de tres ángulos ---------- */
+.df-maqueta-section{padding:clamp(2rem,5vw,4rem) 0;border-top:2px solid var(--vino)}
+.df-maqueta-head{max-width:52rem;margin:0 0 clamp(1.5rem,4vw,2.5rem)}
+.df-maqueta-head .ed-k{font:.8rem Marvin,Georgia,serif;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin:0 0 .7rem}
+.df-maqueta-head h2{font:400 clamp(2.2rem,5vw,4.2rem)/.98 Marvin,Georgia,serif;color:var(--vino);margin:0 0 1rem}
+.df-maqueta-head>p:last-child{max-width:42rem;font:1rem/1.6 system-ui,"Segoe UI",Arial,sans-serif;color:var(--vino)}
+.df-maqueta{background:var(--petrol);padding:clamp(.8rem,2.5vw,1.6rem);border-radius:.5rem 3rem .5rem 3rem;box-shadow:12px 12px 0 var(--mostaza)}
+.df-maq-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;border-radius:.25rem;outline-offset:5px}
+.df-maq-track::-webkit-scrollbar{display:none}
+.df-maq-slide{flex:0 0 100%;min-width:0;scroll-snap-align:start}
+.df-maq-slide .df-tile{width:100%;margin:0}
+.df-maq-slide .df-open{width:100%;aspect-ratio:16/9!important;min-height:clamp(260px,48vw,680px);background:#fffaf0;border:2px solid #fffaf0;box-shadow:none!important;transform:none!important}
+.df-maq-slide .df-open img{object-fit:contain!important;object-position:center;background:#fffaf0}
+.df-maq-slide .df-open .ph{background:#fffaf0;color:var(--vino)}
+.df-maq-slide .df-cap{color:#fffaf0;text-align:right;margin:.9rem .25rem 0;font-size:.9rem}
+.df-maq-slide .df-cap b{color:var(--mostaza)}
+.df-maq-controls{display:flex;align-items:center;justify-content:center;gap:1.1rem;margin:.9rem auto 0;color:#fffaf0}
+.df-maq-controls button{width:2.7rem;height:2.7rem;border:1.5px solid var(--mostaza);border-radius:50%;background:transparent;color:#fffaf0;font:1.2rem/1 system-ui,sans-serif;cursor:pointer;transition:background .2s,color .2s,opacity .2s}
+.df-maq-controls button:hover:not(:disabled){background:var(--mostaza);color:var(--vino)}
+.df-maq-controls button:disabled{opacity:.3;cursor:not-allowed}
+.df-maq-count{min-width:4.5rem;text-align:center;font:.85rem Marvin,Georgia,serif;letter-spacing:.12em;font-variant-numeric:tabular-nums}
+@media(max-width:700px){
+  .df-maqueta{border-radius:.4rem 1.5rem .4rem 1.5rem;box-shadow:7px 7px 0 var(--mostaza)}
+  .df-maq-slide .df-open{aspect-ratio:4/3!important;min-height:220px}
+  .df-maq-slide .df-cap{text-align:left}
+}
