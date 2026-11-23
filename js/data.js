@@ -343,7 +343,7 @@ integracion: [
               { tipo: "Juntar y armar", pie: "Se juntan las partes y la mesa queda armada, lista para usar." }
             ] },
           comparacion: { antes: "semana-02/01", despues: "semana-03/01", etiquetaAntes: "Semana 2", etiquetaDespues: "Semana 3", nota: "De los arcos de tablas con techo modular al inflable de dos caras, con dos puertas, mesas plegables, color neón y un interior de realidad virtual." } },
-        { n: 4, id: "semana-04", periodo: "", titulo: "Configuración definitiva del mobiliario inflable",
+        { n: 4, id: "semana-04", periodo: "18-25 de Noviembre", titulo: "Configuración definitiva del mobiliario inflable",
           objetivo: "Consolidar la forma final de BETA: un único inflable de cuatro lados. Tres caras, cada una con la forma, la entrada y el holograma de un énfasis de Diseño Digital, y una cuarta pared de membrana tensionada que deja ver desde afuera la proyección interior. Todo el mobiliario integra la nueva identidad visual de la carrera, que diseñamos porque hasta ahora no existía.",
           decisiones: [
             { t: "Tres caras, tres énfasis. ", d: "Cada cara representa un énfasis de la carrera, con entrada y holograma propios: la cara A tiene forma de mando de videojuego, la B de pantalla de computador con cursor y glitch, y la C se construye con formas geométricas y un holograma con más formas." },
@@ -430,7 +430,7 @@ integracion: [
                   slides: [
                     { fase: "Carga", t: "Carga de la caja", pie: "La caja y los equipos, a bordo.", d: "Se carga la caja con el inflable y, aparte, el proyector y las gafas." },
                     { fase: "Carga", t: "Aseguramiento", pie: "Carga asegurada para el viaje.", d: "La carga se asegura para evitar movimientos durante el trayecto." },
-                    { fase: "Traslado", t: "Condiciones del trayecto", pie: "Protección frente a humedad y golpes.", d: "El traslado se hace protegiendo la caja y los equipos de la humedad y los golpes." },
+                    { fase: "Traslado", t: "Condiciones del trayecto", pie: "Asegurados frente a las inclemencias de la carretera.", d: "El traslado se hace a una velocidad tranqui, manteniendo el cuidado normal de un objeto como éste." },
                     { fase: "Llegada", t: "Descarga", pie: "Descarga junto al sitio de montaje.", d: "Se descarga cerca del sitio de instalación, listo para iniciar el montaje." }
                   ] }
               ] }
