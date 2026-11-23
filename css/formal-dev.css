@@ -95,7 +95,8 @@
 .car-chips button[aria-pressed=true]{background:var(--vino);color:var(--mostaza)}
 .car-chips button:focus-visible,.car-ctl button:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
 .car-count{font:1rem Marvin,Georgia,serif;letter-spacing:.1em;color:var(--petrol)}
-.car-track{position:relative;display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 12px 1.4rem 0;scrollbar-width:thin}
+.car-track{position:relative;display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 12px 1.4rem 0;scrollbar-width:none;-ms-overflow-style:none}
+.car-track::-webkit-scrollbar{display:none;height:0}
 .car-track:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
 .car-s{flex:0 0 min(88%,640px);scroll-snap-align:start;--ar:16/10}
 .car-t{position:relative;padding:.4rem 0 0 3.2rem;min-height:4.5rem}
