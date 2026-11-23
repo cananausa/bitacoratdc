@@ -187,7 +187,6 @@
       
   </div>
 </header>
-<div class="ed-nav" role="navigation" aria-label="Semanas de la bitácora"><div class="ed-prog" aria-hidden="true"><i></i></div><ol>${secs.map((s) => `<li><a href="#${s[0]}"><span>${s[2]}</span>${s[1]}</a></li>`).join("")}</ol></div>
 
 <section id="evolucion" class="ed-sec ed-tint" aria-labelledby="evolucion-t">
   ${head("00", "evolucion", "Evolución de la propuesta", "Vista general · línea de transformación")}
@@ -278,7 +277,7 @@ ${S.map(week).join("")}
       addEventListener("scroll", () => { const y = scrollY, dy = y - last; if (y < 80) ver(false); else if (dy > 6 && !d.querySelector("#nav.open")) ver(true); else if (dy < -6) ver(false); last = y; }, { passive: true });
       hd.addEventListener("focusin", () => ver(false));
       const bar = main.querySelector(".ed-prog i"), links = [...main.querySelectorAll(".ed-nav a")];
-      let t = 0; const upd = () => { const h = d.documentElement; bar.style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight))})`; t = 0; };
+      let t = 0; const upd = () => { const h = d.documentElement; if (bar) bar.style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight))})`; t = 0; };
       addEventListener("scroll", () => { if (!t) t = requestAnimationFrame(upd); }, { passive: true }); upd();
       const spy = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) links.forEach((l) => { const on = l.getAttribute("href") === "#" + e.target.id; l.toggleAttribute("aria-current", on); if (on) { const ol = l.closest("ol"); ol.scrollTo({ left: l.offsetLeft - ol.clientWidth / 2 + l.clientWidth / 2 }); } }); }), { rootMargin: "-35% 0px -60% 0px" });
       main.querySelectorAll(".ed-sec").forEach((s) => spy.observe(s));
