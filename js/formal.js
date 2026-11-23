@@ -97,7 +97,7 @@
             <div class="mom-side"><span class="mom-n" aria-hidden="true">${pad(mi + 1)}</span><h4 id="${g}-t">${m.t}</h4><p>${m.intro}</p>${m.req ? `<p class="k">${m.reqT || "Condiciones"}</p><ul>${m.req.map((r) => `<li>${r}</li>`).join("")}</ul>` : ""}</div>
             <div class="mom-car" data-car><div class="car-top"><div class="car-chips" role="group" aria-label="Fases de ${esc(m.t)}">${fases.map((f, fi) => `<button type="button" data-f="${esc(f)}" aria-pressed="${fi === 0}">${esc(f)}</button>`).join("")}</div><span class="car-count" aria-live="polite"></span></div>
               <div class="car-track" tabindex="0" role="group" aria-label="Secuencia de ${esc(m.t)}, desplazable">${m.slides.map((x, k) => `<article class="car-s" data-fase="${esc(x.fase)}"><div class="car-im">${T(`${s.id}/${m.id}-${pad(k + 1)}`, { tipo: x.t, pie: x.pie }, g, `${m.t} · ${pad(k + 1)}`)}</div><div class="car-t"><span class="num" aria-hidden="true">${pad(k + 1)}</span><h5>${x.t}</h5><p>${x.d}</p></div></article>`).join("")}</div>
-              <div class="car-ctl"><button type="button" data-d="-1" aria-label="Paso anterior">←</button><div class="car-bar" aria-hidden="true"><i></i></div><button type="button" data-d="1" aria-label="Paso siguiente">→</button></div></div></section>`; }).join("");
+              <div class="car-ctl"><button type="button" data-d="-1" aria-label="Paso anterior">←</button><button type="button" data-d="1" aria-label="Paso siguiente">→</button></div></div></section>`; }).join("");
         return `<div class="dfx df-log" id="${s.id}-logistica"><p class="k">${L.k}</p><h3>${L.t}</h3><p class="log-intro">${L.intro}</p>
           <nav class="log-nav" aria-label="Momentos de la logística">${L.momentos.map((m, i) => `<a href="#${s.id}-${m.id}"><b>${pad(i + 1)}</b> ${m.t}</a>`).join("")}</nav>${moms}</div>`; };
 
@@ -209,11 +209,11 @@ ${S.map(week).join("")}
       /* Carruseles de la secuencia técnica */
       const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
       main.querySelectorAll("[data-car]").forEach((c) => {
-        const tr = c.querySelector(".car-track"), sl = [...tr.children], cnt = c.querySelector(".car-count"), bar = c.querySelector(".car-bar i"),
+        const tr = c.querySelector(".car-track"), sl = [...tr.children], cnt = c.querySelector(".car-count"),
           chips = [...c.querySelectorAll(".car-chips button")], pv = c.querySelector('[data-d="-1"]'), nx = c.querySelector('[data-d="1"]');
         const idx = () => { let b = 0, m = 1e9; sl.forEach((x, i) => { const q = Math.abs(x.offsetLeft - tr.scrollLeft); if (q < m) { m = q; b = i; } }); return b; };
         const upd = () => { const end = tr.scrollLeft + tr.clientWidth >= tr.scrollWidth - 4, j = end ? sl.length - 1 : idx();
-          cnt.textContent = `${pad(j + 1)} / ${pad(sl.length)}`; bar.style.width = ((j + 1) / sl.length * 100) + "%";
+          cnt.textContent = `${pad(j + 1)} / ${pad(sl.length)}`;
           chips.forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === sl[j].dataset.fase)); pv.disabled = tr.scrollLeft < 4; nx.disabled = end; };
         const go = (i) => tr.scrollTo({ left: sl[Math.max(0, Math.min(sl.length - 1, i))].offsetLeft, behavior: RM ? "auto" : "smooth" });
         pv.onclick = () => go(idx() - 1); nx.onclick = () => go(idx() + 1);

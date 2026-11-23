@@ -411,22 +411,20 @@ integracion: [
             logistica: { k: "Itinerancia", t: "Secuencia técnica: montaje y desmontaje, empaque y transporte",
               intro: "BETA es un solo inflable: se infla y se desinfla completo, se dobla y viaja en una caja. Cada momento tiene su propia secuencia; desplázala con las flechas, el teclado o con el dedo.",
               momentos: [
-                { id: "montaje", t: "Montaje y desmontaje", intro: "Cómo se arma la instalación, cómo se desarma y cómo se deja lista para instalarse en otro lugar.", reqT: "Qué se necesita", req: ["Espacio despejado y nivelado", "Fuente de energía recargada", "Proyector y gafas"],
+                { id: "montaje", t: "Montaje y desmontaje", intro: "BETA es un solo inflable: se extiende, se ancla, se infla y se equipa. Para desmontarla se desinfla y se retiran los anclajes.", reqT: "Qué se necesita", req: ["Espacio despejado y nivelado", "Estacas y cuerdas para el anclaje", "Fuente de energía independiente, recargada", "Proyector y gafas"],
                   slides: [
                     { fase: "Montaje", t: "Preparar el sitio", pie: "Área despejada y huella marcada.", d: "Se despeja y nivela el área y se ubica la huella del inflable según la planimetría." },
-                    { fase: "Montaje", t: "Extender el inflable", pie: "El inflable sobre el piso.", d: "Se saca de la caja y se extiende el inflable completo, con sus tres caras, la pared de membrana, las mesas y los asientos." },
-                    { fase: "Montaje", t: "Inflado completo", pie: "La estructura se levanta.", d: "Con la fuente de energía independiente se infla toda la estructura de una vez, incluidas mesas y asientos." },
-                    { fase: "Montaje", t: "Proyector y gafas", pie: "Equipos listos en el interior.", d: "Se ubican el proyector y las gafas; con eso funcionan los hologramas de las caras y la proyección interior." },
-                    { fase: "Desmontaje", t: "Desinflado completo", pie: "El inflable se desinfla.", d: "Se apagan los equipos y se desinfla toda la estructura." },
-                    { fase: "Desmontaje", t: "Doblar el inflable", pie: "Un solo inflable, doblado.", d: "Ya desinflado, el inflable se dobla como una sola pieza." },
-                    { fase: "Reinstalación", t: "Listo para otro lugar", pie: "Todo guardado para volver a armar.", d: "Se guarda en su caja y se recarga la fuente para repetir el montaje en un nuevo espacio." }
+                    { fase: "Montaje", t: "Extender el inflable", pie: "Todo el inflable, extendido en el suelo.", d: "Se saca el inflable de su empaque y se extiende por completo sobre el suelo: es un solo objeto." },
+                    { fase: "Montaje", t: "Anclaje y tensionado", pie: "Estacas, cuerdas y puntos de fijación.", d: "Se colocan estacas en el suelo y se sujetan mediante cuerdas a los puntos de fijación del inflable. Las cuerdas se tensan para mantener la estructura fija y estable, evitando desplazamientos durante su uso." },
+                    { fase: "Montaje", t: "Inflado completo", pie: "La estructura alcanza su forma y volumen.", d: "Mediante una fuente de energía independiente se infla toda la estructura hasta alcanzar su forma y volumen." },
+                    { fase: "Montaje", t: "Instalación de equipos", pie: "Proyector y gafas en el interior.", d: "Se ubican el proyector y las gafas en el interior para habilitar las experiencias de proyección y hologramas." },
+                    { fase: "Desmontaje", t: "Desinflado completo", pie: "Estructura desinflada y anclajes retirados.", d: "Al finalizar su uso, se apagan los equipos y se desinfla toda la estructura. Se retiran los anclajes." }
                   ] },
-                { id: "empaque", t: "Empaque", intro: "Cómo se guarda BETA para almacenarla y trasladarla.", reqT: "Principios", req: ["Una sola pieza: el inflable completo", "Los logotipos están impresos en el inflable: nada gráfico va aparte", "Solo el proyector y las gafas se guardan por separado"],
+                { id: "empaque", t: "Empaque", intro: "Cómo se guarda BETA para almacenarla y trasladarla: primero en cajas y luego en estuches profesionales.", reqT: "Principios", req: ["El inflable es una sola pieza: se empaca completo", "Los logotipos están impresos en el inflable: nada gráfico va aparte", "Solo el proyector y las gafas se guardan por separado"],
                   slides: [
-                    { fase: "Inflable", t: "Desinflado completo", pie: "Estructura sin aire.", d: "Antes de empacar, toda la estructura queda desinflada." },
-                    { fase: "Inflable", t: "Doblado", pie: "Inflable doblado.", d: "Se dobla el inflable completo; las mesas y los asientos hacen parte del mismo stand." },
-                    { fase: "Caja", t: "Dentro de la caja", pie: "El inflable en su caja.", d: "El inflable doblado se guarda en una caja." },
-                    { fase: "Equipos", t: "Proyector y gafas", pie: "Equipos protegidos.", d: "Lo único que se guarda aparte son el proyector y las gafas, protegidos para el viaje." }
+                    { fase: "Enrollado", t: "Doblado y correas", pie: "Inflable medio enrollado y ajustado con correas.", d: "Se verifica que el inflable esté doblado y medio enrollado; una vez así, se le ajustan unas correas para que quede apretado, como un cinturón." },
+                    { fase: "Cajas", t: "Guardado en cajas", pie: "Inflable y equipos, cada uno en su caja.", d: "Ya enrollado, el inflable se maneja como una sola pieza: es únicamente la totalidad del inflable. Se dobla y se guarda, con cuidado, en una caja convencional. Los equipos tecnológicos (proyector y gafas) se guardan también en su propia caja." },
+                    { fase: "Estuches", t: "Preparación para el traslado", pie: "Cada caja dentro de un estuche profesional.", d: "Las cajas del paso anterior se guardan en estuches profesionales, con las características para mantenerlas bien protegidas: la caja del inflable en su estuche y la caja con las gafas y el proyector en otro estuche." }
                   ] },
                 { id: "transporte", t: "Transporte", intro: "Cómo se traslada BETA entre espacios y qué condiciones se necesitan.", reqT: "Condiciones", req: ["Vehículo cubierto y seco", "Acceso libre al lugar de instalación", "Personas suficientes para cargar y descargar"],
                   slides: [
