@@ -161,7 +161,15 @@
 
       const film = S.map((s, i) => `<li>${tile(refOf(s, s.portada || 0), `Semana ${i + 1}`, s.titulo || "", "evo", `Semana ${i + 1} · ${pad((s.portada || 0) + 1)}`, 1)}<a class="df-film-l" href="#${s.id}">Ir a la semana ${i + 1} <span aria-hidden="true">→</span></a></li>`).join("");
 
-      const secs = [["evolucion", "Evolución", "00"]].concat(S.map((s, i) => [s.id, `Semana ${i + 1}`, pad(i + 1)])).concat([["cierre", "Cierre", "→"]]);
+      const maquetaFotos = [
+        { ref: "maqueta-final/01", tipo: "Vista general", pie: "Vista completa de la maqueta física de BETA." },
+        { ref: "maqueta-final/02", tipo: "Vista lateral", pie: "Vista lateral para apreciar la volumetría y la organización de sus componentes." },
+        { ref: "maqueta-final/03", tipo: "Vista posterior", pie: "Vista desde otro ángulo para observar la configuración general de la maqueta." }
+      ];
+      const maquetaFinal = maquetaFotos.map((x, i) =>
+        `<article class="df-maq-slide" aria-label="Fotografía ${i + 1} de 3">${tile(x.ref, x.tipo, x.pie, "maqueta-final", `Maqueta · ${pad(i + 1)}`, 1)}</article>`
+      ).join("");
+      const secs = [["evolucion", "Evolución", "00"]].concat(S.map((s, i) => [s.id, `Semana ${i + 1}`, pad(i + 1)])).concat([["maqueta-final", "Maqueta final", "★"], ["cierre", "Cierre", "→"]]);
       const prevA = acts[idx - 1], nextA = acts[idx + 1];
 
       main.innerHTML = `
@@ -199,6 +207,24 @@
 
 ${S.map(week).join("")}
 
+<section id="maqueta-final" class="ed-sec df-maqueta-section" aria-labelledby="maqueta-final-t">
+  <div class="df-maqueta-head ed-rv">
+    <p class="ed-k">Resultado tridimensional · BETA</p>
+    <h2 id="maqueta-final-t">La maqueta final</h2>
+    <p>Una vista general del modelo físico que reúne las decisiones formales y funcionales desarrolladas durante el proceso.</p>
+  </div>
+  <div class="df-maqueta ed-rv" data-maq-carousel aria-label="Carrusel de fotografías de la maqueta final">
+    <div class="df-maq-track" tabindex="0" role="group" aria-label="Fotografías de la maqueta; usa las flechas para cambiar de ángulo">
+      ${maquetaFinal}
+    </div>
+    <div class="df-maq-controls">
+      <button type="button" data-maq-dir="-1" aria-label="Ver ángulo anterior">←</button>
+      <span class="df-maq-count" aria-live="polite">01 / 03</span>
+      <button type="button" data-maq-dir="1" aria-label="Ver ángulo siguiente">→</button>
+    </div>
+  </div>
+</section>
+
 <section id="cierre" class="ed-sec ed-end" aria-labelledby="cierre-t">
   ${head("→", "cierre", "Cierre", "Siguiente versión")}
   <p class="ed-statement ed-rv">${a.cierre}</p>
@@ -229,6 +255,41 @@ ${S.map(week).join("")}
 
       /* Comparador */
       main.querySelectorAll(".df-cmp input").forEach((inp) => inp.addEventListener("input", () => inp.parentElement.style.setProperty("--p", inp.value + "%")));
+
+      /* Carrusel de tres ángulos de la maqueta final */
+      main.querySelectorAll("[data-maq-carousel]").forEach((c) => {
+        const tr = c.querySelector(".df-maq-track"), slides = [...tr.children],
+          count = c.querySelector(".df-maq-count"),
+          prev = c.querySelector('[data-maq-dir="-1"]'),
+          next = c.querySelector('[data-maq-dir="1"]');
+        const current = () => {
+          let best = 0, dist = Infinity;
+          slides.forEach((s, i) => {
+            const v = Math.abs(s.offsetLeft - tr.scrollLeft);
+            if (v < dist) { dist = v; best = i; }
+          });
+          return best;
+        };
+        const update = () => {
+          const i = current();
+          count.textContent = `${pad(i + 1)} / ${pad(slides.length)}`;
+          prev.disabled = i === 0;
+          next.disabled = i === slides.length - 1;
+        };
+        const go = (i) => slides[Math.max(0, Math.min(slides.length - 1, i))]
+          .scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "nearest", inline: "start" });
+        prev.addEventListener("click", () => go(current() - 1));
+        next.addEventListener("click", () => go(current() + 1));
+        tr.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") { e.preventDefault(); go(current() + 1); }
+          if (e.key === "ArrowLeft") { e.preventDefault(); go(current() - 1); }
+        });
+        let pending = 0;
+        tr.addEventListener("scroll", () => {
+          if (!pending) pending = requestAnimationFrame(() => { update(); pending = 0; });
+        }, { passive: true });
+        update();
+      });
 
       /* Visor ampliado: navegación, zoom, pantalla completa, teclado y gestos */
       const lb = d.createElement("div"); lb.className = "df-lb"; lb.hidden = true;
