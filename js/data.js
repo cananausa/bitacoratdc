@@ -61,9 +61,9 @@ vision: [
      Agrega un objeto por actividad (ver LEEME.md). Se crea sola su página:
      tercer-corte/actividad.html?id=<id>. bloques: texto | imagen | galeria | cita */
   actividades: [
-    { id: "concepto-cultura-arquitectura", editorial: true, semana: "", fecha: "29 oct 2026",
+    { id: "concepto-cultura-arquitectura", editorial: true, semana: "1", fecha: "28 oct - 4 nov 2026",
       titulo: "BETA: instalación para promocionar Diseño Digital, cultura digital y arquitectura efímera",
-      resumen: "Una instalación universitaria interactiva que muestra qué se crea al estudiar Diseño Digital, con síntesis de cultura digital, la carrera y seis tipologías de arquitectura efímera.",
+      resumen: "Una instalación universitaria interactiva que muestra qué se crea al estudiar Diseño Digital, con síntesis de cultura digital, la carrera y arquitectura efímera.",
       pdf: "assets/documentos/referencias-apa7.pdf",
       /* PIES DE FOTO: completa nombre, fuente (autor.com), año y, si quieres, url. Figura x se numera sola.
          Formato final: Nota. Figura x. Nombre de la foto. Tomado de: autor.com (2026).
@@ -227,14 +227,14 @@ integracion: [
         ]
             },
     },
-    { id: "analisis-de-referentes", referentes: true, semana: "", fecha: "9 nov 2026",
+    { id: "analisis-de-referentes", referentes: true, semana: "2", fecha: "4-11 nov 2026",
       titulo: "Análisis de referentes",
       resumen: "Matriz de doce referentes, conclusiones y decisiones para BETA, e inventario de recursos TIC con su clasificación.",
       pdf: "assets/documentos/matriz-referentes.pdf" },
 
-    { id: "desarrollo-formal", formal: true, semana: "12", fecha: "8 de Noviembre de 2026",
+    { id: "desarrollo-formal", formal: true, semana: "12-15", fecha: "8 nov 2026",
       titulo: "DESARROLLO FORMAL: bitácora de evolución de BETA",
-      resumen: "Bitácora cronológica por semanas con bocetos, dibujos, decisiones y comparaciones que muestran cómo la propuesta BETA se transforma y se perfecciona.",
+      resumen: "Bitácora cronológica por semanas con bocetos, dibujos, decisiones y comparaciones que muestran cómo la propuesta BETA se transforma.",
       lema: "La forma de BETA se decide, se prueba y se corrige semana a semana.",
       intro: "Aquí queda el rastro del proceso: bocetos, dibujos, pruebas y las decisiones que fueron moviendo la propuesta de una versión a la siguiente.",
       evolucionTexto: "Cada semana registra qué se quería resolver, qué se decidió, qué cambió frente a la versión anterior y qué problemas quedaron por resolver. La secuencia y la matriz muestran de un vistazo cómo se transforma la propuesta.",
@@ -439,9 +439,9 @@ integracion: [
       ]
     }
 ,
-    { id: "procesos-de-co-creacion", cocreacion: true, semana: "Semana 3 del proyecto", fecha: "11 al 15 de Noviembre de 2026",
+    { id: "procesos-de-co-creacion", cocreacion: true, semana: "3", fecha: "11-18 nov 2026",
       titulo: "Procesos de co-creación: de las opiniones a las decisiones de BETA",
-      resumen: "Sacamos una tercera versión de BETA (un inflable con forma de mando) a conversar con profesores, estudiantes y otras personas: 7 entrevistas y una encuesta a 20 personas. Esto fue lo que escuchamos y lo que cambiamos.",
+      resumen: "Sacamos una tercera versión de BETA (un inflable con forma de mando) a conversar con profesores, estudiantes y otras personas.",
       lema: "Escuchar no es obedecer: es contrastar, interpretar y decidir.",
       /* ENLACES REALES: pega aquí las URL. Mientras estén vacías, el botón aparece como «enlace pendiente». */
       encuestaUrl: "https://tally.so/r/QoevkY",
@@ -627,10 +627,10 @@ integracion: [
       id: "imagen-corporativa-dd",
       externa: true,
       url: "imagen-corporativa/index.html",
-      semana: "Tercer corte",
-      fecha: "19 de Noviembre de 2026",
+      semana: "4",
+      fecha: "18-25 nov 2026",
       titulo: "Diseño de la imagen corporativa del programa",
-      resumen: "Exposición interactiva de la nueva identidad visual del programa de Diseño Digital (Universidad Sergio Arboleda · COM+ID): concepto, imagotipo, logotipo, color, tipografía y sistema gráfico."
+      resumen: "Exposición interactiva de la nueva identidad visual del programa de Diseño Digital (Universidad Sergio Arboleda · COM+ID): concepto, imagotipo, y todo el sistema gráfico."
     }
 
   ]
