@@ -185,6 +185,9 @@
 .mp-card::before{content:"";position:absolute;right:0;top:0;width:58px;height:58px;border-radius:0 .3rem 0 100%;background:radial-gradient(circle at 100% 0,var(--coral) 0 16px,var(--mostaza) 17px 30px,transparent 31px);opacity:.9;pointer-events:none}
 .mp-card::after{content:"";position:absolute;left:var(--tx,50%);width:18px;height:18px;margin-left:-9px;background:var(--crema);border:2.5px solid var(--vino);border-top:0;border-left:0;bottom:-11px;transform:rotate(45deg)}
 .mp-card.abajo::after{bottom:auto;top:-11px;transform:rotate(225deg)}
+.mp-im{position:relative;z-index:1;aspect-ratio:16/10;margin:0 0 .75rem;border:2px solid var(--vino);border-radius:.9rem .3rem .9rem .3rem;overflow:hidden;background:linear-gradient(135deg,#F2B705,#E58B70)}
+.mp-im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .25s}
+.mp-im.ok img{opacity:1}
 .mp-card h3{margin:0 1.6rem .55rem 0;font:400 1.45rem/1.02 Marvin,Georgia,serif;color:var(--vino)}
 .mp-card p{margin:0;font:1.02rem/1.38 Thicker,system-ui,sans-serif;color:#3b0c0c;position:relative}
 .mp-card p::before{content:"";display:block;width:2.4rem;height:4px;border-radius:4px;background:var(--coral);margin-bottom:.6rem}
@@ -194,7 +197,7 @@
 .mp-legend svg{width:1.4rem;height:1.6rem}
 .mp-legend .sw{width:1.5rem;height:1rem;border-radius:.3rem;border:2px solid var(--mostaza);background:linear-gradient(135deg,#c13a2a,#5C0A0A)}
 .mp-legend .sw.n{background:#e9b97c;border-color:#7a2a1f}
-@media(max-width:700px){.mp-stage{aspect-ratio:5/6}.mp-hint{font-size:.72rem}.mp-card h3{font-size:1.25rem}}
+@media(max-width:700px){.mp-im{aspect-ratio:16/9}.mp-stage{aspect-ratio:5/6}.mp-hint{font-size:.72rem}.mp-card h3{font-size:1.25rem}}
 @media(prefers-reduced-motion:reduce){.mp *,.mp *::before,.mp *::after{animation:none!important;transition:none!important}.pin .pi{opacity:1}}
 `;
 
@@ -435,12 +438,37 @@
       svg.addEventListener("pointerup", fin); svg.addEventListener("pointercancel", fin);
 
       /* ---------- Mini-card ---------- */
+      /* Imagen del referente: misma URL que las tarjetas de abajo (assets/img/referentes/referente-NN-id.jpg),
+         con las mismas extensiones de respaldo. Se pide solo al pasar el mouse o abrir el pin y se guarda el resultado. */
+      const IMGDIR = R + "assets/img/referentes/", EXTS = ["jpg", "webp", "png", "jpeg"], imgs = {};
+      const idDe = (n) => { const r = DATA.REF.find((x) => x.n === n); return r ? "referente-" + String(n).padStart(2, "0") + "-" + r.id : null; };
+      function imagen(n) {
+        if (imgs[n]) return imgs[n];
+        const base = idDe(n);
+        return (imgs[n] = new Promise((ok) => {
+          if (!base) return ok(null);
+          let i = 0;
+          const probar = () => {
+            if (i >= EXTS.length) return ok(null);
+            const u = IMGDIR + base + "." + EXTS[i++], im = new Image();
+            im.decoding = "async"; im.onload = () => ok(u); im.onerror = probar; im.src = u;
+          };
+          probar();
+        }));
+      }
       let cur = null;
       const datosDe = (n) => items.find((x) => x.n === n);
       function abrir(n) {
         const it = datosDe(n); if (!it) return;
         cerrar(true); cur = n;
-        card.innerHTML = `<h3>${esc(it.nombre)}</h3><p>${esc(it.frase)}</p>`;
+        card.innerHTML = `<div class="mp-im"></div><h3>${esc(it.nombre)}</h3><p>${esc(it.frase)}</p>`;
+        const caja = card.querySelector(".mp-im");
+        imagen(n).then((u) => {
+          if (cur !== n || !caja.isConnected) return;
+          if (!u) { caja.remove(); colocar(); return; } /* sin imagen: la tarjeta queda solo con texto */
+          const im = new Image(); im.alt = it.nombre; im.decoding = "async"; im.src = u; caja.appendChild(im);
+          requestAnimationFrame(() => caja.classList.add("ok"));
+        });
         card.hidden = false; card.style.animation = "none"; void card.offsetWidth; card.style.animation = "";
         pinEls.forEach((p) => p.classList.toggle("on", +p.dataset.n === n));
         hlEls.forEach((h) => h.classList.toggle("on", h.dataset.a2 === it.a2));
@@ -466,7 +494,8 @@
 
       /* ---------- Eventos ---------- */
       const caliente = (a2, on) => { pinEls.forEach((p) => { if (p.dataset.a2 === a2) p.classList.toggle("hot", on); }); hlEls.forEach((h) => { if (h.dataset.a2 === a2) h.classList.toggle("hot", on); }); };
-      svg.addEventListener("pointerover", (e) => { const t = e.target.closest(".pin,.mp-hl"); if (t) caliente(t.dataset.a2, true); });
+      svg.addEventListener("pointerover", (e) => { const t = e.target.closest(".pin,.mp-hl"); if (t) { caliente(t.dataset.a2, true); const arr = porPais[t.dataset.a2]; if (arr) imagen(t.dataset.n ? +t.dataset.n : arr[0].n); } });
+      svg.addEventListener("focusin", (e) => { const t = e.target.closest(".pin"); if (t) imagen(+t.dataset.n); });
       svg.addEventListener("pointerout", (e) => { const t = e.target.closest(".pin,.mp-hl"); if (t) caliente(t.dataset.a2, false); });
       svg.addEventListener("click", (e) => {
         if (movido) { movido = false; return; }
