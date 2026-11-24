@@ -6,15 +6,14 @@
      · APR  → lista de aprendizajes (t = frase). El aprendizaje de un referente es el primer APR cuya lista r lo incluye.
 
    GEOMETRÍA: los contornos de TODOS los países se descargan al abrir la página (Natural Earth vía world-atlas).
-     Orden de intentos: CDN 50 m → unpkg 50 m → CDN 110 m → archivo local assets/data/mundo.json (TopoJSON o GeoJSON).
+     Orden de intentos: CDN 110 m → unpkg 110 m → archivo local assets/data/mundo.json (TopoJSON o GeoJSON).
      Para que funcione sin internet, guarda cualquiera de esos archivos con ese nombre y ruta. */
 (function () {
   "use strict";
   const NS = "http://www.w3.org/2000/svg";
   const FUENTES = [
-    "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json",
-    "https://unpkg.com/world-atlas@2.0.2/countries-50m.json",
-    "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json"
+    "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json",
+    "https://unpkg.com/world-atlas@2.0.2/countries-110m.json"
   ];
   const LOCAL = "assets/data/mundo.json";
 
@@ -75,7 +74,7 @@
       const q = proj(ring[i][0], ring[i][1]), x = q[0], y = q[1];
       if (px === null) { d += "M" + f1(x) + " " + f1(y); px = x; py = y; continue; }
       const dx = x - px, dy = y - py;
-      if (i < n - 1 && dx * dx + dy * dy < 0.2) continue;
+      if (i < n - 1 && dx * dx + dy * dy < 1.2) continue;
       d += (Math.abs(dx) > W * 0.85 ? "M" : "L") + f1(x) + " " + f1(y); px = x; py = y;
     }
     return d + "Z";
@@ -103,7 +102,7 @@
       <circle r="${r * .1}" fill="#5C0A0A" stroke="#ffe99a" stroke-width="2"/>
       <text y="${-L - 10}" text-anchor="middle" font-family="Marvin,Georgia,serif" font-size="${r * .42}" fill="#ffe99a">N</text></g>`;
   };
-  const barco = (x, y, s, rot) => `<g class="mp-art mp-bob" transform="translate(${x} ${y}) rotate(${rot || 0}) scale(${s})" aria-hidden="true">
+  const barco = (x, y, s, rot) => `<g class="mp-art" transform="translate(${x} ${y}) rotate(${rot || 0}) scale(${s})" aria-hidden="true">
       <path d="M-10 96q10-9 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" fill="none" stroke="#fffaf0" stroke-opacity=".55" stroke-width="3"/>
       <path d="M45 70V8M88 70V20" stroke="#ffe99a" stroke-width="3.5" stroke-linecap="round"/>
       <path d="M47 12Q86 30 47 62Z" fill="#fffaf0" stroke="#5C0A0A" stroke-width="2.5" stroke-linejoin="round"/>
@@ -111,7 +110,7 @@
       <path d="M45 8L45-4L66 2Z" fill="#E58B70" stroke="#5C0A0A" stroke-width="2"/>
       <path d="M4 66L132 66Q118 94 92 94H42Q16 94 4 66Z" fill="#7d1612" stroke="#F2B705" stroke-width="3" stroke-linejoin="round"/>
       <path d="M12 76H124" stroke="#F2B705" stroke-width="2.5" opacity=".8"/></g>`;
-  const ballena = (x, y, s, flip) => `<g class="mp-art mp-bob2" transform="translate(${x} ${y}) scale(${flip ? -s : s} ${s})" aria-hidden="true">
+  const ballena = (x, y, s, flip) => `<g class="mp-art" transform="translate(${x} ${y}) scale(${flip ? -s : s} ${s})" aria-hidden="true">
       <path d="M60 14q-4-16-18-22M64 14q4-16 18-22M62 14V-6" fill="none" stroke="#bfe7ea" stroke-opacity=".85" stroke-width="3" stroke-linecap="round"/>
       <path d="M0 44C14 14 80 8 112 30C124 38 140 30 152 12C154 30 148 46 140 52C152 58 158 68 162 80C146 74 134 66 124 60C90 80 28 78 0 44Z" fill="#3a6079" stroke="#bfe7ea" stroke-opacity=".7" stroke-width="3" stroke-linejoin="round"/>
       <path d="M8 50C40 68 90 70 120 58C100 76 44 78 8 50Z" fill="#a9d4de" opacity=".75"/>
@@ -133,7 +132,7 @@
 .mp-btn{display:inline-flex;align-items:center;gap:.6rem;font:1.05rem Marvin,Georgia,serif;padding:.7rem 1.3rem;border:2px solid var(--mostaza);border-radius:2rem .5rem 2rem .5rem;background:var(--mostaza);color:var(--vino);text-decoration:none;transition:transform .25s}
 .mp-btn:hover{transform:translateY(-2px) rotate(-1deg)}
 .mp-stage{position:relative;width:100%;aspect-ratio:${W}/${H};background:#101e28;border-top:5px solid var(--mostaza);border-bottom:5px solid var(--mostaza);box-shadow:0 -10px 0 var(--coral),0 10px 0 var(--coral);margin:10px 0;overflow:hidden;user-select:none;-webkit-user-select:none}
-.mp-svg{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.mp-svg{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y;shape-rendering:optimizeSpeed;text-rendering:optimizeSpeed;-webkit-tap-highlight-color:transparent}
 .mp-svg.drag{cursor:grabbing}
 .mp-svg *{outline:none}
 .mp-load,.mp-fail{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:2rem;font:clamp(1.3rem,3vw,2rem) Marvin,Georgia,serif;color:#ffe99a;z-index:3;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(16,30,40,.2),rgba(16,30,40,.75))}
@@ -144,27 +143,24 @@
 .mp-tools{position:absolute;right:clamp(.6rem,1.6vw,1.4rem);top:clamp(.6rem,1.6vw,1.4rem);display:flex;flex-direction:column;gap:.4rem;z-index:4}
 .mp-tools button{width:2.5rem;height:2.5rem;border-radius:50% 12% 50% 12%;border:2px solid var(--vino);background:var(--crema);color:var(--vino);font:1.35rem/1 Marvin,Georgia,serif;cursor:pointer;box-shadow:3px 3px 0 var(--mostaza);transition:transform .2s,background .2s}
 .mp-tools button:hover,.mp-tools button:focus-visible{transform:translateY(-2px) rotate(-6deg);background:var(--mostaza)}
-.mp-hint{position:absolute;left:clamp(.6rem,1.6vw,1.4rem);bottom:clamp(.6rem,1.6vw,1.2rem);z-index:4;background:rgba(92,10,10,.82);color:var(--crema);border:1.5px solid rgba(242,183,5,.7);border-radius:2rem;padding:.35rem .9rem;font:.82rem/1.2 system-ui,sans-serif;pointer-events:none;backdrop-filter:blur(3px)}
+.mp-hint{position:absolute;left:clamp(.6rem,1.6vw,1.4rem);bottom:clamp(.6rem,1.6vw,1.2rem);z-index:4;background:rgba(92,10,10,.92);color:var(--crema);border:1.5px solid rgba(242,183,5,.7);border-radius:2rem;padding:.35rem .9rem;font:.82rem/1.2 system-ui,sans-serif;pointer-events:none}
 .mp-m{display:none}@media(pointer:coarse){.mp-m{display:inline}.mp-d{display:none}}
 .mp-hint b{color:var(--mostaza);font-weight:700}
 
 /* Capas del mapa */
-.mp-land path{stroke:#7a2a1f;stroke-opacity:.55;stroke-width:.9px;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:filter .2s;cursor:default}
-.mp-land path:hover{filter:brightness(1.14) saturate(1.1)}
+.mp-land path{stroke:#7a2a1f;stroke-opacity:.6;stroke-width:1;stroke-linejoin:round;cursor:default}
+.mp-land path:hover{fill-opacity:.78}
 .mp-hl{cursor:pointer}
-.mp-hl .hp{fill:url(#mpHot);stroke:#F2B705;stroke-width:3px;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:transform .35s cubic-bezier(.3,1.6,.5,1),filter .3s;filter:drop-shadow(0 3px 0 #3a0606);animation:mpglow 3s ease-in-out infinite}
-.mp-hl .hh{fill:url(#mpHatch);stroke:none;pointer-events:none;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.mp-hl .hp{fill:url(#mpHot);stroke:#F2B705;stroke-width:3.5;stroke-linejoin:round;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.mp-hl .hh{fill:url(#mpHatch);stroke:none;pointer-events:none;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.mp-hl .hs{fill:#2a0404;fill-opacity:.45;pointer-events:none}
 .mp-hl.hot .hp,.mp-hl.hot .hh,.mp-hl.on .hp,.mp-hl.on .hh{transform:translateY(-5px)}
-.mp-hl.hot .hp,.mp-hl.on .hp{filter:drop-shadow(0 9px 4px rgba(0,0,0,.45)) drop-shadow(0 0 10px #F2B705);animation:none;stroke:#fff3b0}
-@keyframes mpglow{0%,100%{stroke-opacity:.75}50%{stroke-opacity:1}}
+.mp-hl.hot .hp,.mp-hl.on .hp{stroke:#fff3b0;stroke-width:5}
 .mp-lab text{font-family:Thicker,Marvin,system-ui,sans-serif;fill:#4a0808;text-anchor:middle;paint-order:stroke;stroke:#fff6dc;stroke-opacity:.85;stroke-linejoin:round;pointer-events:none;font-size:calc(15px * var(--ls,1));stroke-width:calc(3.4px * var(--ls,1));letter-spacing:.01em}
 .mp-lab text.off{display:none}
 .mp-lab text.ft{font-family:Marvin,Georgia,serif;fill:#fffaf0;stroke:#4a0808;stroke-opacity:.95;font-size:calc(21px * var(--ls,1));stroke-width:calc(5px * var(--ls,1))}
 .mp-cont text{font-family:Marvin,Georgia,serif;fill:#5C0A0A;fill-opacity:.2;text-anchor:middle;letter-spacing:.35em;pointer-events:none}
 .mp-ot{font-family:Georgia,"Times New Roman",serif;font-style:italic;fill:#ffe99a;fill-opacity:.62;letter-spacing:.42em}
-.mp-bob{animation:mpbob 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
-.mp-bob2{animation:mpbob 8s ease-in-out -2s infinite;transform-box:fill-box;transform-origin:50% 100%}
-@keyframes mpbob{0%,100%{translate:0 0}50%{translate:0 -6px}}
 
 /* Pins */
 .pin{transform:translate(var(--x),var(--y)) scale(var(--ps,1));cursor:pointer}
@@ -181,12 +177,10 @@
 .pin:focus-visible .pb{stroke:#E58B70;stroke-width:5}
 .pdot{fill:#F2B705;stroke:#5C0A0A;stroke-width:2;pointer-events:none}
 .pleader{stroke:#5C0A0A;stroke-width:2.2;stroke-dasharray:3 4;pointer-events:none;opacity:.8}
-.pring{fill:none;stroke:#F2B705;stroke-width:3;opacity:0;pointer-events:none;transform-origin:0 0}
-.mp-go .pring{animation:mpring 2.8s ease-out infinite;animation-delay:calc(var(--i)*.4s + 1s)}
-@keyframes mpring{0%{transform:scale(.2);opacity:.95}100%{transform:scale(3.2);opacity:0}}
+.pring{fill:#F2B705;fill-opacity:.25;stroke:#F2B705;stroke-width:2.5;stroke-opacity:.8;pointer-events:none}
 
 /* Mini-card */
-.mp-card{position:absolute;z-index:6;width:min(290px,calc(100% - 16px));left:0;top:0;background:var(--crema);color:var(--vino);border:2.5px solid var(--vino);border-radius:1.3rem .4rem 1.3rem .4rem;padding:1rem 1.1rem 1.05rem;box-shadow:6px 6px 0 var(--mostaza),0 14px 28px rgba(0,0,0,.4);pointer-events:auto;transform-origin:var(--tx,50%) var(--oy,100%);animation:mppop .38s cubic-bezier(.3,1.5,.5,1) both;overflow:visible}
+.mp-card{position:absolute;z-index:6;width:min(290px,calc(100% - 16px));left:0;top:0;background:var(--crema);color:var(--vino);border:2.5px solid var(--vino);border-radius:1.3rem .4rem 1.3rem .4rem;padding:1rem 1.1rem 1.05rem;box-shadow:6px 6px 0 var(--mostaza);pointer-events:auto;transform-origin:var(--tx,50%) var(--oy,100%);animation:mppop .38s cubic-bezier(.3,1.5,.5,1) both;overflow:visible}
 .mp-card[hidden]{display:none}
 .mp-card::before{content:"";position:absolute;right:0;top:0;width:58px;height:58px;border-radius:0 .3rem 0 100%;background:radial-gradient(circle at 100% 0,var(--coral) 0 16px,var(--mostaza) 17px 30px,transparent 31px);opacity:.9;pointer-events:none}
 .mp-card::after{content:"";position:absolute;left:var(--tx,50%);width:18px;height:18px;margin-left:-9px;background:var(--crema);border:2.5px solid var(--vino);border-top:0;border-left:0;bottom:-11px;transform:rotate(45deg)}
@@ -201,7 +195,7 @@
 .mp-legend .sw{width:1.5rem;height:1rem;border-radius:.3rem;border:2px solid var(--mostaza);background:linear-gradient(135deg,#c13a2a,#5C0A0A)}
 .mp-legend .sw.n{background:#e9b97c;border-color:#7a2a1f}
 @media(max-width:700px){.mp-stage{aspect-ratio:5/6}.mp-hint{font-size:.72rem}.mp-card h3{font-size:1.25rem}}
-@media(prefers-reduced-motion:reduce){.mp *,.mp *::before,.mp *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}.pin .pi{opacity:1}}
+@media(prefers-reduced-motion:reduce){.mp *,.mp *::before,.mp *::after{animation:none!important;transition:none!important}.pin .pi{opacity:1}}
 `;
 
   window.CANANA_MAPA_REFERENTES = function (a, R, main) {
@@ -322,30 +316,20 @@
   <pattern id="mpWave" width="46" height="22" patternUnits="userSpaceOnUse"><path d="M0 12q11.5-12 23 0t23 0" fill="none" stroke="#bfe7ea" stroke-width="1.3" stroke-opacity=".2"/></pattern>
   <pattern id="mpMarco" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="26" height="26" fill="#3d0707"/><circle cx="13" cy="13" r="3" fill="#F2B705" fill-opacity=".55"/><circle cx="0" cy="0" r="2" fill="#E58B70" fill-opacity=".5"/><circle cx="26" cy="26" r="2" fill="#E58B70" fill-opacity=".5"/><circle cx="26" cy="0" r="2" fill="#E58B70" fill-opacity=".5"/><circle cx="0" cy="26" r="2" fill="#E58B70" fill-opacity=".5"/></pattern>
   <pattern id="mpPunto" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#5C0A0A" fill-opacity=".22"/><circle cx="5.5" cy="5.5" r=".8" fill="#fffaf0" fill-opacity=".22"/></pattern>
-  <filter id="mpTex" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".005 .016" numOctaves="3" seed="7" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 .6  0 0 0 0 .9  0 0 0 0 .95  0 0 0 1.5 -.58"/></filter>
-  <filter id="mpTex2" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/><feColorMatrix type="matrix" values="0 0 0 0 .35  0 0 0 0 .1  0 0 0 0 .05  0 0 0 .55 -.12"/></filter>
-  <filter id="mpBlur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="7"/></filter>
-  <filter id="mpRelieve" x="-1%" y="-1%" width="102%" height="102%"><feGaussianBlur in="SourceAlpha" stdDeviation="2.4" result="b"/><feSpecularLighting in="b" surfaceScale="5" specularConstant=".75" specularExponent="24" lighting-color="#fff4cf" result="s"><feDistantLight azimuth="235" elevation="52"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/><feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3=".6" k4="0"/></filter>
   <clipPath id="mpEsfera"><path d="${sph}"/></clipPath>
   <g id="mpTierra">${landIds}</g>
-  <mask id="mpMascara"><use href="#mpTierra" fill="#fff"/></mask>
 </defs>
 
-<rect x="-2500" y="-2500" width="7000" height="7000" fill="url(#mpMarco)"/>
+<rect x="-40" y="-40" width="${W + 80}" height="${H + 80}" fill="#3d0707"/>
 <g clip-path="url(#mpEsfera)">
   <rect x="0" y="0" width="${W}" height="${H}" fill="url(#mpOc)"/>
-  <rect x="0" y="0" width="${W}" height="${H}" filter="url(#mpTex)" opacity=".5"/>
-  <rect x="0" y="0" width="${W}" height="${H}" fill="url(#mpWave)"/>
-  <rect x="0" y="0" width="${W}" height="${H}" fill="url(#mpSol)"/><rect x="0" y="0" width="${W}" height="${H}" fill="url(#mpCor)"/>
-  <path d="${grat}" fill="none" stroke="#dff4f2" stroke-opacity=".16" stroke-width="1.2" vector-effect="non-scaling-stroke"/>
-  <path d="${polares}" fill="none" stroke="#bfe7ea" stroke-opacity=".3" stroke-width="1.4" stroke-dasharray="3 9" vector-effect="non-scaling-stroke"/>
-  <path d="${tropicos}" fill="none" stroke="#F2B705" stroke-opacity=".4" stroke-width="1.6" stroke-dasharray="10 8" vector-effect="non-scaling-stroke"/>
-  <path d="${ecuador}" fill="none" stroke="#ffe99a" stroke-opacity=".55" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+  <path d="${grat}" fill="none" stroke="#dff4f2" stroke-opacity=".16" stroke-width="1.2"/>
+  <path d="${polares}" fill="none" stroke="#bfe7ea" stroke-opacity=".3" stroke-width="1.4" stroke-dasharray="3 9"/>
+  <path d="${tropicos}" fill="none" stroke="#F2B705" stroke-opacity=".4" stroke-width="1.6" stroke-dasharray="10 8"/>
+  <path d="${ecuador}" fill="none" stroke="#ffe99a" stroke-opacity=".55" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
   <g class="mp-water">
-    <use href="#mpTierra" fill="none" stroke="#8fdcde" stroke-opacity=".12" stroke-width="40" stroke-linejoin="round"/>
-    <use href="#mpTierra" fill="none" stroke="#8fdcde" stroke-opacity=".16" stroke-width="26" stroke-linejoin="round"/>
-    <use href="#mpTierra" fill="none" stroke="#b9f0ec" stroke-opacity=".24" stroke-width="13" stroke-linejoin="round"/>
-    <use href="#mpTierra" fill="none" stroke="#e6fffb" stroke-opacity=".4" stroke-width="5" stroke-linejoin="round"/>
+    <use href="#mpTierra" fill="none" stroke="#8fdcde" stroke-opacity=".16" stroke-width="22" stroke-linejoin="round"/>
+    <use href="#mpTierra" fill="none" stroke="#d5fbf7" stroke-opacity=".32" stroke-width="7" stroke-linejoin="round"/>
   </g>
   <g aria-hidden="true">
     ${to(-148, 6, "OCÉANO PACÍFICO", -6, 40)}${to(-36, 8, "OCÉANO ATLÁNTICO", -62, 32)}${to(80, -18, "OCÉANO ÍNDICO", 0, 34)}${to(55, 79, "OCÉANO ÁRTICO", 0, 22)}${to(-120, -63, "OCÉANO AUSTRAL", 0, 22)}
@@ -355,17 +339,15 @@
     ${pez(q6[0], q6[1], .9, false)}${pez(q6[0] + 56, q6[1] + 22, .6, false, "#F2B705")}${pez(q6[0] + 20, q6[1] + 54, .7, false, "#fffaf0")}
     ${pez(q7[0], q7[1], .8, true, "#F2B705")}${pez(q7[0] - 50, q7[1] - 22, .6, true)}${pez(q11[0], q11[1], .6, true, "#fffaf0")}
   </g>
-  <rect x="0" y="0" width="${W}" height="${H}" fill="url(#mpDeep)" pointer-events="none"/>
 </g>
 
-<use href="#mpTierra" fill="#05101a" fill-opacity=".6" transform="translate(6 10)" filter="url(#mpBlur)"/>
-<g class="mp-land" filter="url(#mpRelieve)">${landPaths}</g>
-<rect x="0" y="0" width="${W}" height="${H}" fill="url(#mpPunto)" mask="url(#mpMascara)" pointer-events="none"/>
-<rect x="0" y="0" width="${W}" height="${H}" filter="url(#mpTex2)" opacity=".5" mask="url(#mpMascara)" pointer-events="none"/>
+<use href="#mpTierra" fill="#05101a" fill-opacity=".38" transform="translate(5 8)" pointer-events="none"/>
+<g class="mp-land">${landPaths}</g>
+<use href="#mpTierra" fill="none" stroke="#fff6d8" stroke-opacity=".5" stroke-width="1.6" transform="translate(-1.2 -1.4)" pointer-events="none"/>
 <g class="mp-cont" aria-hidden="true">${cont(-102, 52, "NORTEAMÉRICA", 70)}${cont(-60, -12, "SUDAMÉRICA", 64)}${cont(18, 8, "ÁFRICA", 84)}${cont(14, 53, "EUROPA", 44)}${cont(96, 52, "ASIA", 96)}${cont(134, -26, "OCEANÍA", 46)}</g>
 <g class="mp-lab" aria-hidden="true">${labels}</g>
 
-<g class="mp-hls">${destacados.map((c) => `<g class="mp-hl" data-a2="${c.a2}"><path class="hp" d="${c.d}"/><path class="hh" d="${c.d}"/></g>`).join("")}</g>
+<g class="mp-hls">${destacados.map((c) => `<g class="mp-hl" data-a2="${c.a2}"><path class="hs" d="${c.d}" transform="translate(4 7)"/><path class="hp" d="${c.d}"/><path class="hh" d="${c.d}"/></g>`).join("")}</g>
 
 <g class="mp-pins">
   ${pins.map((p, i) => {
@@ -373,8 +355,7 @@
     return `${mov ? `<line class="pleader" x1="${f1(p.ax)}" y1="${f1(p.ay)}" x2="${f1(p.x)}" y2="${f1(p.y)}"/>` : ""}
     <circle class="pdot" cx="${f1(p.ax)}" cy="${f1(p.ay)}" r="4.5"/>
     <g class="pin" data-a2="${p.it.a2}" data-n="${p.it.n}" tabindex="0" role="button" aria-label="${esc(p.it.nombre)}" style="--x:${f1(p.x)}px;--y:${f1(p.y)}px;--i:${i}">
-      <g transform="translate(0 0)"><circle class="pring" r="16"/></g>
-      <ellipse class="ps" cx="0" cy="1" rx="11" ry="3.6"/>
+            <ellipse class="ps" cx="0" cy="1" rx="11" ry="3.6"/>
       <g class="pi"><path class="pb" d="M0 0C-4-10-16-18-16-30A16 16 0 1 1 16-30C16-18 4-10 0 0Z"/><circle class="pc" cy="-30" r="10.5"/><text class="pn" y="-24.6">${p.it.n}</text></g>
       <rect x="-22" y="-52" width="44" height="54" fill="transparent"/>
     </g>`;
@@ -393,7 +374,7 @@
       let k = 1, cx = W / 2, cy = H / 2; const KMAX = 9;
       const labs = Array.from(svg.querySelectorAll(".mp-lab text"));
       const pinEls = Array.from(svg.querySelectorAll(".pin")), hlEls = Array.from(svg.querySelectorAll(".mp-hl"));
-      let raf = 0;
+      let raf = 0, kEt = -1;
       function vista() {
         const cw = stage.clientWidth || 1, ch = stage.clientHeight || 1, asp = cw / ch;
         let vw = W / k, vh = vw / asp;
@@ -404,7 +385,7 @@
         svg.style.setProperty("--ps", (1 / Math.pow(k, .72)).toFixed(3));
         svg.style.setProperty("--ls", (1 / k).toFixed(3));
         svg.style.touchAction = k > 2.4 ? "none" : "pan-y";
-        if (!raf) raf = requestAnimationFrame(() => { raf = 0; etiquetar(); colocar(); });
+        if (!raf) raf = requestAnimationFrame(() => { raf = 0; if (kEt !== k) { kEt = k; etiquetar(); } colocar(); });
       }
       function etiquetar() {
         const esc2 = stage.clientWidth / (W / k); /* px de pantalla por unidad del mapa */
