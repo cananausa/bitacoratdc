@@ -336,6 +336,9 @@
     { id: "L10", t: "Un gancho sensorial atrae desde lejos", r: [15], d: ["D2"] }
   ];
 
+  /* Exporta (solo lectura) los datos que usa el mapamundi de entrada: js/mapa-referentes.js */
+  window.CANANA_REFERENTES_DATA = { REF: REF, APR: APR };
+
   /* HALLAZGOS · OPORTUNIDADES (basados en la matriz y en las conclusiones del PDF) */
   const HALL = [
     "Hy-Fi, Seed Cathedral y BUGA no tienen interacción digital: su valor está en el material y en la estructura.",

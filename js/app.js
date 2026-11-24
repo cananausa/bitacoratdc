@@ -128,7 +128,13 @@
         else if (a.referentes) {
       document.title = a.titulo + " · " + A.nombre;
       const s = document.createElement("script"); s.src = R + "js/referentes.js";
-      s.onload = () => window.CANANA_REFERENTES(a, R, main, acts, i); document.body.appendChild(s);
+      s.onload = () => {
+        window.CANANA_REFERENTES(a, R, main, acts, i);
+        /* Mapamundi de entrada: se inserta ANTES de <main>, así no lo borra el render de la actividad */
+        const m = document.createElement("script"); m.src = R + "js/mapa-referentes.js";
+        m.onload = () => window.CANANA_MAPA_REFERENTES(a, R, main); document.body.appendChild(m);
+      };
+      document.body.appendChild(s);
     }
          else if (a.cocreacion) {
       document.title = a.titulo + " · " + A.nombre;
