@@ -162,12 +162,16 @@
       const film = S.map((s, i) => `<li>${tile(refOf(s, s.portada || 0), `Semana ${i + 1}`, s.titulo || "", "evo", `Semana ${i + 1} · ${pad((s.portada || 0) + 1)}`, 1)}<a class="df-film-l" href="#${s.id}">Ir a la semana ${i + 1} <span aria-hidden="true">→</span></a></li>`).join("");
 
       const maquetaFotos = [
-        { ref: "maqueta-final/01", tipo: "Vista general", pie: "Vista completa de la maqueta física de BETA." },
-        { ref: "maqueta-final/02", tipo: "Vista lateral", pie: "Vista lateral para apreciar la volumetría y la organización de sus componentes." },
-        { ref: "maqueta-final/03", tipo: "Vista posterior", pie: "Vista desde otro ángulo para observar la configuración general de la maqueta." }
+        { ref: "maqueta-final/01", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." },
+        { ref: "maqueta-final/02", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." },
+        { ref: "maqueta-final/03", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." },
+        { ref: "maqueta-final/04", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." },
+        { ref: "maqueta-final/05", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." },
+        { ref: "maqueta-final/06", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." },
+        { ref: "maqueta-final/07", tipo: "Maqueta BETA", pie: "Registro fotográfico de la maqueta final." }
       ];
       const maquetaFinal = maquetaFotos.map((x, i) =>
-        `<article class="df-maq-slide" aria-label="Fotografía ${i + 1} de 3">${tile(x.ref, x.tipo, x.pie, "maqueta-final", `Maqueta · ${pad(i + 1)}`, 1)}</article>`
+        `<article class="df-maq-slide" aria-label="Fotografía ${i + 1} de ${maquetaFotos.length}">${tile(x.ref, x.tipo, x.pie, "maqueta-final", `Maqueta · ${pad(i + 1)}`, 1)}</article>`
       ).join("");
       const secs = [["evolucion", "Evolución", "00"]].concat(S.map((s, i) => [s.id, `Semana ${i + 1}`, pad(i + 1)])).concat([["maqueta-final", "Maqueta final", "★"], ["cierre", "Cierre", "→"]]);
       const prevA = acts[idx - 1], nextA = acts[idx + 1];
@@ -211,15 +215,15 @@ ${S.map(week).join("")}
   <div class="df-maqueta-head ed-rv">
     <p class="ed-k">Resultado tridimensional · BETA</p>
     <h2 id="maqueta-final-t">La maqueta final</h2>
-    <p>Una vista general del modelo físico que reúne las decisiones formales y funcionales desarrolladas durante el proceso.</p>
+    <p>Registro fotográfico del modelo físico que reúne las decisiones desarrolladas durante el proceso.</p>
   </div>
   <div class="df-maqueta ed-rv" data-maq-carousel aria-label="Carrusel de fotografías de la maqueta final">
-    <div class="df-maq-track" tabindex="0" role="group" aria-label="Fotografías de la maqueta; usa las flechas para cambiar de ángulo">
+    <div class="df-maq-track" tabindex="0" role="group" aria-label="Fotografías de la maqueta; usa las flechas para cambiar de foto">
       ${maquetaFinal}
     </div>
     <div class="df-maq-controls">
       <button type="button" data-maq-dir="-1" aria-label="Ver ángulo anterior">←</button>
-      <span class="df-maq-count" aria-live="polite">01 / 03</span>
+      <span class="df-maq-count" aria-live="polite">01 / ${pad(maquetaFotos.length)}</span>
       <button type="button" data-maq-dir="1" aria-label="Ver ángulo siguiente">→</button>
     </div>
   </div>
